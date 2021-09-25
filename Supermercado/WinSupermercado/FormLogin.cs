@@ -21,5 +21,28 @@ namespace WinSupermercado
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string Usuario;
+            string Contra;
+
+            Usuario = textBox1.Text;
+            Contra = textBox2.Text;
+
+            if (Usuario =="admin" && Contra == "123")
+            {
+                this.Close;  
+            }
+            else
+            {
+                MessageBox.Show("Usuario o Contraseña incorrecta!");
+            }
+        }
     }
 }

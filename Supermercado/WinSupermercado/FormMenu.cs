@@ -24,7 +24,36 @@ namespace WinSupermercado
 
         private void productoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            var formVender = new FormVender();
+            formVender.MdiParent = this;
+            formVender.Show();
+        }
 
+        private void FormMenu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formLogin = new FormLogin();
+            formLogin.ShowDialog();
+
+            MessageBox.Show("Bienvenidos a Super Market P.O.S");
+        }
+
+        private void productoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var formProductos = new FormProductos();
+            formProductos.MdiParent = this;
+            formProductos.Show();
+        }
+
+        private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formClietes = new FormClientes();
+            formClietes.MdiParent = this;
+            formClietes.Show();
         }
     }
 }
