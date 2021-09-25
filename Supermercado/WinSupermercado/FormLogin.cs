@@ -37,7 +37,7 @@ namespace WinSupermercado
 
             if (Usuario =="admin" && Contra == "123")
             {
-                this.Close;  
+                this.Close();  
             }
             else
             {
