@@ -44,5 +44,25 @@ namespace WinSupermercado
                 MessageBox.Show("Usuario o Contraseña incorrecta!");
             }
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == true)
+            {
+                if (textBox2.PasswordChar == '*')
+                {
+                    textBox2.PasswordChar = '\0';
+                }
+                else
+                {
+                    textBox2.PasswordChar = '*';
+                }
+            }
+        }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
