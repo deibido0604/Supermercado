@@ -91,7 +91,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(185, 417);
+            this.button2.Location = new System.Drawing.Point(199, 417);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 27);
             this.button2.TabIndex = 7;
@@ -118,7 +118,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(351, 489);
+            this.ClientSize = new System.Drawing.Size(348, 489);
             this.ControlBox = false;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
