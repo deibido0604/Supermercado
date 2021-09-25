@@ -60,10 +60,10 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(77, 360);
+            this.textBox2.Location = new System.Drawing.Point(66, 360);
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(197, 20);
+            this.textBox2.Size = new System.Drawing.Size(208, 20);
             this.textBox2.TabIndex = 4;
             // 
             // button1
@@ -91,7 +91,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(199, 417);
+            this.button2.Location = new System.Drawing.Point(185, 417);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 27);
             this.button2.TabIndex = 7;
