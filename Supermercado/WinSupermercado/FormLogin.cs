@@ -37,8 +37,9 @@ namespace WinSupermercado
 
             if (Usuario =="admin1" && Contra == "1234")
             {
-                this.Close();  
-            }else
+                this.Close();
+            }
+            else
             if(Usuario == "admin2" && Contra == "4321")
             {
                 this.Close();
@@ -47,6 +48,8 @@ namespace WinSupermercado
             {
                 MessageBox.Show("Usuario o Contraseña incorrecta!");
             }
+
+
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)

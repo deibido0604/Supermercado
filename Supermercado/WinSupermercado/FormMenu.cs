@@ -79,6 +79,8 @@ namespace WinSupermercado
         private void FormMenu_Load(object sender, EventArgs e)
         {
 
+            var formLogin = new FormLogin();
+            formLogin.ShowDialog();
         }
 
         private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
