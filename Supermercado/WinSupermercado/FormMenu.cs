@@ -15,6 +15,20 @@ namespace WinSupermercado
         public FormMenu()
         {
             InitializeComponent();
+            customizeDesing();
+        }
+
+        private void customizeDesing()
+        {
+            panelAdmi.Visible = false;
+            panelCompras.Visible = false;
+            panelInventarios.Visible = false;
+            panelVenta.Visible = false;
+        }
+
+        private void hideSubMenu()
+        {
+
         }
 
         private void button2_Click(object sender, EventArgs e)
