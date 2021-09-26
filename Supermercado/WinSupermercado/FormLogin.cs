@@ -64,6 +64,9 @@ namespace WinSupermercado
                 {
                     textBox2.PasswordChar = '*';
                 }
+            }else
+            {
+                textBox2.PasswordChar = '*';
             }
         }
 
