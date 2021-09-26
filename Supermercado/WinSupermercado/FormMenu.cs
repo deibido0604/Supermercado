@@ -98,9 +98,7 @@ namespace WinSupermercado
 
         private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var formClietes = new FormClientes();
-            formClietes.MdiParent = this;
-            formClietes.Show();
+            
         }
 
         private void btnAdmin_Click(object sender, EventArgs e)
@@ -110,6 +108,8 @@ namespace WinSupermercado
 
         private void btnUser_Click(object sender, EventArgs e)
         {
+            var formLogin = new FormLogin();
+            formLogin.ShowDialog();
             hideSubMenu();
         }
 
@@ -194,6 +194,15 @@ namespace WinSupermercado
             Application.Exit();
         }
 
+        private void button5_Click(object sender, EventArgs e)
+        {
+            var formLogin = new FormLogin();
+            formLogin.ShowDialog();
+            hideSubMenu();
+        }
+
+       
+
         private Form activeForm = null;
         private void openChildForm(Form childForm)
         {
@@ -210,21 +219,34 @@ namespace WinSupermercado
             childForm.Show();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
-            var formLogin = new FormLogin();
-            formLogin.ShowDialog();
             hideSubMenu();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            hideSubMenu();
+        }
+
+        private void btnSeguridad_Click_1(object sender, EventArgs e)
+        {
 
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
+        private void button9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSalir_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

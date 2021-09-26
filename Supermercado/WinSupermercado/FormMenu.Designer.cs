@@ -54,26 +54,22 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnSeguridad = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.panel8.SuspendLayout();
             this.panelVenta.SuspendLayout();
             this.panelCompras.SuspendLayout();
             this.panelInventarios.SuspendLayout();
             this.panelAdmi.SuspendLayout();
             this.panel9.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel8
             // 
             this.panel8.AutoScroll = true;
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(64)))), ((int)(((byte)(118)))));
-            this.panel8.Controls.Add(this.button2);
-            this.panel8.Controls.Add(this.panel1);
-            this.panel8.Controls.Add(this.button1);
+            this.panel8.Controls.Add(this.btnSalir);
+            this.panel8.Controls.Add(this.btnSeguridad);
             this.panel8.Controls.Add(this.panelVenta);
             this.panel8.Controls.Add(this.btnVenta);
             this.panel8.Controls.Add(this.panelCompras);
@@ -346,7 +342,7 @@
             this.btnUser.Name = "btnUser";
             this.btnUser.Size = new System.Drawing.Size(275, 40);
             this.btnUser.TabIndex = 0;
-            this.btnUser.Text = "USUARIO";
+            this.btnUser.Text = "LOGIN";
             this.btnUser.UseVisualStyleBackColor = true;
             this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
@@ -406,58 +402,35 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button1
+            // btnSeguridad
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.MintCream;
-            this.button1.Location = new System.Drawing.Point(0, 808);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(275, 45);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "SEGURIDAD";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnSeguridad.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSeguridad.FlatAppearance.BorderSize = 0;
+            this.btnSeguridad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeguridad.ForeColor = System.Drawing.Color.MintCream;
+            this.btnSeguridad.Location = new System.Drawing.Point(0, 808);
+            this.btnSeguridad.Name = "btnSeguridad";
+            this.btnSeguridad.Size = new System.Drawing.Size(275, 45);
+            this.btnSeguridad.TabIndex = 9;
+            this.btnSeguridad.Text = "SEGURIDAD";
+            this.btnSeguridad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSeguridad.UseVisualStyleBackColor = true;
+            this.btnSeguridad.Click += new System.EventHandler(this.btnSeguridad_Click_1);
             // 
-            // panel1
+            // btnSalir
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(84)))), ((int)(((byte)(138)))));
-            this.panel1.Controls.Add(this.button9);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 853);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(275, 50);
-            this.panel1.TabIndex = 10;
-            // 
-            // button9
-            // 
-            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.ForeColor = System.Drawing.Color.MintCream;
-            this.button9.Location = new System.Drawing.Point(0, 0);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(275, 40);
-            this.button9.TabIndex = 1;
-            this.button9.Text = "LOGIN";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.MintCream;
-            this.button2.Location = new System.Drawing.Point(0, 953);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(275, 45);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "SALIR";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            this.btnSalir.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnSalir.FlatAppearance.BorderSize = 0;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.ForeColor = System.Drawing.Color.MintCream;
+            this.btnSalir.Location = new System.Drawing.Point(0, 953);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(275, 45);
+            this.btnSalir.TabIndex = 10;
+            this.btnSalir.Text = "SALIR";
+            this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_1);
             // 
             // FormMenu
             // 
@@ -482,7 +455,6 @@
             this.panelInventarios.ResumeLayout(false);
             this.panelAdmi.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -513,9 +485,7 @@
         private System.Windows.Forms.Button btnAdmin;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnSeguridad;
     }
 }
