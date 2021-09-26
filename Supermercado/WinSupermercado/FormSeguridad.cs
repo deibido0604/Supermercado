@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WinSupermercado
 {
-    public partial class FormProductos : Form
+    public partial class FormSeguridad : Form
     {
-        public FormProductos()
+        public FormSeguridad()
         {
             InitializeComponent();
         }

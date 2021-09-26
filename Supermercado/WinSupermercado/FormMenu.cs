@@ -151,16 +151,19 @@ namespace WinSupermercado
 
         private void button17_Click(object sender, EventArgs e)
         {
+            openChildForm(new FormProductos());
             hideSubMenu();
         }
 
         private void button16_Click(object sender, EventArgs e)
         {
+            openChildForm(new FormReporteVenta());
             hideSubMenu();
         }
 
         private void button15_Click(object sender, EventArgs e)
         {
+            openChildForm(new FormReporteCliente());
             hideSubMenu();
         }
 
@@ -231,7 +234,7 @@ namespace WinSupermercado
 
         private void btnSeguridad_Click_1(object sender, EventArgs e)
         {
-
+            openChildForm(new FormSeguridad());
         }
 
         private void button9_Click(object sender, EventArgs e)

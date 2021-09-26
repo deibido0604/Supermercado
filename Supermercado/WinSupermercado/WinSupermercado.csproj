@@ -64,6 +64,24 @@
     <Compile Include="FormProductos.Designer.cs">
       <DependentUpon>FormProductos.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormReporteCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReporteCliente.Designer.cs">
+      <DependentUpon>FormReporteCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReporteVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReporteVenta.Designer.cs">
+      <DependentUpon>FormReporteVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSeguridad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSeguridad.Designer.cs">
+      <DependentUpon>FormSeguridad.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormVender.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +98,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormProductos.resx">
       <DependentUpon>FormProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReporteCliente.resx">
+      <DependentUpon>FormReporteCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReporteVenta.resx">
+      <DependentUpon>FormReporteVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSeguridad.resx">
+      <DependentUpon>FormSeguridad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormVender.resx">
       <DependentUpon>FormVender.cs</DependentUpon>

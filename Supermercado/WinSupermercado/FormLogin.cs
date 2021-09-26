@@ -35,9 +35,13 @@ namespace WinSupermercado
             Usuario = textBox1.Text;
             Contra = textBox2.Text;
 
-            if (Usuario =="admin" && Contra == "123")
+            if (Usuario =="admin1" && Contra == "1234")
             {
                 this.Close();  
+            }else
+            if(Usuario == "admin2" && Contra == "4321")
+            {
+                this.Close();
             }
             else
             {
@@ -61,6 +65,11 @@ namespace WinSupermercado
         }
 
         private void FormLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
