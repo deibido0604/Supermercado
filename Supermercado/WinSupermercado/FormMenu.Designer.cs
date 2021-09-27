@@ -92,6 +92,8 @@
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.ForeColor = System.Drawing.Color.MintCream;
+            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
+            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSalir.Location = new System.Drawing.Point(0, 696);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSalir.Name = "btnSalir";
@@ -108,6 +110,8 @@
             this.btnSeguridad.FlatAppearance.BorderSize = 0;
             this.btnSeguridad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeguridad.ForeColor = System.Drawing.Color.MintCream;
+            this.btnSeguridad.Image = ((System.Drawing.Image)(resources.GetObject("btnSeguridad.Image")));
+            this.btnSeguridad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSeguridad.Location = new System.Drawing.Point(0, 659);
             this.btnSeguridad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSeguridad.Name = "btnSeguridad";
@@ -212,7 +216,10 @@
             this.btnVenta.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnVenta.FlatAppearance.BorderSize = 0;
             this.btnVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVenta.ForeColor = System.Drawing.Color.MintCream;
+            this.btnVenta.Image = ((System.Drawing.Image)(resources.GetObject("btnVenta.Image")));
+            this.btnVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVenta.Location = new System.Drawing.Point(0, 446);
             this.btnVenta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnVenta.Name = "btnVenta";
@@ -302,6 +309,8 @@
             this.btnCompra.FlatAppearance.BorderSize = 0;
             this.btnCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompra.ForeColor = System.Drawing.Color.MintCream;
+            this.btnCompra.Image = ((System.Drawing.Image)(resources.GetObject("btnCompra.Image")));
+            this.btnCompra.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCompra.Location = new System.Drawing.Point(0, 271);
             this.btnCompra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCompra.Name = "btnCompra";
@@ -359,6 +368,8 @@
             this.btnInven.FlatAppearance.BorderSize = 0;
             this.btnInven.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInven.ForeColor = System.Drawing.Color.MintCream;
+            this.btnInven.Image = ((System.Drawing.Image)(resources.GetObject("btnInven.Image")));
+            this.btnInven.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInven.Location = new System.Drawing.Point(0, 158);
             this.btnInven.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnInven.Name = "btnInven";
@@ -399,7 +410,10 @@
             this.btnAdmin.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAdmin.FlatAppearance.BorderSize = 0;
             this.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdmin.ForeColor = System.Drawing.Color.MintCream;
+            this.btnAdmin.Image = ((System.Drawing.Image)(resources.GetObject("btnAdmin.Image")));
+            this.btnAdmin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAdmin.Location = new System.Drawing.Point(0, 81);
             this.btnAdmin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdmin.Name = "btnAdmin";
