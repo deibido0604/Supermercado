@@ -85,10 +85,9 @@ namespace WinSupermercado
 
         private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
+     
             var formLogin = new FormLogin();
             formLogin.ShowDialog();
-
-            MessageBox.Show("Bienvenidos a Super Market P.O.S");
         }
 
         private void productoToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -117,6 +116,7 @@ namespace WinSupermercado
 
         private void button7_Click(object sender, EventArgs e)
         {
+            openChildForm(new FormInventarios());
             hideSubMenu();
         }
 
@@ -250,6 +250,11 @@ namespace WinSupermercado
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelChildForm_Paint(object sender, PaintEventArgs e)
         {
 
         }
