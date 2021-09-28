@@ -23,18 +23,20 @@ namespace WinSupermercado
         }
 
         private void button2_Click(object sender, EventArgs e)
-        {
+        {//botón de cerrar
+            //cierra el sistema
             Application.Exit();
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
+        {//botón de entrar
+            //variable para el  usuario y contraseña
             string Usuario;
             string Contra;
 
             Usuario = textBox1.Text;
             Contra = textBox2.Text;
-
+            //inicio del ciclo if-else
             if (Usuario =="admin1" && Contra == "1234")
             {
                 this.Close();
@@ -47,13 +49,14 @@ namespace WinSupermercado
             else
             {
                 MessageBox.Show("Usuario o Contraseña incorrecta!");
-            }
+            }//fin del ciclo if-else
 
 
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
+        {//validacion del checkbox- que hace visible la contraseña
+         //inicio del ciclo if-else
             if (checkBox1.Checked == true)
             {
                 if (textBox2.PasswordChar == '*')
@@ -67,7 +70,7 @@ namespace WinSupermercado
             }else
             {
                 textBox2.PasswordChar = '*';
-            }
+            }//fin del ciclo if-else
         }
 
         private void FormLogin_Load(object sender, EventArgs e)

@@ -103,84 +103,84 @@ namespace WinSupermercado
         }
 
         private void btnAdmin_Click(object sender, EventArgs e)
-        {
+        {//al darle click despliega el panel o la lista del botón.
             ShowSubMenu(panelAdmi);
         }
 
         private void btnUser_Click(object sender, EventArgs e)
-        {
+        {//Llamamos al formulario de login
             var formLogin = new FormLogin();
             formLogin.ShowDialog();
             hideSubMenu();
         }
 
         private void button7_Click(object sender, EventArgs e)
-        {
+        {//llamamos el formulario de inventario general
             openChildForm(new FormInventarios());
             hideSubMenu();
         }
 
         private void button8_Click(object sender, EventArgs e)
-        {
+        {//llamamos al formulario de salida y devoluciones
             hideSubMenu();
         }
 
         private void button11_Click(object sender, EventArgs e)
-        {
+        {//llamamos al formulario de Control de proveedores
             hideSubMenu();
         }
 
         private void button10_Click(object sender, EventArgs e)
-        {
+        {//llamamos al formulario de Pedidos de proveedores
             hideSubMenu();
         }
 
         private void button12_Click(object sender, EventArgs e)
-        {
+        {//llamamos al formulario de libro de compra y venta
             hideSubMenu();
         }
 
         private void button13_Click(object sender, EventArgs e)
-        {
+        {//llamamos al formulario de cobro
             hideSubMenu();
         }
 
         private void button18_Click(object sender, EventArgs e)
-        {
+        {//llamamos al formulario de ventas
             openChildForm(new FormVender());
             hideSubMenu();
         }
 
         private void button17_Click(object sender, EventArgs e)
-        {
+        {//llamamos al formulario de producto
             openChildForm(new FormProductos());
             hideSubMenu();
         }
 
         private void button16_Click(object sender, EventArgs e)
-        {
+        {//llamamos al formulario de Reporte de venta
             openChildForm(new FormReporteVenta());
             hideSubMenu();
         }
 
         private void button15_Click(object sender, EventArgs e)
-        {
+        {//llamamos al formulario de reporte de Clientes
             openChildForm(new FormReporteCliente());
             hideSubMenu();
         }
 
         private void button19_Click(object sender, EventArgs e)
-        {
+        {//llamamos al formulario de Reporte de Productos
             hideSubMenu();
         }
 
         private void btnInven_Click(object sender, EventArgs e)
-        {
+        {//al darle click despliega el panel o la lista del botón.
             ShowSubMenu(panelInventarios);
         }
 
         private void btnCompra_Click(object sender, EventArgs e)
-        {
+        {//al darle click despliega el panel o la lista del botón.
             ShowSubMenu(panelCompras);
         }
 
@@ -235,7 +235,7 @@ namespace WinSupermercado
         }
 
         private void btnSeguridad_Click_1(object sender, EventArgs e)
-        {
+        {//llamamos al formulario de Seguridad
             openChildForm(new FormSeguridad());
         }
 
@@ -245,7 +245,7 @@ namespace WinSupermercado
         }
 
         private void btnSalir_Click_1(object sender, EventArgs e)
-        {
+        {//Cierre de la sesion
             this.Close();
         }
 
