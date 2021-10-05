@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BL.Supermercado;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,13 @@ namespace WinSupermercado
 {
     public partial class FormLogin : Form
     {
+        SeguridadBL _seguridad; 
         public FormLogin()
         {
             InitializeComponent();
+
+            _seguridad = new SeguridadBL();
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -36,8 +41,10 @@ namespace WinSupermercado
 
             Usuario = textBox1.Text;
             Contra = textBox2.Text;
+
+            var resultado = _seguridad.Autorizar(Usuario, Contra);
             //inicio del ciclo if-else
-            if (Usuario =="admin1" && Contra == "1234")
+            if (resultado == true)
             {
                 this.Close();
             }
