@@ -21,5 +21,10 @@ namespace WinSupermercado
         {
             this.Close();
         }
+
+        private void FormSeguridad_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

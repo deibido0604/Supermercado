@@ -47,11 +47,7 @@ namespace WinSupermercado
             if (resultado == true)
             {
                 this.Close();
-            }
-            else
-            if(Usuario == "admin2" && Contra == "4321")
-            {
-                this.Close();
+                MessageBox.Show("Bienvenidos a Super Market P.O.S");
             }
             else
             {

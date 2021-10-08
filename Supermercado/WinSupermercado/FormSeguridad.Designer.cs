@@ -52,15 +52,16 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // FormSeguridadcs
+            // FormSeguridad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(711, 481);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
-            this.Name = "FormSeguridadcs";
+            this.Name = "FormSeguridad";
             this.Text = "FormSeguridadcs";
+            this.Load += new System.EventHandler(this.FormSeguridad_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

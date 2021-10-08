@@ -15,14 +15,13 @@ namespace BL.Supermercado
                 return true;
             }
             else
+            if (Usuario == "user" && Contra == "456")
             {
-                if (Usuario == "user" && Contra == "456")
-                {
                     return true;
-                }
+            }else
+            {
+                return false;
             }
-
-            return false;
         }
      
     }
