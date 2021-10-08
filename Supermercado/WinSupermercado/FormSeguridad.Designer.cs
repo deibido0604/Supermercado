@@ -59,8 +59,10 @@
             this.ClientSize = new System.Drawing.Size(711, 481);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormSeguridad";
             this.Text = "FormSeguridadcs";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormSeguridad_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -55,6 +55,7 @@
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
+            this.panelChildForm = new System.Windows.Forms.Panel();
             this.panel8.SuspendLayout();
             this.panelVenta.SuspendLayout();
             this.panelCompras.SuspendLayout();
@@ -456,11 +457,20 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // panelChildForm
+            // 
+            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChildForm.Location = new System.Drawing.Point(275, 0);
+            this.panelChildForm.Name = "panelChildForm";
+            this.panelChildForm.Size = new System.Drawing.Size(997, 750);
+            this.panelChildForm.TabIndex = 5;
+            // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1272, 750);
+            this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panel8);
             this.ForeColor = System.Drawing.Color.Lime;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -509,5 +519,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnSeguridad;
+        private System.Windows.Forms.Panel panelChildForm;
     }
 }
