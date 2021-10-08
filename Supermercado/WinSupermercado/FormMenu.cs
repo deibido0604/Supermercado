@@ -153,7 +153,11 @@ namespace WinSupermercado
 
         private void button17_Click(object sender, EventArgs e)
         {//llamamos al formulario de producto
-            openChildForm(new FormProductos());
+            //openChildForm(new FormProductos());
+            var formProductos = new FormProductos();
+            formProductos.MdiParent = this;
+            formProductos.Show();
+
             hideSubMenu();
         }
 

@@ -7,14 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BL.Supermercado;
 
 namespace WinSupermercado
 {
     public partial class FormProductos : Form
     {
+        ProductosBL _productos;
+
         public FormProductos()
         {
             InitializeComponent();
+
+            _productos = new ProductosBL();
+
+            productoBindingSource.DataSource = _productos.ObtenerProducto(); 
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -23,6 +30,16 @@ namespace WinSupermercado
         }
 
         private void FormProductos_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void activoCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void activoLabel_Click(object sender, EventArgs e)
         {
 
         }
