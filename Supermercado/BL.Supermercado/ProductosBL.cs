@@ -57,7 +57,7 @@ namespace BL.Supermercado
             ListaProductos.Add(producto4);
         }
 
-        public BindingList<Producto> ObtenerProducto()
+        public BindingList<Producto> ObtenerProductos()
         {
             return ListaProductos;
         }

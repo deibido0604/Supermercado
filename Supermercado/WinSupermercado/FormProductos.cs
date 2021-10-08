@@ -20,8 +20,9 @@ namespace WinSupermercado
             InitializeComponent();
 
             _productos = new ProductosBL();
+            listaProductosBindingSource.DataSource = _productos.ObtenerProductos();
 
-            productoBindingSource.DataSource = _productos.ObtenerProducto(); 
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -40,6 +41,11 @@ namespace WinSupermercado
         }
 
         private void activoLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void productoDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

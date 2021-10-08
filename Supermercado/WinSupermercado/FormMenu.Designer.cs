@@ -54,7 +54,6 @@
             this.btnAdmin = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panelChildForm = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.panel8.SuspendLayout();
             this.panelVenta.SuspendLayout();
@@ -438,22 +437,10 @@
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.Location = new System.Drawing.Point(13, 28);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(249, 44);
             this.panel2.TabIndex = 0;
-            // 
-            // panelChildForm
-            // 
-            this.panelChildForm.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelChildForm.BackgroundImage")));
-            this.panelChildForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChildForm.Location = new System.Drawing.Point(275, 0);
-            this.panelChildForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(997, 750);
-            this.panelChildForm.TabIndex = 4;
-            this.panelChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChildForm_Paint);
             // 
             // button5
             // 
@@ -474,12 +461,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1272, 750);
-            this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panel8);
             this.ForeColor = System.Drawing.Color.Lime;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(949, 598);
             this.Name = "FormMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -515,7 +501,6 @@
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.Panel panelChildForm;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel panelAdmi;
         private System.Windows.Forms.Button btnUser;
