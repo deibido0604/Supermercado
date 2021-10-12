@@ -49,5 +49,35 @@ namespace WinSupermercado
         {
 
         }
+
+        private void productoExtranjeroCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void productoExtranjeroLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void productoNacionalLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void productoNacionalCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void activoLabel_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void existenciaLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
