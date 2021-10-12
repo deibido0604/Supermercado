@@ -123,7 +123,7 @@
             // 
             precioUnidadLabel.AutoSize = true;
             precioUnidadLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            precioUnidadLabel.Location = new System.Drawing.Point(29, 110);
+            precioUnidadLabel.Location = new System.Drawing.Point(35, 104);
             precioUnidadLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             precioUnidadLabel.Name = "precioUnidadLabel";
             precioUnidadLabel.Size = new System.Drawing.Size(97, 16);
@@ -320,7 +320,7 @@
             this.dataGridViewCheckBoxColumn3});
             this.listaProductosDataGridView.DataSource = this.listaProductosBindingSource;
             this.listaProductosDataGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.listaProductosDataGridView.Location = new System.Drawing.Point(0, 128);
+            this.listaProductosDataGridView.Location = new System.Drawing.Point(0, 125);
             this.listaProductosDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listaProductosDataGridView.Name = "listaProductosDataGridView";
             this.listaProductosDataGridView.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -378,7 +378,7 @@
             // 
             this.descripcionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaProductosBindingSource, "Descripcion", true));
             this.descripcionTextBox.Location = new System.Drawing.Point(383, 63);
-            this.descripcionTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.descripcionTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.descripcionTextBox.Name = "descripcionTextBox";
             this.descripcionTextBox.Size = new System.Drawing.Size(316, 22);
             this.descripcionTextBox.TabIndex = 7;
@@ -387,7 +387,7 @@
             // 
             this.existenciaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaProductosBindingSource, "Existencia", true));
             this.existenciaTextBox.Location = new System.Drawing.Point(383, 101);
-            this.existenciaTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.existenciaTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.existenciaTextBox.Name = "existenciaTextBox";
             this.existenciaTextBox.Size = new System.Drawing.Size(132, 22);
             this.existenciaTextBox.TabIndex = 8;
@@ -396,7 +396,7 @@
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaProductosBindingSource, "id", true));
             this.idTextBox.Location = new System.Drawing.Point(140, 63);
-            this.idTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.idTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(132, 22);
             this.idTextBox.TabIndex = 9;
@@ -404,8 +404,8 @@
             // precioUnidadTextBox
             // 
             this.precioUnidadTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaProductosBindingSource, "PrecioUnidad", true));
-            this.precioUnidadTextBox.Location = new System.Drawing.Point(140, 106);
-            this.precioUnidadTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.precioUnidadTextBox.Location = new System.Drawing.Point(140, 103);
+            this.precioUnidadTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.precioUnidadTextBox.Name = "precioUnidadTextBox";
             this.precioUnidadTextBox.Size = new System.Drawing.Size(132, 22);
             this.precioUnidadTextBox.TabIndex = 10;
@@ -414,7 +414,7 @@
             // 
             this.activoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listaProductosBindingSource, "Activo", true));
             this.activoCheckBox.Location = new System.Drawing.Point(881, 41);
-            this.activoCheckBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.activoCheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.activoCheckBox.Name = "activoCheckBox";
             this.activoCheckBox.Size = new System.Drawing.Size(139, 30);
             this.activoCheckBox.TabIndex = 11;
@@ -424,7 +424,7 @@
             // 
             this.productoExtranjeroCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listaProductosBindingSource, "ProductoExtranjero", true));
             this.productoExtranjeroCheckBox.Location = new System.Drawing.Point(881, 95);
-            this.productoExtranjeroCheckBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.productoExtranjeroCheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.productoExtranjeroCheckBox.Name = "productoExtranjeroCheckBox";
             this.productoExtranjeroCheckBox.Size = new System.Drawing.Size(139, 30);
             this.productoExtranjeroCheckBox.TabIndex = 13;
@@ -435,7 +435,7 @@
             // 
             this.productoNacionalCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listaProductosBindingSource, "ProductoNacional", true));
             this.productoNacionalCheckBox.Location = new System.Drawing.Point(881, 67);
-            this.productoNacionalCheckBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.productoNacionalCheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.productoNacionalCheckBox.Name = "productoNacionalCheckBox";
             this.productoNacionalCheckBox.Size = new System.Drawing.Size(139, 30);
             this.productoNacionalCheckBox.TabIndex = 15;
@@ -469,7 +469,7 @@
             this.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormProductos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormProductos_Load);
