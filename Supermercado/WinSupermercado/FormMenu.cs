@@ -278,11 +278,5 @@ namespace WinSupermercado
         {
 
         }
-
-            //con este evento entramos rapidamente al form de producto con solo apretar un caracter
-        private void button17_KeyPress(object sender, KeyPressEventArgs e)
-        {
-          
-        }
     }
 }
