@@ -87,14 +87,14 @@ namespace WinSupermercado
             var producto=(Producto)listaProductosBindingSource.Current;
             var resultado = _productos.GuardarProducto(producto);
 
-            if (resultado == true)
+            if (resultado.Exitoso == true)
             {
                 listaProductosBindingSource.ResetBindings(false);
                 DeshabilitarHabilitarBotones(true);
             }
             else
             {
-                MessageBox.Show("Ocurrio un error guardando el producto");
+                MessageBox.Show(resultado.Mensaje);
             }
         }
 

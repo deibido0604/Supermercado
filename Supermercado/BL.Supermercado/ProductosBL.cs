@@ -62,13 +62,20 @@ namespace BL.Supermercado
             return ListaProductos;
         }
 
-        public bool GuardarProducto(Producto producto)
+        public Resultado  GuardarProducto(Producto producto)
         {
+            var resultado = Validar(producto);
+            if (resultado.Exitoso == false)
+            {
+                return resultado;
+            }
             if (producto.id == 0)
             {
                 producto.id = ListaProductos.Max(item => item.id) + 1;
             }
-            return true;
+
+            resultado.Exitoso = true;
+            return resultado;
         }
 
         public void AgregarProducto()
@@ -90,6 +97,29 @@ namespace BL.Supermercado
             return false;
         }
 
+       private Resultado Validar(Producto producto)
+        {
+            var resultado = new Resultado();
+            resultado.Exitoso = true;
+
+            if (string.IsNullOrEmpty(producto.Descripcion) == true)
+            {
+                resultado.Mensaje = "Ingrese una descripción";
+                resultado.Exitoso = false;
+            }
+            if (producto.Existencia < 0)
+            {
+                resultado.Mensaje = "La existencia debe ser mayor que cero";
+                resultado.Exitoso = false;
+            }
+
+            if (producto.PrecioUnidad < 0)
+            {
+                resultado.Mensaje = "El precio debe ser mayor que cero";
+                resultado.Exitoso = false;
+            }
+            return resultado;
+        }
     }
     public class Producto
     {//propiedades de la clase producto
@@ -102,5 +132,11 @@ namespace BL.Supermercado
         public bool ProductoNacional { get; set; }
         public bool ProductoExtranjero { get; set; }
         //public int codigo { get; set; }
+    }
+
+    public class Resultado
+    {
+        public bool Exitoso { get; set; }
+        public string  Mensaje { get; set; } 
     }
 }
