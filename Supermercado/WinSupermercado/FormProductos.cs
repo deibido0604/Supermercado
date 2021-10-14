@@ -79,5 +79,80 @@ namespace WinSupermercado
         {
 
         }
+
+        //Guarda producto
+        private void productoBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            listaProductosBindingSource.EndEdit();
+            var producto=(Producto)listaProductosBindingSource.Current;
+            var resultado = _productos.GuardarProducto(producto);
+
+            if (resultado == true)
+            {
+                listaProductosBindingSource.ResetBindings(false);
+                DeshabilitarHabilitarBotones(true);
+            }
+            else
+            {
+                MessageBox.Show("Ocurrio un error guardando el producto");
+            }
+        }
+
+        //Agrega
+        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
+        {
+            _productos.AgregarProducto();
+            listaProductosBindingSource.MoveLast();
+
+            DeshabilitarHabilitarBotones(false);
+        }
+
+        private void DeshabilitarHabilitarBotones(bool Valor)
+        {
+            bindingNavigatorMoveFirstItem.Enabled = Valor;
+            bindingNavigatorMoveLastItem.Enabled = Valor;
+            bindingNavigatorMovePreviousItem.Enabled = Valor;
+            bindingNavigatorMoveNextItem.Enabled = Valor;
+            bindingNavigatorPositionItem.Enabled = Valor;
+
+            bindingNavigatorAddNewItem.Enabled = Valor;
+            bindingNavigatorDeleteItem.Enabled = Valor;
+            toolStripButtonCancelar.Visible = !Valor;
+        }
+        private void DeshabilitarHabilitarBotones()
+        {
+            throw new NotImplementedException();
+        }
+
+        //elimina
+        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
+        {
+            if (idTextBox.Text != "")
+            {
+                var id = Convert.ToInt32(idTextBox.Text);
+                Eliminar(id);
+            }
+        }
+
+        private void Eliminar(int id)
+        {
+            
+            var resultado = _productos.EliminarProducto(id);
+
+            if (resultado == true)
+            {
+                listaProductosBindingSource.ResetBindings(false);
+            }
+            else
+            {
+                MessageBox.Show("Ocurrio un error al eliminar el producto");
+            }
+        }
+
+        private void toolStripButtonCancelar_Click(object sender, EventArgs e)
+        {
+            DeshabilitarHabilitarBotones(true);
+            Eliminar(0);
+        }
     }
 }
