@@ -127,10 +127,17 @@ namespace WinSupermercado
         //elimina
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
-            if (idTextBox.Text != "")
+
+            if  (idTextBox.Text != "")
             {
-                var id = Convert.ToInt32(idTextBox.Text);
-                Eliminar(id);
+                var Resultado = MessageBox.Show("¿Desea eliminar este producto?", "Eliminar", MessageBoxButtons.YesNo);
+
+                if (Resultado == DialogResult.Yes)
+                {
+                    var id = Convert.ToInt32(idTextBox.Text);
+                    Eliminar(id);
+                }
+               
             }
         }
 
