@@ -16,7 +16,6 @@ namespace BL.Supermercado
         //constructor
         public ProductosBL()
         {
-            
             _contexto = new Contexto();
 
             ListaProductos = new BindingList<Producto>();
@@ -26,7 +25,7 @@ namespace BL.Supermercado
         public BindingList<Producto> ObtenerProductos()
         {
             _contexto.Productos.Load();
-            ListaProductos = _contexto.Productos.Local.ToBidingList();
+            ListaProductos = _contexto.Productos.Local.ToBindingList();
 
             return ListaProductos;
         }
