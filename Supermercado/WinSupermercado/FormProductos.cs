@@ -91,6 +91,7 @@ namespace WinSupermercado
             {
                 listaProductosBindingSource.ResetBindings(false);
                 DeshabilitarHabilitarBotones(true);
+                MessageBox.Show("Producto guardado");
             }
             else
             {

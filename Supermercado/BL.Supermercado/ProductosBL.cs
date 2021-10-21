@@ -37,10 +37,7 @@ namespace BL.Supermercado
             {
                 return resultado;
             }
-            if (producto.id == 0)
-            {
-                producto.id = ListaProductos.Max(item => item.id) + 1;
-            }
+            _contexto.SaveChanges();
 
             resultado.Exitoso = true;
             return resultado;
@@ -59,6 +56,7 @@ namespace BL.Supermercado
                 if (producto.id==id)
                 {
                     ListaProductos.Remove(producto);
+                    _contexto.SaveChanges();
                     return true;
                 }
             }
