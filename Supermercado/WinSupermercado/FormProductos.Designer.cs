@@ -68,8 +68,12 @@
             this.precioUnidadTextBox = new System.Windows.Forms.TextBox();
             this.activoCheckBox = new System.Windows.Forms.CheckBox();
             this.productoExtranjeroCheckBox = new System.Windows.Forms.CheckBox();
-            this.productoNacionalCheckBox = new System.Windows.Forms.CheckBox();
             this.seguridadBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fotoPictureBox = new System.Windows.Forms.PictureBox();
+            this.productoNacionalCheckBox = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             descripcionLabel = new System.Windows.Forms.Label();
             existenciaLabel = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
@@ -84,6 +88,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.productosBLBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaProductosDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.seguridadBLBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // descripcionLabel
@@ -195,7 +200,7 @@
             this.productoBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.productoBindingNavigator.Name = "productoBindingNavigator";
             this.productoBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.productoBindingNavigator.Size = new System.Drawing.Size(1267, 27);
+            this.productoBindingNavigator.Size = new System.Drawing.Size(1284, 27);
             this.productoBindingNavigator.TabIndex = 6;
             this.productoBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -335,13 +340,14 @@
             this.dataGridViewCheckBoxColumn3});
             this.listaProductosDataGridView.DataSource = this.listaProductosBindingSource;
             this.listaProductosDataGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.listaProductosDataGridView.Location = new System.Drawing.Point(0, 125);
+            this.listaProductosDataGridView.Location = new System.Drawing.Point(0, 208);
             this.listaProductosDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listaProductosDataGridView.Name = "listaProductosDataGridView";
             this.listaProductosDataGridView.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.listaProductosDataGridView.RowTemplate.Height = 24;
-            this.listaProductosDataGridView.Size = new System.Drawing.Size(1267, 571);
+            this.listaProductosDataGridView.Size = new System.Drawing.Size(1284, 500);
             this.listaProductosDataGridView.TabIndex = 6;
+            this.listaProductosDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.listaProductosDataGridView_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -443,6 +449,21 @@
             this.productoExtranjeroCheckBox.UseVisualStyleBackColor = true;
             this.productoExtranjeroCheckBox.CheckedChanged += new System.EventHandler(this.productoExtranjeroCheckBox_CheckedChanged);
             // 
+            // seguridadBLBindingSource
+            // 
+            this.seguridadBLBindingSource.DataSource = typeof(BL.Supermercado.SeguridadBL);
+            // 
+            // fotoPictureBox
+            // 
+            this.fotoPictureBox.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.fotoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.listaProductosBindingSource, "Foto", true, System.Windows.Forms.DataSourceUpdateMode.Never));
+            this.fotoPictureBox.Location = new System.Drawing.Point(966, 12);
+            this.fotoPictureBox.Name = "fotoPictureBox";
+            this.fotoPictureBox.Size = new System.Drawing.Size(225, 150);
+            this.fotoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.fotoPictureBox.TabIndex = 17;
+            this.fotoPictureBox.TabStop = false;
+            // 
             // productoNacionalCheckBox
             // 
             this.productoNacionalCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listaProductosBindingSource, "ProductoNacional", true));
@@ -454,9 +475,29 @@
             this.productoNacionalCheckBox.UseVisualStyleBackColor = true;
             this.productoNacionalCheckBox.CheckedChanged += new System.EventHandler(this.productoNacionalCheckBox_CheckedChanged);
             // 
-            // seguridadBLBindingSource
+            // button1
             // 
-            this.seguridadBLBindingSource.DataSource = typeof(BL.Supermercado.SeguridadBL);
+            this.button1.Location = new System.Drawing.Point(966, 178);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(99, 30);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Agregar Foto";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(1077, 178);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(114, 30);
+            this.button2.TabIndex = 19;
+            this.button2.Text = "Remover Foto";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.Filter = "jpg, png | *.jpg; *.png";
             // 
             // FormProductos
             // 
@@ -464,7 +505,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1284, 665);
+            this.ClientSize = new System.Drawing.Size(1284, 708);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.fotoPictureBox);
             this.Controls.Add(productoNacionalLabel);
             this.Controls.Add(this.productoNacionalCheckBox);
             this.Controls.Add(productoExtranjeroLabel);
@@ -497,6 +541,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.productosBLBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaProductosDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.seguridadBLBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -534,7 +579,11 @@
         private System.Windows.Forms.TextBox precioUnidadTextBox;
         private System.Windows.Forms.CheckBox activoCheckBox;
         private System.Windows.Forms.CheckBox productoExtranjeroCheckBox;
-        private System.Windows.Forms.CheckBox productoNacionalCheckBox;
         private System.Windows.Forms.ToolStripButton toolStripButtonCancelar;
+        private System.Windows.Forms.PictureBox fotoPictureBox;
+        private System.Windows.Forms.CheckBox productoNacionalCheckBox;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

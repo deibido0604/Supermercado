@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BL.Supermercado;
+using System.IO;
 
 namespace WinSupermercado
 {
@@ -85,6 +86,16 @@ namespace WinSupermercado
         {
             listaProductosBindingSource.EndEdit();
             var producto=(Producto)listaProductosBindingSource.Current;
+
+            if (fotoPictureBox.Image != null)
+            {
+                producto.Foto = Program.imageToByteArray(fotoPictureBox.Image);
+
+            }
+            else
+            {
+                producto.Foto = null;
+            }
             var resultado = _productos.GuardarProducto(producto);
 
             if (resultado.Exitoso == true)
@@ -161,6 +172,39 @@ namespace WinSupermercado
         {
             DeshabilitarHabilitarBotones(true);
             Eliminar(0);
+        }
+
+        private void listaProductosDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            var producto = (Producto)listaProductosBindingSource.Current;
+
+            if (producto != null)
+            {
+                openFileDialog1.ShowDialog();
+                var archivo = openFileDialog1.FileName;
+
+                if (archivo != "")
+                {
+                    var fileInfo = new FileInfo(archivo);
+                    var fileStream = fileInfo.OpenRead();
+
+                    fotoPictureBox.Image = Image.FromStream(fileStream);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Cree un producto antes de asignar una imagen");
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            fotoPictureBox.Image = null;
         }
     }
 }
