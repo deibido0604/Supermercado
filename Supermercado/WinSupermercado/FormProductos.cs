@@ -96,6 +96,7 @@ namespace WinSupermercado
             {
                 producto.Foto = null;
             }
+
             var resultado = _productos.GuardarProducto(producto);
 
             if (resultado.Exitoso == true)
