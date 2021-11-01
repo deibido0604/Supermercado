@@ -8,20 +8,23 @@ namespace BL.Supermercado
 {
     public class SeguridadBL
     {
-        public bool Autorizar(string Usuario, string Contra)
+        Contexto _contexto;
+        public SeguridadBL()
         {
-            if (Usuario == "admin" && Contra == "123")
+            _contexto = new Contexto();
+        }
+
+        public bool Autorizar(string usuario, string contrasena)
+        {
+            var usuarios = _contexto.Usuarios.ToList();
+            foreach (var usuarioDB in usuarios)
             {
-                return true;
-            }
-            else
-            if (Usuario == "user" && Contra == "456")
-            {
+                if(usuario == usuarioDB.Nombre && contrasena == usuarioDB.Contrasena)
+                {
                     return true;
-            }else
-            {
-                return false;
+                }
             }
+            return false;
         }
      
     }
