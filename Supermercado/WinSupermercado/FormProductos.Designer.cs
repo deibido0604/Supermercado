@@ -37,42 +37,13 @@
             System.Windows.Forms.Label productoExtranjeroLabel;
             System.Windows.Forms.Label productoNacionalLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProductos));
-            this.listaProductosDataGridView = new System.Windows.Forms.DataGridView();
-            this.descripcionTextBox = new System.Windows.Forms.TextBox();
-            this.existenciaTextBox = new System.Windows.Forms.TextBox();
-            this.idTextBox = new System.Windows.Forms.TextBox();
-            this.precioUnidadTextBox = new System.Windows.Forms.TextBox();
-            this.activoCheckBox = new System.Windows.Forms.CheckBox();
-            this.productoExtranjeroCheckBox = new System.Windows.Forms.CheckBox();
-            this.productoNacionalCheckBox = new System.Windows.Forms.CheckBox();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.fotoPictureBox = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.datosdeInicioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.categoriasBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productoBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.listaCategoriasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.resultadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.contextoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.categoriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tiposBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tipoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.seguridadBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.productosBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.listaProductosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewCheckBoxColumn3 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
@@ -81,7 +52,28 @@
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.productoBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonCancelar = new System.Windows.Forms.ToolStripButton();
-            this.productoBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.listaProductosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productosBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.listaProductosDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dataGridViewCheckBoxColumn3 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.descripcionTextBox = new System.Windows.Forms.TextBox();
+            this.existenciaTextBox = new System.Windows.Forms.TextBox();
+            this.idTextBox = new System.Windows.Forms.TextBox();
+            this.precioUnidadTextBox = new System.Windows.Forms.TextBox();
+            this.activoCheckBox = new System.Windows.Forms.CheckBox();
+            this.productoExtranjeroCheckBox = new System.Windows.Forms.CheckBox();
+            this.seguridadBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fotoPictureBox = new System.Windows.Forms.PictureBox();
+            this.productoNacionalCheckBox = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             descripcionLabel = new System.Windows.Forms.Label();
             existenciaLabel = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
@@ -89,22 +81,14 @@
             activoLabel = new System.Windows.Forms.Label();
             productoExtranjeroLabel = new System.Windows.Forms.Label();
             productoNacionalLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.listaProductosDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datosdeInicioBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriasBLBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listaCategoriasBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.resultadoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.contextoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tiposBLBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tipoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.seguridadBLBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productosBLBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listaProductosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingNavigator)).BeginInit();
             this.productoBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaProductosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productosBLBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaProductosDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seguridadBLBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // descripcionLabel
@@ -122,7 +106,7 @@
             // 
             existenciaLabel.AutoSize = true;
             existenciaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            existenciaLabel.Location = new System.Drawing.Point(287, 104);
+            existenciaLabel.Location = new System.Drawing.Point(297, 105);
             existenciaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             existenciaLabel.Name = "existenciaLabel";
             existenciaLabel.Size = new System.Drawing.Size(91, 20);
@@ -188,216 +172,48 @@
             productoNacionalLabel.Text = "Producto Nacional:";
             productoNacionalLabel.Click += new System.EventHandler(this.productoNacionalLabel_Click);
             // 
-            // listaProductosDataGridView
+            // productoBindingNavigator
             // 
-            this.listaProductosDataGridView.AllowUserToAddRows = false;
-            this.listaProductosDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.listaProductosDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
-            this.listaProductosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewCheckBoxColumn1,
-            this.dataGridViewCheckBoxColumn2,
-            this.dataGridViewCheckBoxColumn3});
-            this.listaProductosDataGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.listaProductosDataGridView.Location = new System.Drawing.Point(0, 555);
-            this.listaProductosDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.listaProductosDataGridView.Name = "listaProductosDataGridView";
-            this.listaProductosDataGridView.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.listaProductosDataGridView.RowTemplate.Height = 24;
-            this.listaProductosDataGridView.Size = new System.Drawing.Size(1326, 500);
-            this.listaProductosDataGridView.TabIndex = 6;
-            this.listaProductosDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.listaProductosDataGridView_CellContentClick);
-            // 
-            // descripcionTextBox
-            // 
-            this.descripcionTextBox.Location = new System.Drawing.Point(383, 63);
-            this.descripcionTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.descripcionTextBox.Name = "descripcionTextBox";
-            this.descripcionTextBox.Size = new System.Drawing.Size(316, 26);
-            this.descripcionTextBox.TabIndex = 7;
-            // 
-            // existenciaTextBox
-            // 
-            this.existenciaTextBox.Location = new System.Drawing.Point(383, 101);
-            this.existenciaTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.existenciaTextBox.Name = "existenciaTextBox";
-            this.existenciaTextBox.Size = new System.Drawing.Size(132, 26);
-            this.existenciaTextBox.TabIndex = 8;
-            // 
-            // idTextBox
-            // 
-            this.idTextBox.Location = new System.Drawing.Point(140, 63);
-            this.idTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.idTextBox.Name = "idTextBox";
-            this.idTextBox.ReadOnly = true;
-            this.idTextBox.Size = new System.Drawing.Size(132, 26);
-            this.idTextBox.TabIndex = 9;
-            // 
-            // precioUnidadTextBox
-            // 
-            this.precioUnidadTextBox.Location = new System.Drawing.Point(140, 103);
-            this.precioUnidadTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.precioUnidadTextBox.Name = "precioUnidadTextBox";
-            this.precioUnidadTextBox.Size = new System.Drawing.Size(132, 26);
-            this.precioUnidadTextBox.TabIndex = 10;
-            // 
-            // activoCheckBox
-            // 
-            this.activoCheckBox.Location = new System.Drawing.Point(881, 41);
-            this.activoCheckBox.Margin = new System.Windows.Forms.Padding(4);
-            this.activoCheckBox.Name = "activoCheckBox";
-            this.activoCheckBox.Size = new System.Drawing.Size(139, 30);
-            this.activoCheckBox.TabIndex = 11;
-            this.activoCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // productoExtranjeroCheckBox
-            // 
-            this.productoExtranjeroCheckBox.Location = new System.Drawing.Point(907, 100);
-            this.productoExtranjeroCheckBox.Margin = new System.Windows.Forms.Padding(4);
-            this.productoExtranjeroCheckBox.Name = "productoExtranjeroCheckBox";
-            this.productoExtranjeroCheckBox.Size = new System.Drawing.Size(139, 30);
-            this.productoExtranjeroCheckBox.TabIndex = 13;
-            this.productoExtranjeroCheckBox.UseVisualStyleBackColor = true;
-            this.productoExtranjeroCheckBox.CheckedChanged += new System.EventHandler(this.productoExtranjeroCheckBox_CheckedChanged);
-            // 
-            // productoNacionalCheckBox
-            // 
-            this.productoNacionalCheckBox.Location = new System.Drawing.Point(902, 70);
-            this.productoNacionalCheckBox.Margin = new System.Windows.Forms.Padding(4);
-            this.productoNacionalCheckBox.Name = "productoNacionalCheckBox";
-            this.productoNacionalCheckBox.Size = new System.Drawing.Size(139, 30);
-            this.productoNacionalCheckBox.TabIndex = 15;
-            this.productoNacionalCheckBox.UseVisualStyleBackColor = true;
-            this.productoNacionalCheckBox.CheckedChanged += new System.EventHandler(this.productoNacionalCheckBox_CheckedChanged);
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.Filter = "jpg, png | *.jpg; *.png";
-            // 
-            // fotoPictureBox
-            // 
-            this.fotoPictureBox.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.fotoPictureBox.Location = new System.Drawing.Point(1074, 12);
-            this.fotoPictureBox.Name = "fotoPictureBox";
-            this.fotoPictureBox.Size = new System.Drawing.Size(225, 150);
-            this.fotoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.fotoPictureBox.TabIndex = 17;
-            this.fotoPictureBox.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(1074, 178);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(99, 30);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Agregar Foto";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(1185, 178);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(114, 30);
-            this.button2.TabIndex = 19;
-            this.button2.Text = "Remover Foto";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // datosdeInicioBindingSource
-            // 
-            this.datosdeInicioBindingSource.DataSource = typeof(BL.Supermercado.DatosdeInicio);
-            // 
-            // categoriasBLBindingSource
-            // 
-            this.categoriasBLBindingSource.DataSource = typeof(BL.Supermercado.CategoriasBL);
+            this.productoBindingNavigator.AddNewItem = null;
+            this.productoBindingNavigator.BindingSource = this.productoBindingSource;
+            this.productoBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.productoBindingNavigator.DeleteItem = null;
+            this.productoBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.productoBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem,
+            this.bindingNavigatorMovePreviousItem,
+            this.bindingNavigatorSeparator,
+            this.bindingNavigatorPositionItem,
+            this.bindingNavigatorCountItem,
+            this.bindingNavigatorSeparator1,
+            this.bindingNavigatorMoveNextItem,
+            this.bindingNavigatorMoveLastItem,
+            this.bindingNavigatorSeparator2,
+            this.bindingNavigatorAddNewItem,
+            this.bindingNavigatorDeleteItem,
+            this.productoBindingNavigatorSaveItem,
+            this.toolStripButtonCancelar});
+            this.productoBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.productoBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.productoBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.productoBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.productoBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.productoBindingNavigator.Name = "productoBindingNavigator";
+            this.productoBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.productoBindingNavigator.Size = new System.Drawing.Size(1284, 27);
+            this.productoBindingNavigator.TabIndex = 6;
+            this.productoBindingNavigator.Text = "bindingNavigator1";
             // 
             // productoBindingSource
             // 
             this.productoBindingSource.DataSource = typeof(BL.Supermercado.Producto);
             // 
-            // listaCategoriasBindingSource
+            // bindingNavigatorCountItem
             // 
-            this.listaCategoriasBindingSource.DataMember = "ListaCategorias";
-            this.listaCategoriasBindingSource.DataSource = this.categoriasBLBindingSource;
-            // 
-            // resultadoBindingSource
-            // 
-            this.resultadoBindingSource.DataSource = typeof(BL.Supermercado.Resultado);
-            // 
-            // contextoBindingSource
-            // 
-            this.contextoBindingSource.DataSource = typeof(BL.Supermercado.Contexto);
-            // 
-            // categoriaBindingSource
-            // 
-            this.categoriaBindingSource.DataSource = typeof(BL.Supermercado.Categoria);
-            // 
-            // tiposBLBindingSource
-            // 
-            this.tiposBLBindingSource.DataSource = typeof(BL.Supermercado.TiposBL);
-            // 
-            // tipoBindingSource
-            // 
-            this.tipoBindingSource.DataSource = typeof(BL.Supermercado.Tipo);
-            // 
-            // seguridadBLBindingSource
-            // 
-            this.seguridadBLBindingSource.DataSource = typeof(BL.Supermercado.SeguridadBL);
-            // 
-            // productosBLBindingSource
-            // 
-            this.productosBLBindingSource.DataSource = typeof(BL.Supermercado.ProductosBL);
-            // 
-            // listaProductosBindingSource
-            // 
-            this.listaProductosBindingSource.DataMember = "ListaProductos";
-            this.listaProductosBindingSource.DataSource = this.productosBLBindingSource;
-            // 
-            // dataGridViewCheckBoxColumn3
-            // 
-            this.dataGridViewCheckBoxColumn3.DataPropertyName = "ProductoExtranjero";
-            this.dataGridViewCheckBoxColumn3.HeaderText = "ProductoExtranjero";
-            this.dataGridViewCheckBoxColumn3.Name = "dataGridViewCheckBoxColumn3";
-            // 
-            // dataGridViewCheckBoxColumn2
-            // 
-            this.dataGridViewCheckBoxColumn2.DataPropertyName = "ProductoNacional";
-            this.dataGridViewCheckBoxColumn2.HeaderText = "ProductoNacional";
-            this.dataGridViewCheckBoxColumn2.Name = "dataGridViewCheckBoxColumn2";
-            // 
-            // dataGridViewCheckBoxColumn1
-            // 
-            this.dataGridViewCheckBoxColumn1.DataPropertyName = "Activo";
-            this.dataGridViewCheckBoxColumn1.HeaderText = "Activo";
-            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Existencia";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Existencia";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "PrecioUnidad";
-            this.dataGridViewTextBoxColumn3.HeaderText = "PrecioUnidad";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Descripcion";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Descripcion";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -430,13 +246,6 @@
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(49, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
             // bindingNavigatorSeparator1
             // 
@@ -506,37 +315,190 @@
             this.toolStripButtonCancelar.Visible = false;
             this.toolStripButtonCancelar.Click += new System.EventHandler(this.toolStripButtonCancelar_Click);
             // 
-            // productoBindingNavigator
+            // listaProductosBindingSource
             // 
-            this.productoBindingNavigator.AddNewItem = null;
-            this.productoBindingNavigator.BindingSource = this.productoBindingSource;
-            this.productoBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.productoBindingNavigator.DeleteItem = null;
-            this.productoBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.productoBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.productoBindingNavigatorSaveItem,
-            this.toolStripButtonCancelar});
-            this.productoBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.productoBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.productoBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.productoBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.productoBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.productoBindingNavigator.Name = "productoBindingNavigator";
-            this.productoBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.productoBindingNavigator.Size = new System.Drawing.Size(1326, 27);
-            this.productoBindingNavigator.TabIndex = 6;
-            this.productoBindingNavigator.Text = "bindingNavigator1";
+            this.listaProductosBindingSource.DataMember = "ListaProductos";
+            this.listaProductosBindingSource.DataSource = this.productosBLBindingSource;
+            this.listaProductosBindingSource.CurrentChanged += new System.EventHandler(this.listaProductosBindingSource_CurrentChanged);
+            // 
+            // productosBLBindingSource
+            // 
+            this.productosBLBindingSource.DataSource = typeof(BL.Supermercado.ProductosBL);
+            // 
+            // listaProductosDataGridView
+            // 
+            this.listaProductosDataGridView.AllowUserToAddRows = false;
+            this.listaProductosDataGridView.AutoGenerateColumns = false;
+            this.listaProductosDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.listaProductosDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            this.listaProductosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewCheckBoxColumn1,
+            this.dataGridViewCheckBoxColumn2,
+            this.dataGridViewCheckBoxColumn3});
+            this.listaProductosDataGridView.DataSource = this.listaProductosBindingSource;
+            this.listaProductosDataGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.listaProductosDataGridView.Location = new System.Drawing.Point(0, 208);
+            this.listaProductosDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listaProductosDataGridView.Name = "listaProductosDataGridView";
+            this.listaProductosDataGridView.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.listaProductosDataGridView.RowTemplate.Height = 24;
+            this.listaProductosDataGridView.Size = new System.Drawing.Size(1284, 500);
+            this.listaProductosDataGridView.TabIndex = 6;
+            this.listaProductosDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.listaProductosDataGridView_CellContentClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Descripcion";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Descripcion";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "PrecioUnidad";
+            this.dataGridViewTextBoxColumn3.HeaderText = "PrecioUnidad";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Existencia";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Existencia";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewCheckBoxColumn1
+            // 
+            this.dataGridViewCheckBoxColumn1.DataPropertyName = "Activo";
+            this.dataGridViewCheckBoxColumn1.HeaderText = "Activo";
+            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            // 
+            // dataGridViewCheckBoxColumn2
+            // 
+            this.dataGridViewCheckBoxColumn2.DataPropertyName = "ProductoNacional";
+            this.dataGridViewCheckBoxColumn2.HeaderText = "ProductoNacional";
+            this.dataGridViewCheckBoxColumn2.Name = "dataGridViewCheckBoxColumn2";
+            // 
+            // dataGridViewCheckBoxColumn3
+            // 
+            this.dataGridViewCheckBoxColumn3.DataPropertyName = "ProductoExtranjero";
+            this.dataGridViewCheckBoxColumn3.HeaderText = "ProductoExtranjero";
+            this.dataGridViewCheckBoxColumn3.Name = "dataGridViewCheckBoxColumn3";
+            // 
+            // descripcionTextBox
+            // 
+            this.descripcionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaProductosBindingSource, "Descripcion", true));
+            this.descripcionTextBox.Location = new System.Drawing.Point(383, 63);
+            this.descripcionTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.descripcionTextBox.Name = "descripcionTextBox";
+            this.descripcionTextBox.Size = new System.Drawing.Size(316, 26);
+            this.descripcionTextBox.TabIndex = 7;
+            // 
+            // existenciaTextBox
+            // 
+            this.existenciaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaProductosBindingSource, "Existencia", true));
+            this.existenciaTextBox.Location = new System.Drawing.Point(383, 101);
+            this.existenciaTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.existenciaTextBox.Name = "existenciaTextBox";
+            this.existenciaTextBox.Size = new System.Drawing.Size(132, 26);
+            this.existenciaTextBox.TabIndex = 8;
+            // 
+            // idTextBox
+            // 
+            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaProductosBindingSource, "id", true));
+            this.idTextBox.Location = new System.Drawing.Point(140, 63);
+            this.idTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.idTextBox.Name = "idTextBox";
+            this.idTextBox.ReadOnly = true;
+            this.idTextBox.Size = new System.Drawing.Size(132, 26);
+            this.idTextBox.TabIndex = 9;
+            // 
+            // precioUnidadTextBox
+            // 
+            this.precioUnidadTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaProductosBindingSource, "PrecioUnidad", true));
+            this.precioUnidadTextBox.Location = new System.Drawing.Point(140, 103);
+            this.precioUnidadTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.precioUnidadTextBox.Name = "precioUnidadTextBox";
+            this.precioUnidadTextBox.Size = new System.Drawing.Size(132, 26);
+            this.precioUnidadTextBox.TabIndex = 10;
+            // 
+            // activoCheckBox
+            // 
+            this.activoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listaProductosBindingSource, "Activo", true));
+            this.activoCheckBox.Location = new System.Drawing.Point(881, 41);
+            this.activoCheckBox.Margin = new System.Windows.Forms.Padding(4);
+            this.activoCheckBox.Name = "activoCheckBox";
+            this.activoCheckBox.Size = new System.Drawing.Size(139, 30);
+            this.activoCheckBox.TabIndex = 11;
+            this.activoCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // productoExtranjeroCheckBox
+            // 
+            this.productoExtranjeroCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listaProductosBindingSource, "ProductoExtranjero", true));
+            this.productoExtranjeroCheckBox.Location = new System.Drawing.Point(881, 95);
+            this.productoExtranjeroCheckBox.Margin = new System.Windows.Forms.Padding(4);
+            this.productoExtranjeroCheckBox.Name = "productoExtranjeroCheckBox";
+            this.productoExtranjeroCheckBox.Size = new System.Drawing.Size(139, 30);
+            this.productoExtranjeroCheckBox.TabIndex = 13;
+            this.productoExtranjeroCheckBox.UseVisualStyleBackColor = true;
+            this.productoExtranjeroCheckBox.CheckedChanged += new System.EventHandler(this.productoExtranjeroCheckBox_CheckedChanged);
+            // 
+            // seguridadBLBindingSource
+            // 
+            this.seguridadBLBindingSource.DataSource = typeof(BL.Supermercado.SeguridadBL);
+            // 
+            // fotoPictureBox
+            // 
+            this.fotoPictureBox.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.fotoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.listaProductosBindingSource, "Foto", true, System.Windows.Forms.DataSourceUpdateMode.Never));
+            this.fotoPictureBox.Location = new System.Drawing.Point(966, 12);
+            this.fotoPictureBox.Name = "fotoPictureBox";
+            this.fotoPictureBox.Size = new System.Drawing.Size(225, 150);
+            this.fotoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.fotoPictureBox.TabIndex = 17;
+            this.fotoPictureBox.TabStop = false;
+            // 
+            // productoNacionalCheckBox
+            // 
+            this.productoNacionalCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listaProductosBindingSource, "ProductoNacional", true));
+            this.productoNacionalCheckBox.Location = new System.Drawing.Point(881, 67);
+            this.productoNacionalCheckBox.Margin = new System.Windows.Forms.Padding(4);
+            this.productoNacionalCheckBox.Name = "productoNacionalCheckBox";
+            this.productoNacionalCheckBox.Size = new System.Drawing.Size(139, 30);
+            this.productoNacionalCheckBox.TabIndex = 15;
+            this.productoNacionalCheckBox.UseVisualStyleBackColor = true;
+            this.productoNacionalCheckBox.CheckedChanged += new System.EventHandler(this.productoNacionalCheckBox_CheckedChanged);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(966, 178);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(99, 30);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Agregar Foto";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(1077, 178);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(114, 30);
+            this.button2.TabIndex = 19;
+            this.button2.Text = "Remover Foto";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.Filter = "jpg, png | *.jpg; *.png";
             // 
             // FormProductos
             // 
@@ -544,7 +506,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1326, 1055);
+            this.ClientSize = new System.Drawing.Size(1284, 708);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.fotoPictureBox);
@@ -572,41 +534,39 @@
             this.Name = "FormProductos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormProductos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.listaProductosDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datosdeInicioBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriasBLBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listaCategoriasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.resultadoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.contextoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tiposBLBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tipoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.seguridadBLBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productosBLBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listaProductosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingNavigator)).EndInit();
             this.productoBindingNavigator.ResumeLayout(false);
             this.productoBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaProductosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productosBLBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaProductosDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seguridadBLBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
+        private System.Windows.Forms.BindingSource productoBindingSource;
+        private System.Windows.Forms.BindingSource productosBLBindingSource;
+        private System.Windows.Forms.BindingSource seguridadBLBindingSource;
+        private System.Windows.Forms.BindingNavigator productoBindingNavigator;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
+        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
+        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
+        private System.Windows.Forms.ToolStripButton productoBindingNavigatorSaveItem;
+        private System.Windows.Forms.BindingSource listaProductosBindingSource;
         private System.Windows.Forms.DataGridView listaProductosDataGridView;
-        private System.Windows.Forms.TextBox descripcionTextBox;
-        private System.Windows.Forms.TextBox existenciaTextBox;
-        private System.Windows.Forms.TextBox idTextBox;
-        private System.Windows.Forms.TextBox precioUnidadTextBox;
-        private System.Windows.Forms.CheckBox activoCheckBox;
-        private System.Windows.Forms.CheckBox productoExtranjeroCheckBox;
-        private System.Windows.Forms.CheckBox productoNacionalCheckBox;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.PictureBox fotoPictureBox;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -614,31 +574,17 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn2;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn3;
-        private System.Windows.Forms.BindingSource datosdeInicioBindingSource;
-        private System.Windows.Forms.BindingSource categoriasBLBindingSource;
-        private System.Windows.Forms.BindingSource productoBindingSource;
-        private System.Windows.Forms.BindingSource listaCategoriasBindingSource;
-        private System.Windows.Forms.BindingSource resultadoBindingSource;
-        private System.Windows.Forms.BindingSource contextoBindingSource;
-        private System.Windows.Forms.BindingSource categoriaBindingSource;
-        private System.Windows.Forms.BindingSource tiposBLBindingSource;
-        private System.Windows.Forms.BindingSource tipoBindingSource;
-        private System.Windows.Forms.BindingSource seguridadBLBindingSource;
-        private System.Windows.Forms.BindingSource productosBLBindingSource;
-        private System.Windows.Forms.BindingSource listaProductosBindingSource;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
-        private System.Windows.Forms.ToolStripButton productoBindingNavigatorSaveItem;
+        private System.Windows.Forms.TextBox descripcionTextBox;
+        private System.Windows.Forms.TextBox existenciaTextBox;
+        private System.Windows.Forms.TextBox idTextBox;
+        private System.Windows.Forms.TextBox precioUnidadTextBox;
+        private System.Windows.Forms.CheckBox activoCheckBox;
+        private System.Windows.Forms.CheckBox productoExtranjeroCheckBox;
         private System.Windows.Forms.ToolStripButton toolStripButtonCancelar;
-        private System.Windows.Forms.BindingNavigator productoBindingNavigator;
+        private System.Windows.Forms.PictureBox fotoPictureBox;
+        private System.Windows.Forms.CheckBox productoNacionalCheckBox;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

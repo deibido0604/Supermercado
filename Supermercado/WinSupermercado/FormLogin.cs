@@ -36,19 +36,15 @@ namespace WinSupermercado
         private void button1_Click(object sender, EventArgs e)
         {//botón de entrar
             //variable para el  usuario y contraseña
-            string usuario;
-            string contrasena;
+            string Usuario;
+            string Contra;
 
-            usuario = textBox1.Text;
-            contrasena = textBox2.Text;
+            Usuario = textBox1.Text;
+            Contra = textBox2.Text;
 
-            button1.Enabled = false;
-            button1.Text = "Verificando...";
-            Application.DoEvents();
-
-            //var resultado = _seguridad.Autorizar(usuario, contrasena);
+            var resultado = _seguridad.Autorizar(Usuario, Contra);
             //inicio del ciclo if-else
-            /*if (resultado == true)
+            if (resultado == true)
             {
                 this.Close();
                 MessageBox.Show("Bienvenidos a Super Market P.O.S");
@@ -57,11 +53,7 @@ namespace WinSupermercado
             {
                 MessageBox.Show("Usuario o Contraseña incorrecta!");
             }//fin del ciclo if-else
-            */
-            if(usuario == "admin" && contrasena == "123")
-            {
-                this.Close();
-            }
+
 
         }
 

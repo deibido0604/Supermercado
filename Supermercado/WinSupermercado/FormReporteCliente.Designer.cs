@@ -32,15 +32,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.productosBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.listaCategoriasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.categoriasBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.listaProductosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productosBLBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listaCategoriasBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriasBLBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listaProductosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -67,23 +59,6 @@
             // 
             this.productoBindingSource.DataSource = typeof(BL.Supermercado.Producto);
             // 
-            // productosBLBindingSource
-            // 
-            this.productosBLBindingSource.DataSource = typeof(BL.Supermercado.ProductosBL);
-            // 
-            // listaCategoriasBindingSource
-            // 
-            //this.listaCategoriasBindingSource.DataSource = typeof(BL.Supermercado.Usuario);
-            // 
-            // categoriasBLBindingSource
-            // 
-           // this.categoriasBLBindingSource.DataSource = typeof(BL.Supermercado.UsuariosBL);
-            // 
-            // listaProductosBindingSource
-            // 
-            this.listaProductosBindingSource.DataMember = "ListaProductos";
-            this.listaProductosBindingSource.DataSource = this.productosBLBindingSource;
-            // 
             // FormReporteCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -96,10 +71,6 @@
             this.Text = "FormReporteCliente";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productosBLBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listaCategoriasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriasBLBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listaProductosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -110,9 +81,5 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.BindingSource productoBindingSource;
-        private System.Windows.Forms.BindingSource productosBLBindingSource;
-        private System.Windows.Forms.BindingSource listaCategoriasBindingSource;
-        private System.Windows.Forms.BindingSource categoriasBLBindingSource;
-        private System.Windows.Forms.BindingSource listaProductosBindingSource;
     }
 }

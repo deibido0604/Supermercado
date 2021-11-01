@@ -150,16 +150,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="packages.config" />
-    <None Include="Properties\DataSources\BL.Supermercado.Categoria.datasource" />
-    <None Include="Properties\DataSources\BL.Supermercado.CategoriasBL.datasource" />
-    <None Include="Properties\DataSources\BL.Supermercado.Contexto.datasource" />
-    <None Include="Properties\DataSources\BL.Supermercado.DatosdeInicio.datasource" />
     <None Include="Properties\DataSources\BL.Supermercado.Producto.datasource" />
     <None Include="Properties\DataSources\BL.Supermercado.ProductosBL.datasource" />
-    <None Include="Properties\DataSources\BL.Supermercado.Resultado.datasource" />
     <None Include="Properties\DataSources\BL.Supermercado.SeguridadBL.datasource" />
-    <None Include="Properties\DataSources\BL.Supermercado.Tipo.datasource" />
-    <None Include="Properties\DataSources\BL.Supermercado.TiposBL.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

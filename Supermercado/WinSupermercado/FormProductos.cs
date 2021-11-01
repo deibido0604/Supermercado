@@ -1,4 +1,4 @@
-﻿ using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,8 +15,6 @@ namespace WinSupermercado
     public partial class FormProductos : Form
     {
         ProductosBL _productos;
-        CategoriasBL _categorias;
-        TiposBL _tiposBL;
 
         public FormProductos()
         {
@@ -25,12 +23,7 @@ namespace WinSupermercado
             _productos = new ProductosBL();
             listaProductosBindingSource.DataSource = _productos.ObtenerProductos();
 
-            _categorias = new CategoriasBL();
-            listaProductosBindingSource.DataSource = _categorias.ObtenerCategorias();
-
-            _tiposBL = new TiposBL();
-            listaProductosBindingSource.DataSource = _tiposBL.ObtenerTipos();
-
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -103,7 +96,6 @@ namespace WinSupermercado
             {
                 producto.Foto = null;
             }
-
             var resultado = _productos.GuardarProducto(producto);
 
             if (resultado.Exitoso == true)
@@ -213,6 +205,11 @@ namespace WinSupermercado
         private void button2_Click(object sender, EventArgs e)
         {
             fotoPictureBox.Image = null;
+        }
+
+        private void listaProductosBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
