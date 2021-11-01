@@ -23,7 +23,7 @@ namespace BL.Supermercado
         }
 
         public BindingList<Producto> ObtenerProductos()
-        {//LISTA DE PRODUCTOoooooo
+        {//LISTA DE PRODUCTO
             _contexto.Productos.Load();
             ListaProductos = _contexto.Productos.Local.ToBindingList();
 
@@ -117,8 +117,8 @@ namespace BL.Supermercado
         public Tipo Tipo { get; set; }
 
         //De UsuarioBL
-        public string UsuarioNombre { get; set; }
-        public Usuario Usuario { get; set; }
+        //public string UsuarioNombre { get; set; }
+        //public Usuario Usuario { get; set; }
 
         public byte[] Foto { get; set; }
         public bool Activo { get; set; }

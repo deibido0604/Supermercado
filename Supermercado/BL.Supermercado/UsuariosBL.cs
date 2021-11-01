@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 using System.Data.Entity;
-
+/*
 namespace BL.Supermercado
 {
     public class UsuariosBL
@@ -29,4 +29,4 @@ namespace BL.Supermercado
         public string Nombre { get; set; }
         public string Contrasena { get; set; }
     }
-}
+}*/

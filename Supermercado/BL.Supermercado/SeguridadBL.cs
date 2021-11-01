@@ -13,7 +13,7 @@ namespace BL.Supermercado
         {
             _contexto = new Contexto();
         }
-
+        /*
         public bool Autorizar(string usuario, string contrasena)
         {
             var usuarios = _contexto.Usuarios.ToList();
@@ -25,7 +25,7 @@ namespace BL.Supermercado
                 }
             }
             return false;
-        }
+        }*/
      
     }
 }

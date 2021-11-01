@@ -73,11 +73,11 @@
             // 
             // listaCategoriasBindingSource
             // 
-            this.listaCategoriasBindingSource.DataSource = typeof(BL.Supermercado.Usuario);
+            //this.listaCategoriasBindingSource.DataSource = typeof(BL.Supermercado.Usuario);
             // 
             // categoriasBLBindingSource
             // 
-            this.categoriasBLBindingSource.DataSource = typeof(BL.Supermercado.UsuariosBL);
+           // this.categoriasBLBindingSource.DataSource = typeof(BL.Supermercado.UsuariosBL);
             // 
             // listaProductosBindingSource
             // 
