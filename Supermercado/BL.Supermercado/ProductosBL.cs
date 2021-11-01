@@ -23,7 +23,7 @@ namespace BL.Supermercado
         }
 
         public BindingList<Producto> ObtenerProductos()
-        {
+        {//LISTA DE PRODUCTO
             _contexto.Productos.Load();
             ListaProductos = _contexto.Productos.Local.ToBindingList();
 
