@@ -26,11 +26,11 @@ namespace WinSupermercado
             listaProductosBindingSource.DataSource = _productos.ObtenerProductos();
 
             _categorias = new CategoriasBL();
-            listaCategoriasBindingSource.DataSource = _categorias.ObtenerCategorias();
+            listaProductosBindingSource.DataSource = _categorias.ObtenerCategorias();
 
             _tiposBL = new TiposBL();
-            listaTiposBindingSource.DataSource = _tiposBL.ObtenerTipos();
-            
+            listaProductosBindingSource.DataSource = _tiposBL.ObtenerTipos();
+
         }
 
         private void button1_Click(object sender, EventArgs e)

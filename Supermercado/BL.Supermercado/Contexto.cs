@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BL.Supermercado;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
@@ -10,7 +11,7 @@ namespace BL.Supermercado
 {
     public class Contexto: DbContext 
     {
-        public Contexto(): base("Productos Supermercado")
+        public Contexto(): base("Productos Supermercados")
         {
 
         }
@@ -21,8 +22,7 @@ namespace BL.Supermercado
             Database.SetInitializer(new DatosdeInicio()); 
 
         }
-
-
+        
         public DbSet<Producto> Productos { get; set; }
         public DbSet<Categoria> Categorias { get; set; }
         public DbSet<Tipo> Tipos { get; set; }

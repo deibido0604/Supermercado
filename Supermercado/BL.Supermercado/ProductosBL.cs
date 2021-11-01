@@ -111,8 +111,14 @@ namespace BL.Supermercado
         //De CategoriasBL
         public int CategoriaId { get; set; }
         public Categoria Categoria { get; set; }
+
+        //De TipoId
         public int TipoId { get; set; }
         public Tipo Tipo { get; set; }
+
+        //De UsuarioBL
+        public string UsuarioNombre { get; set; }
+        public Usuario Usuario { get; set; }
 
         public byte[] Foto { get; set; }
         public bool Activo { get; set; }

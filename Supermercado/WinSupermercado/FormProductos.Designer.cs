@@ -37,7 +37,10 @@
             System.Windows.Forms.Label productoExtranjeroLabel;
             System.Windows.Forms.Label productoNacionalLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProductos));
+            System.Windows.Forms.Label categoriaIdLabel;
+            System.Windows.Forms.Label tipoIdLabel;
             this.productoBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -52,7 +55,15 @@
             this.productoBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonCancelar = new System.Windows.Forms.ToolStripButton();
             this.listaProductosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productosBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.listaProductosDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dataGridViewCheckBoxColumn3 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.descripcionTextBox = new System.Windows.Forms.TextBox();
             this.existenciaTextBox = new System.Windows.Forms.TextBox();
             this.idTextBox = new System.Windows.Forms.TextBox();
@@ -64,16 +75,16 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.productosBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dataGridViewCheckBoxColumn3 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.seguridadBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.categoriasBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tipoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tiposBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.categoriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.categoriaIdComboBox = new System.Windows.Forms.ComboBox();
+            this.tipoIdComboBox = new System.Windows.Forms.ComboBox();
+            this.contextoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.datosdeInicioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.resultadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             descripcionLabel = new System.Windows.Forms.Label();
             existenciaLabel = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
@@ -81,14 +92,23 @@
             activoLabel = new System.Windows.Forms.Label();
             productoExtranjeroLabel = new System.Windows.Forms.Label();
             productoNacionalLabel = new System.Windows.Forms.Label();
+            categoriaIdLabel = new System.Windows.Forms.Label();
+            tipoIdLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingNavigator)).BeginInit();
             this.productoBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaProductosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productosBLBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaProductosDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productosBLBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.seguridadBLBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriasBLBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tiposBLBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.contextoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datosdeInicioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.resultadoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // descripcionLabel
@@ -200,9 +220,13 @@
             this.productoBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.productoBindingNavigator.Name = "productoBindingNavigator";
             this.productoBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.productoBindingNavigator.Size = new System.Drawing.Size(1284, 27);
+            this.productoBindingNavigator.Size = new System.Drawing.Size(1326, 27);
             this.productoBindingNavigator.TabIndex = 6;
             this.productoBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // productoBindingSource
+            // 
+            this.productoBindingSource.DataSource = typeof(BL.Supermercado.Producto);
             // 
             // bindingNavigatorCountItem
             // 
@@ -316,6 +340,10 @@
             this.listaProductosBindingSource.DataMember = "ListaProductos";
             this.listaProductosBindingSource.DataSource = this.productosBLBindingSource;
             // 
+            // productosBLBindingSource
+            // 
+            this.productosBLBindingSource.DataSource = typeof(BL.Supermercado.ProductosBL);
+            // 
             // listaProductosDataGridView
             // 
             this.listaProductosDataGridView.AllowUserToAddRows = false;
@@ -332,14 +360,56 @@
             this.dataGridViewCheckBoxColumn3});
             this.listaProductosDataGridView.DataSource = this.listaProductosBindingSource;
             this.listaProductosDataGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.listaProductosDataGridView.Location = new System.Drawing.Point(0, 208);
+            this.listaProductosDataGridView.Location = new System.Drawing.Point(0, 555);
             this.listaProductosDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listaProductosDataGridView.Name = "listaProductosDataGridView";
             this.listaProductosDataGridView.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.listaProductosDataGridView.RowTemplate.Height = 24;
-            this.listaProductosDataGridView.Size = new System.Drawing.Size(1284, 500);
+            this.listaProductosDataGridView.Size = new System.Drawing.Size(1326, 500);
             this.listaProductosDataGridView.TabIndex = 6;
             this.listaProductosDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.listaProductosDataGridView_CellContentClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Descripcion";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Descripcion";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "PrecioUnidad";
+            this.dataGridViewTextBoxColumn3.HeaderText = "PrecioUnidad";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Existencia";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Existencia";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewCheckBoxColumn1
+            // 
+            this.dataGridViewCheckBoxColumn1.DataPropertyName = "Activo";
+            this.dataGridViewCheckBoxColumn1.HeaderText = "Activo";
+            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            // 
+            // dataGridViewCheckBoxColumn2
+            // 
+            this.dataGridViewCheckBoxColumn2.DataPropertyName = "ProductoNacional";
+            this.dataGridViewCheckBoxColumn2.HeaderText = "ProductoNacional";
+            this.dataGridViewCheckBoxColumn2.Name = "dataGridViewCheckBoxColumn2";
+            // 
+            // dataGridViewCheckBoxColumn3
+            // 
+            this.dataGridViewCheckBoxColumn3.DataPropertyName = "ProductoExtranjero";
+            this.dataGridViewCheckBoxColumn3.HeaderText = "ProductoExtranjero";
+            this.dataGridViewCheckBoxColumn3.Name = "dataGridViewCheckBoxColumn3";
             // 
             // descripcionTextBox
             // 
@@ -445,59 +515,73 @@
             // 
             this.openFileDialog1.Filter = "jpg, png | *.jpg; *.png";
             // 
-            // productosBLBindingSource
-            // 
-            this.productosBLBindingSource.DataSource = typeof(BL.Supermercado.ProductosBL);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Descripcion";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Descripcion";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "PrecioUnidad";
-            this.dataGridViewTextBoxColumn3.HeaderText = "PrecioUnidad";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Existencia";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Existencia";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewCheckBoxColumn1
-            // 
-            this.dataGridViewCheckBoxColumn1.DataPropertyName = "Activo";
-            this.dataGridViewCheckBoxColumn1.HeaderText = "Activo";
-            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
-            // 
-            // dataGridViewCheckBoxColumn2
-            // 
-            this.dataGridViewCheckBoxColumn2.DataPropertyName = "ProductoNacional";
-            this.dataGridViewCheckBoxColumn2.HeaderText = "ProductoNacional";
-            this.dataGridViewCheckBoxColumn2.Name = "dataGridViewCheckBoxColumn2";
-            // 
-            // dataGridViewCheckBoxColumn3
-            // 
-            this.dataGridViewCheckBoxColumn3.DataPropertyName = "ProductoExtranjero";
-            this.dataGridViewCheckBoxColumn3.HeaderText = "ProductoExtranjero";
-            this.dataGridViewCheckBoxColumn3.Name = "dataGridViewCheckBoxColumn3";
-            // 
-            // productoBindingSource
-            // 
-            this.productoBindingSource.DataSource = typeof(BL.Supermercado.Producto);
-            // 
             // seguridadBLBindingSource
             // 
             this.seguridadBLBindingSource.DataSource = typeof(BL.Supermercado.SeguridadBL);
+            // 
+            // categoriasBLBindingSource
+            // 
+            this.categoriasBLBindingSource.DataSource = typeof(BL.Supermercado.CategoriasBL);
+            // 
+            // tipoBindingSource
+            // 
+            this.tipoBindingSource.DataSource = typeof(BL.Supermercado.Tipo);
+            // 
+            // tiposBLBindingSource
+            // 
+            this.tiposBLBindingSource.DataSource = typeof(BL.Supermercado.TiposBL);
+            // 
+            // categoriaBindingSource
+            // 
+            this.categoriaBindingSource.DataSource = typeof(BL.Supermercado.Categoria);
+            // 
+            // categoriaIdLabel
+            // 
+            categoriaIdLabel.AutoSize = true;
+            categoriaIdLabel.Location = new System.Drawing.Point(273, 137);
+            categoriaIdLabel.Name = "categoriaIdLabel";
+            categoriaIdLabel.Size = new System.Drawing.Size(104, 20);
+            categoriaIdLabel.TabIndex = 19;
+            categoriaIdLabel.Text = "Categoria Id:";
+            // 
+            // categoriaIdComboBox
+            // 
+            this.categoriaIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaProductosBindingSource, "CategoriaId", true));
+            this.categoriaIdComboBox.FormattingEnabled = true;
+            this.categoriaIdComboBox.Location = new System.Drawing.Point(383, 134);
+            this.categoriaIdComboBox.Name = "categoriaIdComboBox";
+            this.categoriaIdComboBox.Size = new System.Drawing.Size(121, 28);
+            this.categoriaIdComboBox.TabIndex = 20;
+            // 
+            // tipoIdLabel
+            // 
+            tipoIdLabel.AutoSize = true;
+            tipoIdLabel.Location = new System.Drawing.Point(313, 183);
+            tipoIdLabel.Name = "tipoIdLabel";
+            tipoIdLabel.Size = new System.Drawing.Size(64, 20);
+            tipoIdLabel.TabIndex = 21;
+            tipoIdLabel.Text = "Tipo Id:";
+            // 
+            // tipoIdComboBox
+            // 
+            this.tipoIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaProductosBindingSource, "TipoId", true));
+            this.tipoIdComboBox.FormattingEnabled = true;
+            this.tipoIdComboBox.Location = new System.Drawing.Point(383, 180);
+            this.tipoIdComboBox.Name = "tipoIdComboBox";
+            this.tipoIdComboBox.Size = new System.Drawing.Size(121, 28);
+            this.tipoIdComboBox.TabIndex = 22;
+            // 
+            // contextoBindingSource
+            // 
+            this.contextoBindingSource.DataSource = typeof(BL.Supermercado.Contexto);
+            // 
+            // datosdeInicioBindingSource
+            // 
+            this.datosdeInicioBindingSource.DataSource = typeof(BL.Supermercado.DatosdeInicio);
+            // 
+            // resultadoBindingSource
+            // 
+            this.resultadoBindingSource.DataSource = typeof(BL.Supermercado.Resultado);
             // 
             // FormProductos
             // 
@@ -505,7 +589,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1284, 708);
+            this.ClientSize = new System.Drawing.Size(1326, 1055);
+            this.Controls.Add(tipoIdLabel);
+            this.Controls.Add(this.tipoIdComboBox);
+            this.Controls.Add(categoriaIdLabel);
+            this.Controls.Add(this.categoriaIdComboBox);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.fotoPictureBox);
@@ -536,12 +624,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingNavigator)).EndInit();
             this.productoBindingNavigator.ResumeLayout(false);
             this.productoBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaProductosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productosBLBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaProductosDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productosBLBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.seguridadBLBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriasBLBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tiposBLBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.contextoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datosdeInicioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.resultadoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -585,5 +680,14 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.BindingSource categoriasBLBindingSource;
+        private System.Windows.Forms.BindingSource tipoBindingSource;
+        private System.Windows.Forms.BindingSource tiposBLBindingSource;
+        private System.Windows.Forms.BindingSource categoriaBindingSource;
+        private System.Windows.Forms.ComboBox categoriaIdComboBox;
+        private System.Windows.Forms.ComboBox tipoIdComboBox;
+        private System.Windows.Forms.BindingSource contextoBindingSource;
+        private System.Windows.Forms.BindingSource datosdeInicioBindingSource;
+        private System.Windows.Forms.BindingSource resultadoBindingSource;
     }
 }

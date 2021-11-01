@@ -8,9 +8,8 @@ namespace BL.Supermercado
         protected override void Seed (Contexto contexto)
         {
             var UsuarioAdmin = new Usuario();
-            //UsuarioAdmin.Nombre = 'admin';
-            //UsuarioAdmin.Contrasena = '123';
-
+            UsuarioAdmin.Nombre = "admin";
+            UsuarioAdmin.Contrasena = "123";
             contexto.Usuarios.Add(UsuarioAdmin);
 
             var categoria1 = new Categoria();
