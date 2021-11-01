@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +15,8 @@ namespace WinSupermercado
     public partial class FormProductos : Form
     {
         ProductosBL _productos;
+        CategoriasBL _categorias;
+        TiposBL _tiposBL;
 
         public FormProductos()
         {
@@ -23,6 +25,11 @@ namespace WinSupermercado
             _productos = new ProductosBL();
             listaProductosBindingSource.DataSource = _productos.ObtenerProductos();
 
+            _categorias = new CategoriasBL();
+            listaCategoriasBindingSource.DataSource = _categorias.ObtenerCategorias();
+
+            _tiposBL = new TiposBL();
+            listaTiposBindingSource.DataSource = _tiposBL.ObtenerTipos();
             
         }
 

@@ -84,6 +84,19 @@ namespace BL.Supermercado
                 resultado.Mensaje = "El precio debe ser mayor que cero";
                 resultado.Exitoso = false;
             }
+
+            if (producto.TipoId == 0)
+            {
+                resultado.Mensaje = "Seleccione un Tipo";
+                resultado.Exitoso = false;
+            }
+
+            if (producto.CategoriaId == 0)
+            {
+                resultado.Mensaje = "Seleccione una categoria";
+                resultado.Exitoso = false;
+            }
+
             return resultado;
         }
     }

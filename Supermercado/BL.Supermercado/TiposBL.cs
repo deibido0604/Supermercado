@@ -15,7 +15,7 @@ namespace BL.Supermercado
             ListaTipos = new BindingList<Tipo>();
         }
 
-        public BindingList<Tipo> ObtenerCategorias()
+        public BindingList<Tipo> ObtenerTipos()
         {
             _contexto.Tipos.Load();
             ListaTipos = _contexto.Tipos.Local.ToBindingList();

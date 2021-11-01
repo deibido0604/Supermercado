@@ -36,13 +36,17 @@ namespace WinSupermercado
         private void button1_Click(object sender, EventArgs e)
         {//botón de entrar
             //variable para el  usuario y contraseña
-            string Usuario;
-            string Contra;
+            string usuario;
+            string contrasena;
 
-            Usuario = textBox1.Text;
-            Contra = textBox2.Text;
+            usuario = textBox1.Text;
+            contrasena = textBox2.Text;
 
-            var resultado = _seguridad.Autorizar(Usuario, Contra);
+            button1.Enabled = false;
+            button1.Text = "Verificando...";
+            Application.DoEvents();
+
+            var resultado = _seguridad.Autorizar(usuario, contrasena);
             //inicio del ciclo if-else
             if (resultado == true)
             {
