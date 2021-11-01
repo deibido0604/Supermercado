@@ -18,7 +18,7 @@ namespace BL.Supermercado
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
-            Database.SetInitializer(new DatosdeInicio());
+            Database.SetInitializer(new DatosdeInicio()); 
 
         }
 

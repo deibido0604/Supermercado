@@ -464,7 +464,7 @@
             this.fotoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.listaProductosBindingSource, "Foto", true, System.Windows.Forms.DataSourceUpdateMode.Never));
             this.fotoPictureBox.Location = new System.Drawing.Point(966, 12);
             this.fotoPictureBox.Name = "fotoPictureBox";
-            this.fotoPictureBox.Size = new System.Drawing.Size(225, 150);
+            this.fotoPictureBox.Size = new System.Drawing.Size(259, 155);
             this.fotoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.fotoPictureBox.TabIndex = 17;
             this.fotoPictureBox.TabStop = false;
@@ -482,7 +482,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(966, 178);
+            this.button1.Location = new System.Drawing.Point(994, 173);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(99, 30);
             this.button1.TabIndex = 18;
@@ -492,7 +492,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(1077, 178);
+            this.button2.Location = new System.Drawing.Point(1111, 173);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(114, 30);
             this.button2.TabIndex = 19;
