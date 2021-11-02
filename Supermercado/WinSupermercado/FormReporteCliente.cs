@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BL.Supermercado;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +13,15 @@ namespace WinSupermercado
 {
     public partial class FormReporteCliente : Form
     {
+        ClientesBL _clientes;
+
         public FormReporteCliente()
         {
             InitializeComponent();
-        }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            _clientes = new ClientesBL();
+            listaClientesBindingSource.DataSource = _clientes.ObtenerClientes();
         }
+        
     }
 }

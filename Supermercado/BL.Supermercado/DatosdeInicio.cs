@@ -14,8 +14,8 @@ namespace BL.Supermercado
         {
 
             var usuarioAdmin = new Usuario();
-            usuarioAdmin.Nombre = "a";
-            usuarioAdmin.Contrasena = "a";
+            usuarioAdmin.Nombre = "admin";
+            usuarioAdmin.Contrasena = "123";
             contexto.Usuarios.Add(usuarioAdmin);
 
             var categoria1 = new Categoria();

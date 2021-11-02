@@ -151,6 +151,7 @@
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\BL.Supermercado.CategoriaBL.datasource" />
+    <None Include="Properties\DataSources\BL.Supermercado.ClientesBL.datasource" />
     <None Include="Properties\DataSources\BL.Supermercado.Producto.datasource" />
     <None Include="Properties\DataSources\BL.Supermercado.ProductosBL.datasource" />
     <None Include="Properties\DataSources\BL.Supermercado.SeguridadBL.datasource" />
