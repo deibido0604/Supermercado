@@ -1,15 +1,19 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data.Entity;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace BL.Supermercado
 {
-    public class TiposBL
+    public  class TipoBL
     {
         Contexto _contexto;
+         public BindingList<Tipo> ListaTipos { get; set; }
 
-        public BindingList<Tipo> ListaTipos { get; set; }
-
-        public TiposBL()
+        public TipoBL()
         {
             _contexto = new Contexto();
             ListaTipos = new BindingList<Tipo>();
@@ -22,6 +26,7 @@ namespace BL.Supermercado
 
             return ListaTipos;
         }
+
     }
 
     public class Tipo

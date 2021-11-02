@@ -84,6 +84,20 @@ namespace BL.Supermercado
                 resultado.Mensaje = "El precio debe ser mayor que cero";
                 resultado.Exitoso = false;
             }
+
+            /*
+            if (producto.CategoriaId == 0)
+            {
+                resultado.Mensaje = "Seleccione una Categoria";
+                resultado.Exitoso = false;
+            }
+
+            if (producto.TipoId == 0)
+            {
+                resultado.Mensaje = "Seleccione un Tipo";
+                resultado.Exitoso = false;
+            }*/
+
             return resultado;
         }
     }
@@ -96,9 +110,19 @@ namespace BL.Supermercado
         public int Existencia { get; set; }
         public byte[] Foto { get; set; }
         public bool Activo { get; set; }
-        public bool ProductoNacional { get; set; }
-        public bool ProductoExtranjero { get; set; }
-        //public int codigo { get; set; }
+
+        //Propiedades de Categoria
+        public int CategoriaId { get; set; }
+        public Categoria Categoria { get; set; }
+
+        //Propiedades de Tipo 
+        public int TipoId { get; set; }
+        public Tipo Tipo { get; set; }
+
+        public Producto()
+        {
+            Activo = true;
+        }
     }
 
     public class Resultado

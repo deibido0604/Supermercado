@@ -34,8 +34,8 @@
             System.Windows.Forms.Label idLabel;
             System.Windows.Forms.Label precioUnidadLabel;
             System.Windows.Forms.Label activoLabel;
-            System.Windows.Forms.Label productoExtranjeroLabel;
-            System.Windows.Forms.Label productoNacionalLabel;
+            System.Windows.Forms.Label tipoIdLabel;
+            System.Windows.Forms.Label categoriaIdLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProductos));
             this.productoBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -60,42 +60,44 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dataGridViewCheckBoxColumn3 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.descripcionTextBox = new System.Windows.Forms.TextBox();
             this.existenciaTextBox = new System.Windows.Forms.TextBox();
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.precioUnidadTextBox = new System.Windows.Forms.TextBox();
             this.activoCheckBox = new System.Windows.Forms.CheckBox();
-            this.productoExtranjeroCheckBox = new System.Windows.Forms.CheckBox();
-            this.seguridadBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fotoPictureBox = new System.Windows.Forms.PictureBox();
-            this.productoNacionalCheckBox = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.seguridadBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.listaTiposBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tipoIdComboBox = new System.Windows.Forms.ComboBox();
+            this.listaCategoriasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.categoriaIdComboBox = new System.Windows.Forms.ComboBox();
             descripcionLabel = new System.Windows.Forms.Label();
             existenciaLabel = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
             precioUnidadLabel = new System.Windows.Forms.Label();
             activoLabel = new System.Windows.Forms.Label();
-            productoExtranjeroLabel = new System.Windows.Forms.Label();
-            productoNacionalLabel = new System.Windows.Forms.Label();
+            tipoIdLabel = new System.Windows.Forms.Label();
+            categoriaIdLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingNavigator)).BeginInit();
             this.productoBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaProductosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productosBLBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaProductosDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.seguridadBLBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seguridadBLBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaTiposBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaCategoriasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // descripcionLabel
             // 
             descripcionLabel.AutoSize = true;
             descripcionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            descripcionLabel.Location = new System.Drawing.Point(287, 71);
+            descripcionLabel.Location = new System.Drawing.Point(287, 74);
             descripcionLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             descripcionLabel.Name = "descripcionLabel";
             descripcionLabel.Size = new System.Drawing.Size(104, 20);
@@ -106,7 +108,7 @@
             // 
             existenciaLabel.AutoSize = true;
             existenciaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            existenciaLabel.Location = new System.Drawing.Point(297, 105);
+            existenciaLabel.Location = new System.Drawing.Point(44, 139);
             existenciaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             existenciaLabel.Name = "existenciaLabel";
             existenciaLabel.Size = new System.Drawing.Size(91, 20);
@@ -129,7 +131,7 @@
             // 
             precioUnidadLabel.AutoSize = true;
             precioUnidadLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            precioUnidadLabel.Location = new System.Drawing.Point(35, 104);
+            precioUnidadLabel.Location = new System.Drawing.Point(16, 104);
             precioUnidadLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             precioUnidadLabel.Name = "precioUnidadLabel";
             precioUnidadLabel.Size = new System.Drawing.Size(119, 20);
@@ -148,29 +150,23 @@
             activoLabel.Text = "Activo:";
             activoLabel.Click += new System.EventHandler(this.activoLabel_Click_1);
             // 
-            // productoExtranjeroLabel
+            // tipoIdLabel
             // 
-            productoExtranjeroLabel.AutoSize = true;
-            productoExtranjeroLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            productoExtranjeroLabel.Location = new System.Drawing.Point(737, 101);
-            productoExtranjeroLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            productoExtranjeroLabel.Name = "productoExtranjeroLabel";
-            productoExtranjeroLabel.Size = new System.Drawing.Size(162, 20);
-            productoExtranjeroLabel.TabIndex = 12;
-            productoExtranjeroLabel.Text = "Producto Extranjero:";
-            productoExtranjeroLabel.Click += new System.EventHandler(this.productoExtranjeroLabel_Click);
+            tipoIdLabel.AutoSize = true;
+            tipoIdLabel.Location = new System.Drawing.Point(345, 107);
+            tipoIdLabel.Name = "tipoIdLabel";
+            tipoIdLabel.Size = new System.Drawing.Size(46, 20);
+            tipoIdLabel.TabIndex = 19;
+            tipoIdLabel.Text = "Tipo:";
             // 
-            // productoNacionalLabel
+            // categoriaIdLabel
             // 
-            productoNacionalLabel.AutoSize = true;
-            productoNacionalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            productoNacionalLabel.Location = new System.Drawing.Point(743, 74);
-            productoNacionalLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            productoNacionalLabel.Name = "productoNacionalLabel";
-            productoNacionalLabel.Size = new System.Drawing.Size(151, 20);
-            productoNacionalLabel.TabIndex = 14;
-            productoNacionalLabel.Text = "Producto Nacional:";
-            productoNacionalLabel.Click += new System.EventHandler(this.productoNacionalLabel_Click);
+            categoriaIdLabel.AutoSize = true;
+            categoriaIdLabel.Location = new System.Drawing.Point(305, 143);
+            categoriaIdLabel.Name = "categoriaIdLabel";
+            categoriaIdLabel.Size = new System.Drawing.Size(86, 20);
+            categoriaIdLabel.TabIndex = 20;
+            categoriaIdLabel.Text = "Categoria:";
             // 
             // productoBindingNavigator
             // 
@@ -336,12 +332,10 @@
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
-            this.dataGridViewCheckBoxColumn1,
-            this.dataGridViewCheckBoxColumn2,
-            this.dataGridViewCheckBoxColumn3});
+            this.dataGridViewCheckBoxColumn1});
             this.listaProductosDataGridView.DataSource = this.listaProductosBindingSource;
             this.listaProductosDataGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.listaProductosDataGridView.Location = new System.Drawing.Point(0, 208);
+            this.listaProductosDataGridView.Location = new System.Drawing.Point(0, 462);
             this.listaProductosDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listaProductosDataGridView.Name = "listaProductosDataGridView";
             this.listaProductosDataGridView.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -380,22 +374,10 @@
             this.dataGridViewCheckBoxColumn1.HeaderText = "Activo";
             this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
             // 
-            // dataGridViewCheckBoxColumn2
-            // 
-            this.dataGridViewCheckBoxColumn2.DataPropertyName = "ProductoNacional";
-            this.dataGridViewCheckBoxColumn2.HeaderText = "ProductoNacional";
-            this.dataGridViewCheckBoxColumn2.Name = "dataGridViewCheckBoxColumn2";
-            // 
-            // dataGridViewCheckBoxColumn3
-            // 
-            this.dataGridViewCheckBoxColumn3.DataPropertyName = "ProductoExtranjero";
-            this.dataGridViewCheckBoxColumn3.HeaderText = "ProductoExtranjero";
-            this.dataGridViewCheckBoxColumn3.Name = "dataGridViewCheckBoxColumn3";
-            // 
             // descripcionTextBox
             // 
             this.descripcionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaProductosBindingSource, "Descripcion", true));
-            this.descripcionTextBox.Location = new System.Drawing.Point(383, 63);
+            this.descripcionTextBox.Location = new System.Drawing.Point(399, 71);
             this.descripcionTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.descripcionTextBox.Name = "descripcionTextBox";
             this.descripcionTextBox.Size = new System.Drawing.Size(316, 26);
@@ -404,7 +386,7 @@
             // existenciaTextBox
             // 
             this.existenciaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaProductosBindingSource, "Existencia", true));
-            this.existenciaTextBox.Location = new System.Drawing.Point(383, 101);
+            this.existenciaTextBox.Location = new System.Drawing.Point(140, 137);
             this.existenciaTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.existenciaTextBox.Name = "existenciaTextBox";
             this.existenciaTextBox.Size = new System.Drawing.Size(132, 26);
@@ -439,21 +421,6 @@
             this.activoCheckBox.TabIndex = 11;
             this.activoCheckBox.UseVisualStyleBackColor = true;
             // 
-            // productoExtranjeroCheckBox
-            // 
-            this.productoExtranjeroCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listaProductosBindingSource, "ProductoExtranjero", true));
-            this.productoExtranjeroCheckBox.Location = new System.Drawing.Point(881, 95);
-            this.productoExtranjeroCheckBox.Margin = new System.Windows.Forms.Padding(4);
-            this.productoExtranjeroCheckBox.Name = "productoExtranjeroCheckBox";
-            this.productoExtranjeroCheckBox.Size = new System.Drawing.Size(139, 30);
-            this.productoExtranjeroCheckBox.TabIndex = 13;
-            this.productoExtranjeroCheckBox.UseVisualStyleBackColor = true;
-            this.productoExtranjeroCheckBox.CheckedChanged += new System.EventHandler(this.productoExtranjeroCheckBox_CheckedChanged);
-            // 
-            // seguridadBLBindingSource
-            // 
-            this.seguridadBLBindingSource.DataSource = typeof(BL.Supermercado.SeguridadBL);
-            // 
             // fotoPictureBox
             // 
             this.fotoPictureBox.BackColor = System.Drawing.SystemColors.AppWorkspace;
@@ -464,17 +431,6 @@
             this.fotoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.fotoPictureBox.TabIndex = 17;
             this.fotoPictureBox.TabStop = false;
-            // 
-            // productoNacionalCheckBox
-            // 
-            this.productoNacionalCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listaProductosBindingSource, "ProductoNacional", true));
-            this.productoNacionalCheckBox.Location = new System.Drawing.Point(881, 67);
-            this.productoNacionalCheckBox.Margin = new System.Windows.Forms.Padding(4);
-            this.productoNacionalCheckBox.Name = "productoNacionalCheckBox";
-            this.productoNacionalCheckBox.Size = new System.Drawing.Size(139, 30);
-            this.productoNacionalCheckBox.TabIndex = 15;
-            this.productoNacionalCheckBox.UseVisualStyleBackColor = true;
-            this.productoNacionalCheckBox.CheckedChanged += new System.EventHandler(this.productoNacionalCheckBox_CheckedChanged);
             // 
             // button1
             // 
@@ -500,20 +456,57 @@
             // 
             this.openFileDialog1.Filter = "jpg, png | *.jpg; *.png";
             // 
+            // seguridadBLBindingSource
+            // 
+            this.seguridadBLBindingSource.DataSource = typeof(BL.Supermercado.SeguridadBL);
+            // 
+            // listaTiposBindingSource
+            // 
+            this.listaTiposBindingSource.DataSource = typeof(BL.Supermercado.Tipo);
+            // 
+            // tipoIdComboBox
+            // 
+            this.tipoIdComboBox.DataSource = this.listaTiposBindingSource;
+            this.tipoIdComboBox.DisplayMember = "Descripcion";
+            this.tipoIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.tipoIdComboBox.FormattingEnabled = true;
+            this.tipoIdComboBox.Location = new System.Drawing.Point(399, 104);
+            this.tipoIdComboBox.Name = "tipoIdComboBox";
+            this.tipoIdComboBox.Size = new System.Drawing.Size(316, 28);
+            this.tipoIdComboBox.TabIndex = 20;
+            this.tipoIdComboBox.ValueMember = "Id";
+            // 
+            // listaCategoriasBindingSource
+            // 
+            this.listaCategoriasBindingSource.DataSource = typeof(BL.Supermercado.Categoria);
+            // 
+            // categoriaIdComboBox
+            // 
+            this.categoriaIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.listaProductosBindingSource, "CategoriaId", true));
+            this.categoriaIdComboBox.DataSource = this.listaCategoriasBindingSource;
+            this.categoriaIdComboBox.DisplayMember = "Descripcion";
+            this.categoriaIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.categoriaIdComboBox.FormattingEnabled = true;
+            this.categoriaIdComboBox.Location = new System.Drawing.Point(399, 143);
+            this.categoriaIdComboBox.Name = "categoriaIdComboBox";
+            this.categoriaIdComboBox.Size = new System.Drawing.Size(316, 28);
+            this.categoriaIdComboBox.TabIndex = 21;
+            this.categoriaIdComboBox.ValueMember = "Id";
+            // 
             // FormProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1284, 708);
+            this.ClientSize = new System.Drawing.Size(1284, 962);
+            this.Controls.Add(categoriaIdLabel);
+            this.Controls.Add(this.categoriaIdComboBox);
+            this.Controls.Add(tipoIdLabel);
+            this.Controls.Add(this.tipoIdComboBox);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.fotoPictureBox);
-            this.Controls.Add(productoNacionalLabel);
-            this.Controls.Add(this.productoNacionalCheckBox);
-            this.Controls.Add(productoExtranjeroLabel);
-            this.Controls.Add(this.productoExtranjeroCheckBox);
             this.Controls.Add(activoLabel);
             this.Controls.Add(this.activoCheckBox);
             this.Controls.Add(precioUnidadLabel);
@@ -541,8 +534,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.listaProductosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productosBLBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaProductosDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.seguridadBLBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seguridadBLBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaTiposBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaCategoriasBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -572,19 +567,21 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn2;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn3;
+       // private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn2;
+        //private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn3;
         private System.Windows.Forms.TextBox descripcionTextBox;
         private System.Windows.Forms.TextBox existenciaTextBox;
         private System.Windows.Forms.TextBox idTextBox;
         private System.Windows.Forms.TextBox precioUnidadTextBox;
         private System.Windows.Forms.CheckBox activoCheckBox;
-        private System.Windows.Forms.CheckBox productoExtranjeroCheckBox;
         private System.Windows.Forms.ToolStripButton toolStripButtonCancelar;
         private System.Windows.Forms.PictureBox fotoPictureBox;
-        private System.Windows.Forms.CheckBox productoNacionalCheckBox;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.BindingSource listaTiposBindingSource;
+        private System.Windows.Forms.ComboBox tipoIdComboBox;
+        private System.Windows.Forms.BindingSource listaCategoriasBindingSource;
+        private System.Windows.Forms.ComboBox categoriaIdComboBox;
     }
 }

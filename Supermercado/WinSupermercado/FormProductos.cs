@@ -15,6 +15,8 @@ namespace WinSupermercado
     public partial class FormProductos : Form
     {
         ProductosBL _productos;
+        TipoBL _tiposBL;
+        CategoriaBL _categoriasBL;
 
         public FormProductos()
         {
@@ -23,6 +25,11 @@ namespace WinSupermercado
             _productos = new ProductosBL();
             listaProductosBindingSource.DataSource = _productos.ObtenerProductos();
 
+            _tiposBL = new TipoBL();
+            listaTiposBindingSource.DataSource = _tiposBL.ObtenerTipos();
+
+            _categoriasBL = new CategoriaBL();
+            listaCategoriasBindingSource.DataSource = _categoriasBL.ObtenerCategoria();
             
         }
 
