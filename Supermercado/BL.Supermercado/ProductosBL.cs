@@ -85,7 +85,7 @@ namespace BL.Supermercado
                 resultado.Exitoso = false;
             }
 
-            /*
+            
             if (producto.CategoriaId == 0)
             {
                 resultado.Mensaje = "Seleccione una Categoria";
@@ -96,7 +96,7 @@ namespace BL.Supermercado
             {
                 resultado.Mensaje = "Seleccione un Tipo";
                 resultado.Exitoso = false;
-            }*/
+            }
 
             return resultado;
         }

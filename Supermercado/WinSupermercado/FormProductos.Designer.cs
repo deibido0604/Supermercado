@@ -466,6 +466,7 @@
             // 
             // tipoIdComboBox
             // 
+            this.tipoIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.listaProductosBindingSource, "TipoId", true));
             this.tipoIdComboBox.DataSource = this.listaTiposBindingSource;
             this.tipoIdComboBox.DisplayMember = "Descripcion";
             this.tipoIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
