@@ -42,6 +42,10 @@ namespace WinSupermercado
             Usuario = textBox1.Text;
             Contra = textBox2.Text;
 
+            button1.Enabled = false;
+            button1.Text = "Verificando...";
+            Application.DoEvents();
+
             var resultado = _seguridad.Autorizar(Usuario, Contra);
             //inicio del ciclo if-else
             if (resultado == true)
@@ -54,6 +58,8 @@ namespace WinSupermercado
                 MessageBox.Show("Usuario o Contraseña incorrecta!");
             }//fin del ciclo if-else
 
+            button1.Enabled = true;
+            button1.Text = "Aceptar";
 
         }
 

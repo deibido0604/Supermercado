@@ -5,12 +5,13 @@ using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static BL.Supermercado.SeguridadBL;
 
 namespace BL.Supermercado
 {
     public class Contexto: DbContext 
     {
-        public Contexto(): base("Productos Supermercados ")
+        public Contexto(): base("Productos Supermercado ")
         {
 
         }
@@ -25,5 +26,6 @@ namespace BL.Supermercado
         public DbSet<Producto> Productos { get; set; }
         public DbSet<Tipo> Tipos { get; set; }
         public DbSet<Categoria> Categorias { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
     }
 }

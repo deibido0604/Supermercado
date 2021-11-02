@@ -4,6 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static BL.Supermercado.SeguridadBL;
 
 namespace BL.Supermercado
 {
@@ -11,6 +12,11 @@ namespace BL.Supermercado
     {
         protected override void Seed(Contexto contexto)
         {
+
+            var usuarioAdmin = new Usuario();
+            usuarioAdmin.Nombre = "a";
+            usuarioAdmin.Contrasena = "a";
+            contexto.Usuarios.Add(usuarioAdmin);
 
             var categoria1 = new Categoria();
             categoria1.Descripcion = "Hogar";
