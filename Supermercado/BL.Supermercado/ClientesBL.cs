@@ -27,6 +27,21 @@ namespace BL.Supermercado
         {
             return ListaClientes;
         }
+
+        public bool GuardarCliente(Cliente cliente)
+        {
+            if(cliente.Id == 0)
+            {
+                cliente.Id = ListaClientes.Max(item => item.Id) + 1;
+            }
+            return true; 
+        }
+
+        public void AgregarCliente()
+        {
+            var nuevoCliente = new Cliente();
+            ListaClientes.Add(nuevoCliente);
+        }
     }
 
     public class Cliente

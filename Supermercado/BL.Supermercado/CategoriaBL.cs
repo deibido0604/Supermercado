@@ -11,7 +11,6 @@ namespace BL.Supermercado
     public class CategoriaBL
     {
         Contexto _contexto;
-        
         public BindingList<Categoria> ListaCategorias { get; set; }
 
         public CategoriaBL()

@@ -22,6 +22,26 @@ namespace WinSupermercado
             _clientes = new ClientesBL();
             listaClientesBindingSource.DataSource = _clientes.ObtenerClientes();
         }
-        
+
+        private void listaClientesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            listaClientesBindingSource.EndEdit();
+            var cliente = (Cliente)listaClientesBindingSource.Current;
+            var resultado = _clientes.GuardarCliente(cliente);
+
+            if(resultado == true)
+            {
+                listaClientesBindingSource.ResetBindings(false);
+            }else
+            {
+                MessageBox.Show("Ocurrio un error");
+            }
+        }
+
+        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
+        {
+            _clientes.AgregarCliente();
+            listaClientesBindingSource.MoveLast();
+        }
     }
 }
