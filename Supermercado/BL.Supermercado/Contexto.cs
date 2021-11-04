@@ -11,7 +11,7 @@ namespace BL.Supermercado
 {
     public class Contexto: DbContext 
     {
-        public Contexto(): base("Productos Supermercado ")
+        public Contexto(): base("Productos Supermercado")
         {
 
         }
@@ -27,5 +27,6 @@ namespace BL.Supermercado
         public DbSet<Tipo> Tipos { get; set; }
         public DbSet<Categoria> Categorias { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
+        public object Facturas { get; internal set; }
     }
 }
