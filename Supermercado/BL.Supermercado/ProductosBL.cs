@@ -125,7 +125,7 @@ namespace BL.Supermercado
         }
     }
 
-    public class Resultado
+    public class Resultados
     {
         public bool Exitoso { get; set; }
         public string  Mensaje { get; set; } 
