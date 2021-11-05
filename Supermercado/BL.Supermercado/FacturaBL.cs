@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data.Entity;
 using System.Linq;
 using System.Runtime.Remoting.Contexts;
 using System.Text;
@@ -22,7 +23,7 @@ namespace BL.Supermercado
 
         public BindingList<Factura> ObtenerFacturas()
         {//Factura
-            _contexto.Facturas.Include("FacturaDetalle").Load();
+            _contexto.Facturas.Include("Factura Detalle").Load();
             ListaFacturas = _contexto.Facturas.Local.ToBindingList();
 
             return ListaFacturas;
@@ -62,7 +63,8 @@ namespace BL.Supermercado
             return resultado;
         }
     }
-        public class Factura
+      
+     public class Factura
     {
 
         public int Id { get; set; }
