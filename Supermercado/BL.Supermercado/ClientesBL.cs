@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,31 +10,19 @@ namespace BL.Supermercado
 {
     public class ClientesBL
     {
+        Contexto _contexto;
         public BindingList<Cliente> ListaClientes { get; set; }
 
         public ClientesBL()
         {
+            _contexto = new Contexto();
             ListaClientes = new BindingList<Cliente>();
-
-            var cliente1 = new Cliente();
-            cliente1.Activo = true;
-            cliente1.Nombre = "David";
-            cliente1.Email = "David@hotmail.com";
-            cliente1.Telefono = 88476055;
-
-            ListaClientes.Add(cliente1);
-
-            var cliente2 = new Cliente();
-            cliente2.Activo = true;
-            cliente2.Nombre = "Isis";
-            cliente2.Email = "Isis@hotmail.com";
-            cliente2.Telefono = 98129656;
-
-            ListaClientes.Add(cliente2);
         }
 
         public BindingList<Cliente> ObtenerClientes()
         {
+            _contexto.Clientes.Load();
+            ListaClientes = _contexto.Clientes.Local.ToBindingList();
             return ListaClientes;
         }
 
@@ -44,10 +33,9 @@ namespace BL.Supermercado
             {
                 return resultado;
             }
-            if(cliente.Id == 0)
-            {
-                cliente.Id = ListaClientes.Max(item => item.Id) + 1;
-            }
+
+            _contexto.SaveChanges();
+
             resultado.Exitoso = true;
             return resultado; 
         }
@@ -65,6 +53,7 @@ namespace BL.Supermercado
                 if (cliente.Id == id)
                 {
                     ListaClientes.Remove(cliente);
+                    _contexto.SaveChanges();
                     return true;
                 }
             }
@@ -107,6 +96,7 @@ namespace BL.Supermercado
         public int Telefono { get; set; }
         public string Direccion { get; set; }
         public string Email { get; set; }
+        public byte[] Foto { get; set; }
         public bool Activo { get; set; }
     }
 

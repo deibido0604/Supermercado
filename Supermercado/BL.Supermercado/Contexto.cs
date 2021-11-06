@@ -9,9 +9,9 @@ using static BL.Supermercado.SeguridadBL;
 
 namespace BL.Supermercado
 {
-    public class Contexto: DbContext 
+    public class Contexto : DbContext
     {
-        public Contexto(): base("Productos Supermercado. ")
+       public Contexto() : base("Productos Supermercado. ")
         {
 
         }
@@ -28,5 +28,10 @@ namespace BL.Supermercado
         public DbSet<Categoria> Categorias { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Factura> Facturas { get; set; }
+        public DbSet<Cliente>Clientes { get; set; }
+
+
     }
+    
+
 }

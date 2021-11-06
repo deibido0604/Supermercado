@@ -149,7 +149,7 @@
             this.button19.TabIndex = 5;
             this.button19.Text = "Factura";
             this.button19.UseVisualStyleBackColor = true;
-            this.button19.Click += new System.EventHandler(this.button19_Click);
+        //    this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
             // button15
             // 

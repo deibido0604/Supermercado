@@ -186,14 +186,14 @@ namespace WinSupermercado
             hideSubMenu();
         }
 
-        private void button19_Click(object sender, EventArgs e)
+       /* private void button19_Click(object sender, EventArgs e)
         {//llamamos al formulario de Reporte de Productos
            
             var formFactura = new FormFactura();
             formFactura.ShowDialog();
             hideSubMenu();
 
-        }
+        }*/
 
         private void btnInven_Click(object sender, EventArgs e)
         {//al darle click despliega el panel o la lista del botón.
