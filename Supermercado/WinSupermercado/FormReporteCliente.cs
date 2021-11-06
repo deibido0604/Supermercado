@@ -15,6 +15,8 @@ namespace WinSupermercado
     public partial class FormReporteCliente : Form
     {
         ClientesBL _clientes;
+        TipoBL _tiposBL;
+        CategoriaBL _categoriasBL;
 
         public FormReporteCliente()
         {
@@ -22,6 +24,13 @@ namespace WinSupermercado
 
             _clientes = new ClientesBL();
             listaClientesBindingSource.DataSource = _clientes.ObtenerClientes();
+
+            _tiposBL = new TipoBL();
+            listaTiposBindingSource.DataSource = _tiposBL.ObtenerTipos();
+
+            _categoriasBL = new CategoriaBL();
+            listaCategoriasBindingSource.DataSource = _categoriasBL.ObtenerCategoria();
+
         }
 
         private void listaClientesBindingNavigatorSaveItem_Click(object sender, EventArgs e)

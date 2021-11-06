@@ -29,6 +29,7 @@ namespace BL.Supermercado
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Factura> Facturas { get; set; }
         public DbSet<Cliente>Clientes { get; set; }
+        
 
 
     }
