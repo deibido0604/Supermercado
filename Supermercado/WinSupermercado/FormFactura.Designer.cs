@@ -47,9 +47,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FromFactura));
             this.listaFacturasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.listaFacturasBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -58,6 +56,8 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.listaFacturasBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonCancelar = new System.Windows.Forms.ToolStripButton();
             this.fechaDateTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -78,11 +78,17 @@
             this.clienteIdComboBox = new System.Windows.Forms.ComboBox();
             this.facturaDetalleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.facturaDetalleDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioUnidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.existenciaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fotoDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.activoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.categoriaIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoriaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.listaProductosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             clienteIdLabel = new System.Windows.Forms.Label();
@@ -290,19 +296,9 @@
             this.listaFacturasBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.listaFacturasBindingNavigator.Name = "listaFacturasBindingNavigator";
             this.listaFacturasBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.listaFacturasBindingNavigator.Size = new System.Drawing.Size(1155, 25);
+            this.listaFacturasBindingNavigator.Size = new System.Drawing.Size(1146, 25);
             this.listaFacturasBindingNavigator.TabIndex = 0;
             this.listaFacturasBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
-            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
             // 
             // bindingNavigatorCountItem
             // 
@@ -310,15 +306,6 @@
             this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
             this.bindingNavigatorCountItem.Text = "de {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Eliminar";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -379,6 +366,25 @@
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
+            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Eliminar";
             // 
             // listaFacturasBindingNavigatorSaveItem
             // 
@@ -551,15 +557,22 @@
             // 
             // facturaDetalleDataGridView
             // 
+            this.facturaDetalleDataGridView.AllowUserToAddRows = false;
             this.facturaDetalleDataGridView.AutoGenerateColumns = false;
             this.facturaDetalleDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.facturaDetalleDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.facturaDetalleDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6});
-            this.facturaDetalleDataGridView.DataSource = this.facturaDetalleBindingSource;
+            this.idDataGridViewTextBoxColumn,
+            this.descripcionDataGridViewTextBoxColumn,
+            this.precioUnidadDataGridViewTextBoxColumn,
+            this.existenciaDataGridViewTextBoxColumn,
+            this.fotoDataGridViewImageColumn,
+            this.activoDataGridViewCheckBoxColumn,
+            this.categoriaIdDataGridViewTextBoxColumn,
+            this.categoriaDataGridViewTextBoxColumn,
+            this.tipoIdDataGridViewTextBoxColumn,
+            this.tipoDataGridViewTextBoxColumn});
+            this.facturaDetalleDataGridView.DataSource = this.listaProductosBindingSource;
             this.facturaDetalleDataGridView.Location = new System.Drawing.Point(14, 155);
             this.facturaDetalleDataGridView.Name = "facturaDetalleDataGridView";
             this.facturaDetalleDataGridView.Size = new System.Drawing.Size(1121, 411);
@@ -567,39 +580,69 @@
             this.facturaDetalleDataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.facturaDetalleDataGridView_CellEndEdit);
             this.facturaDetalleDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.facturaDetalleDataGridView_DataError);
             // 
-            // dataGridViewTextBoxColumn3
+            // idDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "ProductoId";
-            this.dataGridViewTextBoxColumn3.DataSource = this.listaProductosBindingSource;
-            this.dataGridViewTextBoxColumn3.DisplayMember = "Descripcion";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Producto";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewTextBoxColumn3.ValueMember = "id";
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            // 
+            // descripcionDataGridViewTextBoxColumn
+            // 
+            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
+            // 
+            // precioUnidadDataGridViewTextBoxColumn
+            // 
+            this.precioUnidadDataGridViewTextBoxColumn.DataPropertyName = "PrecioUnidad";
+            this.precioUnidadDataGridViewTextBoxColumn.HeaderText = "PrecioUnidad";
+            this.precioUnidadDataGridViewTextBoxColumn.Name = "precioUnidadDataGridViewTextBoxColumn";
+            // 
+            // existenciaDataGridViewTextBoxColumn
+            // 
+            this.existenciaDataGridViewTextBoxColumn.DataPropertyName = "Existencia";
+            this.existenciaDataGridViewTextBoxColumn.HeaderText = "Existencia";
+            this.existenciaDataGridViewTextBoxColumn.Name = "existenciaDataGridViewTextBoxColumn";
+            // 
+            // fotoDataGridViewImageColumn
+            // 
+            this.fotoDataGridViewImageColumn.DataPropertyName = "Foto";
+            this.fotoDataGridViewImageColumn.HeaderText = "Foto";
+            this.fotoDataGridViewImageColumn.Name = "fotoDataGridViewImageColumn";
+            // 
+            // activoDataGridViewCheckBoxColumn
+            // 
+            this.activoDataGridViewCheckBoxColumn.DataPropertyName = "Activo";
+            this.activoDataGridViewCheckBoxColumn.HeaderText = "Activo";
+            this.activoDataGridViewCheckBoxColumn.Name = "activoDataGridViewCheckBoxColumn";
+            // 
+            // categoriaIdDataGridViewTextBoxColumn
+            // 
+            this.categoriaIdDataGridViewTextBoxColumn.DataPropertyName = "CategoriaId";
+            this.categoriaIdDataGridViewTextBoxColumn.HeaderText = "CategoriaId";
+            this.categoriaIdDataGridViewTextBoxColumn.Name = "categoriaIdDataGridViewTextBoxColumn";
+            // 
+            // categoriaDataGridViewTextBoxColumn
+            // 
+            this.categoriaDataGridViewTextBoxColumn.DataPropertyName = "Categoria";
+            this.categoriaDataGridViewTextBoxColumn.HeaderText = "Categoria";
+            this.categoriaDataGridViewTextBoxColumn.Name = "categoriaDataGridViewTextBoxColumn";
+            // 
+            // tipoIdDataGridViewTextBoxColumn
+            // 
+            this.tipoIdDataGridViewTextBoxColumn.DataPropertyName = "TipoId";
+            this.tipoIdDataGridViewTextBoxColumn.HeaderText = "TipoId";
+            this.tipoIdDataGridViewTextBoxColumn.Name = "tipoIdDataGridViewTextBoxColumn";
+            // 
+            // tipoDataGridViewTextBoxColumn
+            // 
+            this.tipoDataGridViewTextBoxColumn.DataPropertyName = "Tipo";
+            this.tipoDataGridViewTextBoxColumn.HeaderText = "Tipo";
+            this.tipoDataGridViewTextBoxColumn.Name = "tipoDataGridViewTextBoxColumn";
             // 
             // listaProductosBindingSource
             // 
             this.listaProductosBindingSource.DataSource = typeof(BL.Supermercado.Producto);
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Cantidad";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Cantidad";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Precio";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Precio";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Total";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Total";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
             // button1
             // 
@@ -623,11 +666,11 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // Factura
+            // FromFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1155, 688);
+            this.ClientSize = new System.Drawing.Size(1146, 688);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.facturaDetalleDataGridView);
@@ -662,7 +705,7 @@
             this.Controls.Add(totalLabel);
             this.Controls.Add(this.totalTextBox);
             this.Controls.Add(this.listaFacturasBindingNavigator);
-            this.Name = "Factura";
+            this.Name = "FromFactura";
             this.Text = "Factura";
             ((System.ComponentModel.ISupportInitialize)(this.listaFacturasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaFacturasBindingNavigator)).EndInit();
@@ -715,9 +758,15 @@
         private System.Windows.Forms.BindingSource listaProductosBindingSource;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precioUnidadDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn existenciaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewImageColumn fotoDataGridViewImageColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn activoDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoriaIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoriaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipoIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipoDataGridViewTextBoxColumn;
     }
 }

@@ -24,7 +24,7 @@ namespace BL.Supermercado
         public BindingList<Factura> ObtenerFacturas()
         {//Factura 
             //error
-            _contexto.Facturas.Include("Factura Detalle").Load();
+            _contexto.Facturas.Include("FacturaDetalle").Load();
             ListaFacturas = _contexto.Facturas.Local.ToBindingList();
 
             return ListaFacturas;
@@ -49,9 +49,6 @@ namespace BL.Supermercado
             if (factura != null &&  facturaDetalle != null)
             {
                 factura.FacturaDetalle.Remove(facturaDetalle);
-            }
-        {
-
             }
         }
         public void CancelarCambios()

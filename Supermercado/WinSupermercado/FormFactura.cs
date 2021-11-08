@@ -80,7 +80,7 @@ namespace WinSupermercado
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var factura = (Factura)listaClientesBindingSource.Current;
+            var factura = (Factura)listaFacturasBindingSource.Current;
             _facturaBL.AgregarFacturaDetalle(factura);
 
             DeshabilitarHabilitarBotones(false);
@@ -88,7 +88,7 @@ namespace WinSupermercado
 
         private void button2_Click(object sender, EventArgs e)
         {
-            var factura = (Factura)listaClientesBindingSource.Current;
+            var factura = (Factura)listaFacturasBindingSource.Current;
             var facturaDetalle = (FacturaDetalle)facturaDetalleBindingSource.Current;
 
             _facturaBL.RemoverFacturaDetalle(factura, facturaDetalle);
