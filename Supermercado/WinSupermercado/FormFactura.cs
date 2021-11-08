@@ -100,5 +100,19 @@ namespace WinSupermercado
         {
             e.ThrowException = false;
         }
+
+        private void facturaDetalleDataGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            var factura = (Factura)listaClientesBindingSource.Current;
+            _facturaBL.CalcularFactura(factura);
+
+            listaFacturasBindingSource.ResetBindings(false);
+
+        }
+
+        private void idTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

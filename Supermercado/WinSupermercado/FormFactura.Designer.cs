@@ -265,10 +265,10 @@
             // 
             // listaFacturasBindingNavigator
             // 
-            this.listaFacturasBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.listaFacturasBindingNavigator.AddNewItem = null;
             this.listaFacturasBindingNavigator.BindingSource = this.listaFacturasBindingSource;
             this.listaFacturasBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.listaFacturasBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.listaFacturasBindingNavigator.DeleteItem = null;
             this.listaFacturasBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -410,35 +410,43 @@
             // 
             // idTextBox
             // 
-            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaFacturasBindingSource, "Id", true));
+            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaFacturasBindingSource, "Id", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "00000"));
             this.idTextBox.Location = new System.Drawing.Point(71, 115);
             this.idTextBox.Name = "idTextBox";
+            this.idTextBox.ReadOnly = true;
             this.idTextBox.Size = new System.Drawing.Size(200, 20);
             this.idTextBox.TabIndex = 8;
+            this.idTextBox.TextChanged += new System.EventHandler(this.idTextBox_TextChanged);
             // 
             // impuestoTextBox
             // 
-            this.impuestoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaFacturasBindingSource, "Impuesto", true));
+            this.impuestoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaFacturasBindingSource, "Impuesto", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "N2"));
             this.impuestoTextBox.Location = new System.Drawing.Point(84, 596);
             this.impuestoTextBox.Name = "impuestoTextBox";
+            this.impuestoTextBox.ReadOnly = true;
             this.impuestoTextBox.Size = new System.Drawing.Size(200, 20);
             this.impuestoTextBox.TabIndex = 10;
+            this.impuestoTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // subtotalTextBox
             // 
-            this.subtotalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaFacturasBindingSource, "Subtotal", true));
+            this.subtotalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaFacturasBindingSource, "Subtotal", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "N2"));
             this.subtotalTextBox.Location = new System.Drawing.Point(84, 622);
             this.subtotalTextBox.Name = "subtotalTextBox";
+            this.subtotalTextBox.ReadOnly = true;
             this.subtotalTextBox.Size = new System.Drawing.Size(200, 20);
             this.subtotalTextBox.TabIndex = 12;
+            this.subtotalTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // totalTextBox
             // 
-            this.totalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaFacturasBindingSource, "Total", true));
+            this.totalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaFacturasBindingSource, "Total", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "N2"));
             this.totalTextBox.Location = new System.Drawing.Point(84, 648);
             this.totalTextBox.Name = "totalTextBox";
+            this.totalTextBox.ReadOnly = true;
             this.totalTextBox.Size = new System.Drawing.Size(200, 20);
             this.totalTextBox.TabIndex = 14;
+            this.totalTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // categoriaIdTextBox
             // 
@@ -499,6 +507,7 @@
             // activoCheckBox1
             // 
             this.activoCheckBox1.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listaFacturasBindingSource, "Cliente.Activo", true));
+            this.activoCheckBox1.Enabled = false;
             this.activoCheckBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.activoCheckBox1.Location = new System.Drawing.Point(358, 59);
             this.activoCheckBox1.Name = "activoCheckBox1";
@@ -555,6 +564,7 @@
             this.facturaDetalleDataGridView.Name = "facturaDetalleDataGridView";
             this.facturaDetalleDataGridView.Size = new System.Drawing.Size(1121, 411);
             this.facturaDetalleDataGridView.TabIndex = 31;
+            this.facturaDetalleDataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.facturaDetalleDataGridView_CellEndEdit);
             this.facturaDetalleDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.facturaDetalleDataGridView_DataError);
             // 
             // dataGridViewTextBoxColumn3
