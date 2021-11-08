@@ -73,23 +73,7 @@ namespace BL.Supermercado
             var tipo2 = new Tipo();
             tipo2.Descripcion = "Producto Extranjero";
             contexto.Tipos.Add(tipo2);
-            //Categoria Cliente
-            var categoria15= new Categoria();
-            categoria15.Descripcion = "Proveedor";
-            contexto.Categorias.Add(categoria15);
-
-            var categoria16 = new Categoria();
-            categoria16.Descripcion = "Consumidor";
-            contexto.Categorias.Add(categoria16);
-            //Tipo Cliente
-            var tipo3 = new Tipo();
-            tipo3.Descripcion = "Clientes Nacionales";
-            contexto.Tipos.Add(tipo3);
-
-            var tipo4 = new Tipo();
-            tipo4.Descripcion = "Clientes Extranjeros";
-            contexto.Tipos.Add(tipo4);
-
+           
             base.Seed(contexto);
         }
     }
