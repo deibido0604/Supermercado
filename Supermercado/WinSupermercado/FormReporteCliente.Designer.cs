@@ -32,11 +32,12 @@
             System.Windows.Forms.Label activoLabel;
             System.Windows.Forms.Label idLabel;
             System.Windows.Forms.Label nombreLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormReporteCliente));
             System.Windows.Forms.Label direccionLabel1;
             System.Windows.Forms.Label emailLabel;
             System.Windows.Forms.Label telefonoLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormReporteCliente));
             this.listaClientesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.listaClientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -57,7 +58,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.listaClientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.listaTiposBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.listaCategoriasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.seguridadBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -72,8 +72,8 @@
             telefonoLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.listaClientesBindingNavigator)).BeginInit();
             this.listaClientesBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaClientesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaTiposBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaCategoriasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.seguridadBLBindingSource)).BeginInit();
@@ -106,6 +106,33 @@
             nombreLabel.TabIndex = 9;
             nombreLabel.Text = "Nombre:";
             // 
+            // direccionLabel1
+            // 
+            direccionLabel1.AutoSize = true;
+            direccionLabel1.Location = new System.Drawing.Point(260, 45);
+            direccionLabel1.Name = "direccionLabel1";
+            direccionLabel1.Size = new System.Drawing.Size(55, 13);
+            direccionLabel1.TabIndex = 16;
+            direccionLabel1.Text = "Direccion:";
+            // 
+            // emailLabel
+            // 
+            emailLabel.AutoSize = true;
+            emailLabel.Location = new System.Drawing.Point(36, 112);
+            emailLabel.Name = "emailLabel";
+            emailLabel.Size = new System.Drawing.Size(35, 13);
+            emailLabel.TabIndex = 17;
+            emailLabel.Text = "Email:";
+            // 
+            // telefonoLabel
+            // 
+            telefonoLabel.AutoSize = true;
+            telefonoLabel.Location = new System.Drawing.Point(260, 81);
+            telefonoLabel.Name = "telefonoLabel";
+            telefonoLabel.Size = new System.Drawing.Size(52, 13);
+            telefonoLabel.TabIndex = 18;
+            telefonoLabel.Text = "Telefono:";
+            // 
             // listaClientesBindingNavigator
             // 
             this.listaClientesBindingNavigator.AddNewItem = null;
@@ -134,15 +161,19 @@
             this.listaClientesBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.listaClientesBindingNavigator.Name = "listaClientesBindingNavigator";
             this.listaClientesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.listaClientesBindingNavigator.Size = new System.Drawing.Size(859, 27);
+            this.listaClientesBindingNavigator.Size = new System.Drawing.Size(720, 27);
             this.listaClientesBindingNavigator.TabIndex = 0;
             this.listaClientesBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // listaClientesBindingSource
+            // 
+            this.listaClientesBindingSource.DataSource = typeof(BL.Supermercado.Cliente);
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 24);
-            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 24);
+            this.bindingNavigatorCountItem.Text = "de {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
             // bindingNavigatorMoveFirstItem
@@ -306,10 +337,6 @@
             // 
             this.openFileDialog1.Filter = "jpg, png | *.jpg; *.png ";
             // 
-            // listaClientesBindingSource
-            // 
-            this.listaClientesBindingSource.DataSource = typeof(BL.Supermercado.Cliente);
-            // 
             // listaTiposBindingSource
             // 
             this.listaTiposBindingSource.DataSource = typeof(BL.Supermercado.Tipo);
@@ -322,15 +349,6 @@
             // 
             this.seguridadBLBindingSource.DataSource = typeof(BL.Supermercado.SeguridadBL);
             // 
-            // direccionLabel1
-            // 
-            direccionLabel1.AutoSize = true;
-            direccionLabel1.Location = new System.Drawing.Point(260, 45);
-            direccionLabel1.Name = "direccionLabel1";
-            direccionLabel1.Size = new System.Drawing.Size(55, 13);
-            direccionLabel1.TabIndex = 16;
-            direccionLabel1.Text = "Direccion:";
-            // 
             // direccionTextBox1
             // 
             this.direccionTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaClientesBindingSource, "Direccion", true));
@@ -339,15 +357,6 @@
             this.direccionTextBox1.Size = new System.Drawing.Size(148, 20);
             this.direccionTextBox1.TabIndex = 17;
             // 
-            // emailLabel
-            // 
-            emailLabel.AutoSize = true;
-            emailLabel.Location = new System.Drawing.Point(36, 112);
-            emailLabel.Name = "emailLabel";
-            emailLabel.Size = new System.Drawing.Size(35, 13);
-            emailLabel.TabIndex = 17;
-            emailLabel.Text = "Email:";
-            // 
             // emailTextBox1
             // 
             this.emailTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaClientesBindingSource, "Email", true));
@@ -355,15 +364,6 @@
             this.emailTextBox1.Name = "emailTextBox1";
             this.emailTextBox1.Size = new System.Drawing.Size(150, 20);
             this.emailTextBox1.TabIndex = 18;
-            // 
-            // telefonoLabel
-            // 
-            telefonoLabel.AutoSize = true;
-            telefonoLabel.Location = new System.Drawing.Point(260, 81);
-            telefonoLabel.Name = "telefonoLabel";
-            telefonoLabel.Size = new System.Drawing.Size(52, 13);
-            telefonoLabel.TabIndex = 18;
-            telefonoLabel.Text = "Telefono:";
             // 
             // telefonoTextBox
             // 
@@ -377,7 +377,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(859, 460);
+            this.ClientSize = new System.Drawing.Size(720, 460);
             this.Controls.Add(telefonoLabel);
             this.Controls.Add(this.telefonoTextBox);
             this.Controls.Add(emailLabel);
@@ -403,8 +403,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.listaClientesBindingNavigator)).EndInit();
             this.listaClientesBindingNavigator.ResumeLayout(false);
             this.listaClientesBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaClientesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaTiposBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaCategoriasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.seguridadBLBindingSource)).EndInit();

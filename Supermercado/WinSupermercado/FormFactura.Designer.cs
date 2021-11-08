@@ -83,7 +83,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productoIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -564,7 +564,7 @@
             this.precioDataGridViewTextBoxColumn,
             this.totalDataGridViewTextBoxColumn});
             this.facturaDetalleDataGridView.DataSource = this.facturaDetalleBindingSource;
-            this.facturaDetalleDataGridView.Location = new System.Drawing.Point(14, 155);
+            this.facturaDetalleDataGridView.Location = new System.Drawing.Point(13, 155);
             this.facturaDetalleDataGridView.Name = "facturaDetalleDataGridView";
             this.facturaDetalleDataGridView.Size = new System.Drawing.Size(1121, 411);
             this.facturaDetalleDataGridView.TabIndex = 31;
@@ -611,9 +611,14 @@
             // 
             // productoDataGridViewTextBoxColumn
             // 
-            this.productoDataGridViewTextBoxColumn.DataPropertyName = "Producto";
+            this.productoDataGridViewTextBoxColumn.DataPropertyName = "ProductoId";
+            this.productoDataGridViewTextBoxColumn.DataSource = this.listaProductosBindingSource;
+            this.productoDataGridViewTextBoxColumn.DisplayMember = "Descripcion";
             this.productoDataGridViewTextBoxColumn.HeaderText = "Producto";
             this.productoDataGridViewTextBoxColumn.Name = "productoDataGridViewTextBoxColumn";
+            this.productoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.productoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.productoDataGridViewTextBoxColumn.ValueMember = "id";
             // 
             // cantidadDataGridViewTextBoxColumn
             // 
@@ -727,7 +732,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn productoIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn productoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn productoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidadDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn totalDataGridViewTextBoxColumn;
