@@ -80,13 +80,13 @@ namespace BL.Supermercado
                 resultado.Mensaje = "Ingrese un Email";
                 resultado.Exitoso = false;
             }
-            if (cliente.Telefono > 8)
+            /*if (cliente.Telefono > 8)
             {
                 resultado.Mensaje = "El numero de telefono debe ser mayor que 8";
                 resultado.Exitoso = false;
             }
-
-            if (cliente.CategoriaId == 0)
+            //*/
+          /*  if (cliente.CategoriaId == 0)
             {
                 resultado.Mensaje = "Seleccione una Categoria";
                 resultado.Exitoso = false;
@@ -96,7 +96,7 @@ namespace BL.Supermercado
             {
                 resultado.Mensaje = "Seleccione un Tipo";
                 resultado.Exitoso = false;
-            }
+            }*/ 
             return resultado;
         }
     }
@@ -109,13 +109,13 @@ namespace BL.Supermercado
         public string Direccion { get; set; }
         public string Email { get; set; }
         public byte[] Foto { get; set; }
-        //categoria
+   /*     //categoria
         public int CategoriaId { get; set; }
         public Categoria Categoria { get; set; }
         //tipo
         public int TipoId { get; set; }
         public Tipo Tipo { get; set; }
-        public bool Activo { get; set; }
+        public bool Activo { get; set; }*/
     }
    
 

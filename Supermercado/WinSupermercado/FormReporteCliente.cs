@@ -147,5 +147,10 @@ namespace WinSupermercado
         {
             fotoPictureBox.Image = null;
         }
+
+        private void listaClientesDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

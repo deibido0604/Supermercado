@@ -11,13 +11,13 @@ using System.Windows.Forms;
 
 namespace WinSupermercado
 {
-    public partial class Factura : Form
+    public partial class FromFactura : Form
     {
         FacturaBL _facturaBL;
         ClientesBL _clientesBL;
         ProductosBL _productosBL;
 
-        public Factura()
+        public FromFactura()
         {
             InitializeComponent();
 

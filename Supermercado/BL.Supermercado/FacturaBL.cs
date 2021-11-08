@@ -22,7 +22,8 @@ namespace BL.Supermercado
         }
 
         public BindingList<Factura> ObtenerFacturas()
-        {//Factura
+        {//Factura 
+            //error
             _contexto.Facturas.Include("Factura Detalle").Load();
             ListaFacturas = _contexto.Facturas.Local.ToBindingList();
 

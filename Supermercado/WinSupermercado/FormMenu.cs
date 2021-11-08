@@ -285,7 +285,7 @@ namespace WinSupermercado
 
         private void button19_Click(object sender, EventArgs e)
         {
-            openChildForm(new Factura());
+            openChildForm(new FromFactura());
         }
     }
 }

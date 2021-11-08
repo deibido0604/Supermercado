@@ -1,6 +1,6 @@
 ﻿namespace WinSupermercado
 {
-    partial class Factura
+    partial class FromFactura
     {
         /// <summary>
         /// Required designer variable.
@@ -44,7 +44,7 @@
             System.Windows.Forms.Label telefonoLabel;
             System.Windows.Forms.Label tipoIdLabel;
             System.Windows.Forms.Label activoLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Factura));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FromFactura));
             this.listaFacturasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.listaFacturasBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
