@@ -34,6 +34,25 @@ namespace BL.Supermercado
             var nuevaFactura = new Factura();
             _contexto.Facturas.Add(nuevaFactura);
         }
+        public void AgregarFacturaDetalle(Factura factura)
+        {
+            if (factura != null)
+            {
+                var nuevoDetalle = new FacturaDetalle();
+                factura.FacturaDetalle.Add(nuevoDetalle);
+            }
+        }
+
+        public void RemoverFacturaDetalle(Factura factura, FacturaDetalle facturaDetalle)
+        {
+            if (factura != null &&  facturaDetalle != null)
+            {
+                factura.FacturaDetalle.Remove(facturaDetalle);
+            }
+        {
+
+            }
+        }
         public void CancelarCambios()
         {
             foreach (var item in _contexto.ChangeTracker.Entries())

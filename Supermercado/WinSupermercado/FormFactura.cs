@@ -77,5 +77,28 @@ namespace WinSupermercado
                 MessageBox.Show(resultado.Mensaje);
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var factura = (Factura)listaClientesBindingSource.Current;
+            _facturaBL.AgregarFacturaDetalle(factura);
+
+            DeshabilitarHabilitarBotones(false);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var factura = (Factura)listaClientesBindingSource.Current;
+            var facturaDetalle = (FacturaDetalle)facturaDetalleBindingSource.Current;
+
+            _facturaBL.RemoverFacturaDetalle(factura, facturaDetalle);
+
+            DeshabilitarHabilitarBotones(false);
+        }
+
+        private void facturaDetalleDataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            e.ThrowException = false;
+        }
     }
 }
