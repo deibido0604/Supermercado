@@ -303,8 +303,8 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
-            this.bindingNavigatorCountItem.Text = "de {0}";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
             // 
             // bindingNavigatorMoveFirstItem
@@ -519,7 +519,6 @@
             this.activoCheckBox1.Name = "activoCheckBox1";
             this.activoCheckBox1.Size = new System.Drawing.Size(104, 24);
             this.activoCheckBox1.TabIndex = 16;
-            this.activoCheckBox1.Text = "checkBox1";
             this.activoCheckBox1.UseVisualStyleBackColor = true;
             // 
             // activoCheckBox
