@@ -70,6 +70,7 @@
     <None Include="Properties\DataSources\CategoriaBL.datasource" />
     <None Include="Properties\DataSources\Cliente.datasource" />
     <None Include="Properties\DataSources\ClientesBL.datasource" />
+    <None Include="Properties\DataSources\FacturaBL.datasource" />
     <None Include="Properties\DataSources\Producto.datasource" />
     <None Include="Properties\DataSources\ProductosBL.datasource" />
     <None Include="Properties\DataSources\SeguridadBL.datasource" />

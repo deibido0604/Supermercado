@@ -28,6 +28,7 @@ namespace BL.Supermercado
             ListaFacturas = _contexto.Facturas.Local.ToBindingList();
 
             return ListaFacturas;
+           
         }
 
         public void AgregarFactura()
