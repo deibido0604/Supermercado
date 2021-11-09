@@ -36,6 +36,9 @@ namespace BL.Supermercado
             var nuevaFactura = new Factura();
             _contexto.Facturas.Add(nuevaFactura);
         }
+
+
+
         public void AgregarFacturaDetalle(Factura factura)
         {
             if (factura != null)
@@ -67,6 +70,7 @@ namespace BL.Supermercado
             {
                 return resultado;
             }
+            
             CalcularExistencia(factura);
             _contexto.SaveChanges();
             resultado.Exitoso = true;

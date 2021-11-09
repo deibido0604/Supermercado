@@ -31,20 +31,6 @@ namespace WinSupermercado
             listaProductosBindingSource.DataSource = _productosBL.ObtenerProductos();
         }
 
-        private void toolStripButton1_Click(object sender, EventArgs e)
-        {
-            //cancelar
-            DeshabilitarHabilitarBotones(true);
-            _facturaBL.CancelarCambios();
-        }
-
-        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
-        {
-            _facturaBL.AgregarFactura();
-            listaClientesBindingSource.MoveLast();
-
-            DeshabilitarHabilitarBotones(false);
-        }
 
         private void DeshabilitarHabilitarBotones(bool Valor)
         {
@@ -58,8 +44,37 @@ namespace WinSupermercado
             bindingNavigatorDeleteItem.Enabled = Valor;
             toolStripButtonCancelar.Visible = !Valor;
         }
+        
+        public void Anular(int id)
+        {
+            var resultado = _facturaBL.AnularFactura(id);
+            if (resultado == true)
+            {
+                listaFacturasBindingSource.ResetBindings(false);
+            }
+            else
+            {
+                MessageBox.Show("Ocurrio un error al anular la factura", "Anular", MessageBoxButtons.YesNo);
 
-        private void listaFacturasBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+            }
+        }
+
+
+
+
+
+        
+
+
+        private void bindingNavigatorAddNewItem_Click_1(object sender, EventArgs e)
+        {
+            _facturaBL.AgregarFactura();
+            listaClientesBindingSource.MoveLast();
+
+            DeshabilitarHabilitarBotones(false);
+        }
+
+        private void listaFacturasBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
         {
             listaFacturasBindingSource.EndEdit();
 
@@ -78,7 +93,13 @@ namespace WinSupermercado
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void toolStripButtonCancelar_Click(object sender, EventArgs e)
+        {
+            DeshabilitarHabilitarBotones(true);
+            _facturaBL.CancelarCambios();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
             var factura = (Factura)listaFacturasBindingSource.Current;
             _facturaBL.AgregarFacturaDetalle(factura);
@@ -86,7 +107,7 @@ namespace WinSupermercado
             DeshabilitarHabilitarBotones(false);
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
             var factura = (Factura)listaFacturasBindingSource.Current;
             var facturaDetalle = (FacturaDetalle)facturaDetalleBindingSource.Current;
@@ -96,55 +117,36 @@ namespace WinSupermercado
             DeshabilitarHabilitarBotones(false);
         }
 
-        private void facturaDetalleDataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        private void facturaDetalleDataGridView_DataError_1(object sender, DataGridViewDataErrorEventArgs e)
         {
             e.ThrowException = false;
         }
 
-        private void facturaDetalleDataGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        private void facturaDetalleDataGridView_CellEndEdit_1(object sender, DataGridViewCellEventArgs e)
         {
             var factura = (Factura)listaClientesBindingSource.Current;
             _facturaBL.CalcularFactura(factura);
 
             listaFacturasBindingSource.ResetBindings(false);
-
         }
 
-        private void idTextBox_TextChanged(object sender, EventArgs e)
+        private void bindingNavigatorDeleteItem_Click_1(object sender, EventArgs e)
         {
-
-        }
-
-        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
-        {
-            if (idTextBox1.Text != "")
+            if (idTextBox.Text != "")
             {
                 var resultado = MessageBox.Show("Desea anular esta factura", "Anular", MessageBoxButtons.YesNo);
                 if (resultado == DialogResult.Yes)
                 {
-                    var id = Convert.ToInt32(idTextBox1.Text);
+                    var id = Convert.ToInt32(idTextBox.Text);
                     Anular(id);
                 }
             }
         }
-        public void Anular(int id)
-        {
-            var resultado = _facturaBL.AnularFactura(id);
-            if (resultado == true)
-            {
-                listaFacturasBindingSource.ResetBindings(false);
-            }
-            else
-            {
-                MessageBox.Show("Ocurrio un error al anular la factura", "Anular", MessageBoxButtons.YesNo);
 
-            }
-        }
-
-        private void listaFacturasBindingSource_CurrentChanged(object sender, EventArgs e)
+        private void listaFacturasBindingSource_CurrentChanged_1(object sender, EventArgs e)
         {
             var factura = (Factura)listaClientesBindingSource.Current;
-            if(factura != null && factura.Id !=0 && factura.Activo == false)
+            if (factura != null && factura.Id != 0 && factura.Activo == false)
             {
                 label1.Visible = true;
             }
@@ -152,7 +154,6 @@ namespace WinSupermercado
             {
                 label1.Visible = false;
             }
-
 
         }
     }
