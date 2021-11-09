@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label clienteIdLabel;
             System.Windows.Forms.Label fechaLabel;
-            System.Windows.Forms.Label idLabel;
             System.Windows.Forms.Label impuestoLabel;
             System.Windows.Forms.Label subtotalLabel;
             System.Windows.Forms.Label totalLabel;
@@ -58,7 +57,6 @@
             this.listaFacturasBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonCancelar = new System.Windows.Forms.ToolStripButton();
             this.fechaDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.idTextBox = new System.Windows.Forms.TextBox();
             this.impuestoTextBox = new System.Windows.Forms.TextBox();
             this.subtotalTextBox = new System.Windows.Forms.TextBox();
             this.totalTextBox = new System.Windows.Forms.TextBox();
@@ -84,7 +82,6 @@
             this.label1 = new System.Windows.Forms.Label();
             clienteIdLabel = new System.Windows.Forms.Label();
             fechaLabel = new System.Windows.Forms.Label();
-            idLabel = new System.Windows.Forms.Label();
             impuestoLabel = new System.Windows.Forms.Label();
             subtotalLabel = new System.Windows.Forms.Label();
             totalLabel = new System.Windows.Forms.Label();
@@ -122,16 +119,6 @@
             fechaLabel.Size = new System.Drawing.Size(40, 13);
             fechaLabel.TabIndex = 5;
             fechaLabel.Text = "Fecha:";
-            // 
-            // idLabel
-            // 
-            idLabel.AutoSize = true;
-            idLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            idLabel.Location = new System.Drawing.Point(11, 118);
-            idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(19, 13);
-            idLabel.TabIndex = 7;
-            idLabel.Text = "Id:";
             // 
             // impuestoLabel
             // 
@@ -375,16 +362,6 @@
             this.fechaDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.fechaDateTimePicker.TabIndex = 6;
             // 
-            // idTextBox
-            // 
-            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaFacturasBindingSource, "Id", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "00000"));
-            this.idTextBox.Location = new System.Drawing.Point(71, 115);
-            this.idTextBox.Name = "idTextBox";
-            this.idTextBox.ReadOnly = true;
-            this.idTextBox.Size = new System.Drawing.Size(200, 20);
-            this.idTextBox.TabIndex = 8;
-            this.idTextBox.TextChanged += new System.EventHandler(this.idTextBox_TextChanged);
-            // 
             // impuestoTextBox
             // 
             this.impuestoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaFacturasBindingSource, "Impuesto", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "N2"));
@@ -612,8 +589,6 @@
             this.Controls.Add(clienteIdLabel);
             this.Controls.Add(fechaLabel);
             this.Controls.Add(this.fechaDateTimePicker);
-            this.Controls.Add(idLabel);
-            this.Controls.Add(this.idTextBox);
             this.Controls.Add(impuestoLabel);
             this.Controls.Add(this.impuestoTextBox);
             this.Controls.Add(subtotalLabel);
@@ -653,7 +628,6 @@
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton listaFacturasBindingNavigatorSaveItem;
         private System.Windows.Forms.DateTimePicker fechaDateTimePicker;
-        private System.Windows.Forms.TextBox idTextBox;
         private System.Windows.Forms.TextBox impuestoTextBox;
         private System.Windows.Forms.TextBox subtotalTextBox;
         private System.Windows.Forms.TextBox totalTextBox;

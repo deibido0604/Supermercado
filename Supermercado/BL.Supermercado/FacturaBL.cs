@@ -108,6 +108,11 @@ namespace BL.Supermercado
 
                 return resultado;
             }
+            if (factura.Id != 0 && factura.Activo == true)
+            {
+                resultado.Mensaje = "La factura ya fue emitida y no se puede realizar cambios";
+                resultado.Exitoso = false;
+            }
 
             if (factura.Activo == false)
             {

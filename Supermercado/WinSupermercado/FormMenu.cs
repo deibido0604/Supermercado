@@ -230,7 +230,7 @@ namespace WinSupermercado
 
        
 
-        private Form activeForm = null;
+   //     private Form activeForm = null;
        /* private void openChildForm(Form childForm)
         {
             if(activeForm != null)
