@@ -68,6 +68,12 @@ namespace BL.Supermercado
             var resultado = new Resultado();
             resultado.Exitoso = true;
 
+            if(producto == null)
+            {
+                resultado.Mensaje = "Agregue un producto valido";
+                resultado.Exitoso = false;
+            }
+
             if (string.IsNullOrEmpty(producto.Descripcion) == true)
             {
                 resultado.Mensaje = "Ingrese una descripción";

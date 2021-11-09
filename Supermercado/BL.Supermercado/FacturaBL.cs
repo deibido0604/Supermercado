@@ -78,6 +78,8 @@ namespace BL.Supermercado
             var resultado = new Resultado();
             resultado.Exitoso = true;
 
+
+
             if (factura == null)
             {
                 resultado.Mensaje = "Agregue una factura para poderla salvar";
@@ -140,6 +142,21 @@ namespace BL.Supermercado
 
             }
         }
+        
+        public bool AnularFactura(int id)
+        {
+            foreach (var factura in ListaFacturas)
+            {
+                if (factura.Id == id)
+                {
+                    factura.Activo = false;
+                    _contexto.SaveChanges();
+                    return true;
+                }
+            }
+            return false;
+        }
+
     }
       
      public class Factura

@@ -65,7 +65,13 @@ namespace BL.Supermercado
             var resultado = new Resultado();
             resultado.Exitoso = true;
 
-            if(string.IsNullOrEmpty(cliente.Nombre) == true)
+            if (cliente == null)
+            {
+                resultado.Mensaje = "Agregue un Cliente valido";
+                resultado.Exitoso = false;
+            }
+
+            if (string.IsNullOrEmpty(cliente.Nombre) == true)
             {
                 resultado.Mensaje = "Ingrese un Nombre";
                 resultado.Exitoso = false;
