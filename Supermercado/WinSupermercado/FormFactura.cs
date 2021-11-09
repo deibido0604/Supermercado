@@ -117,12 +117,12 @@ namespace WinSupermercado
 
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
-            if (idTextBox.Text != "")
+            if (idTextBox1.Text != "")
             {
                 var resultado = MessageBox.Show("Desea anular esta factura", "Anular", MessageBoxButtons.YesNo);
                 if (resultado == DialogResult.Yes)
                 {
-                    var id = Convert.ToInt32(id);
+                    var id = Convert.ToInt32(idTextBox1.Text);
                     Anular(id);
                 }
             }
