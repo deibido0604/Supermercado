@@ -68,7 +68,7 @@
             // panel8
             // 
             this.panel8.AutoScroll = true;
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(64)))), ((int)(((byte)(118)))));
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(106)))), ((int)(((byte)(127)))));
             this.panel8.Controls.Add(this.btnSalir);
             this.panel8.Controls.Add(this.btnSeguridad);
             this.panel8.Controls.Add(this.panelVenta);
