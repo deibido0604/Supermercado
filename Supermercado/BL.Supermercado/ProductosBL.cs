@@ -22,6 +22,16 @@ namespace BL.Supermercado
             
         }
 
+        public void CancelarCambios()
+        {
+            foreach (var item in _contexto.ChangeTracker.Entries())
+            {
+                item.State = EntityState.Unchanged;
+                item.Reload();
+            }
+        }
+
+
         public BindingList<Producto> ObtenerProductos()
         {//LISTA DE PRODUCTO
             _contexto.Productos.Load();

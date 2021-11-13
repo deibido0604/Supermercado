@@ -177,8 +177,8 @@ namespace WinSupermercado
 
         private void toolStripButtonCancelar_Click(object sender, EventArgs e)
         {
+            _productos.CancelarCambios();
             DeshabilitarHabilitarBotones(true);
-            Eliminar(0);
         }
 
         private void listaProductosDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)

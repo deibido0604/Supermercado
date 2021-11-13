@@ -27,39 +27,9 @@ namespace WinSupermercado
 
         }
 
-        private void listaClientesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {//GUARDAR CLIENTE
-            listaClientesBindingSource.EndEdit();
-            var cliente = (Cliente)listaClientesBindingSource.Current;
+        
 
-            if(fotoPictureBox.Image != null)
-            {
-                cliente.Foto = Program.imageToByteArray(fotoPictureBox.Image);
-            }else
-            {
-                cliente.Foto = null;            }
-            var resultado = _clientes.GuardarCliente(cliente);
-
-            if(resultado.Exitoso == true)
-            {
-                listaClientesBindingSource.ResetBindings(false);
-                DeshabilitarHabilitarBotones(true);
-                MessageBox.Show("Cliente guardado");
-            }
-            else
-            {
-                MessageBox.Show(resultado.Mensaje);
-            }
-        }
-
-        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
-        {//AGREGAR CLIENTE
-            _clientes.AgregarCliente();
-            listaClientesBindingSource.MoveLast();
-            //Metodo de deshabilitar
-            DeshabilitarHabilitarBotones(false);
-
-        }
+        
 
         private void DeshabilitarHabilitarBotones(bool valor)
         {//navigation de siguiente
@@ -77,20 +47,7 @@ namespace WinSupermercado
 
 
         }
-
-        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
-        {//Eliminar CLiente
-
-            if (idTextBox.Text != "")
-            {
-                var resultado = MessageBox.Show("Desea Eliminar este registro?", "Eliminar", MessageBoxButtons.YesNo);
-                if (resultado == DialogResult.Yes)
-                {
-                    var id = Convert.ToInt32(idTextBox.Text);
-                    Eliminar(id);
-                }
-            }
-        }
+        
 
         private void Eliminar(int id)
         {//Metodo eliminar
@@ -106,18 +63,74 @@ namespace WinSupermercado
                 MessageBox.Show("Ocurrio un error al eliminar el Cliente");
             }
         }
+        
+        
 
-        private void toolStripButtonCancelar_Click(object sender, EventArgs e)
+        private void listaClientesDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            DeshabilitarHabilitarBotones(true);
-            Eliminar(0);
+
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void listaClientesBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
+        {
+            listaClientesBindingSource.EndEdit();
+            var cliente = (Cliente)listaClientesBindingSource.Current;
+
+            if (fotoPictureBox.Image != null)
+            {
+                cliente.Foto = Program.imageToByteArray(fotoPictureBox.Image);
+            }
+            else
+            {
+                cliente.Foto = null;
+            }
+            var resultado = _clientes.GuardarCliente(cliente);
+
+            if (resultado.Exitoso == true)
+            {
+                listaClientesBindingSource.ResetBindings(false);
+                DeshabilitarHabilitarBotones(true);
+                MessageBox.Show("Cliente guardado");
+            }
+            else
+            {
+                MessageBox.Show(resultado.Mensaje);
+            }
+        }
+
+        private void bindingNavigatorAddNewItem_Click_1(object sender, EventArgs e)
+        {
+            _clientes.AgregarCliente();
+            listaClientesBindingSource.MoveLast();
+            //Metodo de deshabilitar
+            DeshabilitarHabilitarBotones(false);
+        }
+
+        private void bindingNavigatorDeleteItem_Click_1(object sender, EventArgs e)
+        {
+            if (idTextBox.Text != "")
+            {
+                var resultado = MessageBox.Show("Desea Eliminar este registro?", "Eliminar", MessageBoxButtons.YesNo);
+                if (resultado == DialogResult.Yes)
+                {
+                    var id = Convert.ToInt32(idTextBox.Text);
+                    Eliminar(id);
+                }
+            }
+        }
+
+        private void toolStripButtonCancelar_Click_1(object sender, EventArgs e)
+        {
+            _clientes.CancelarCambios();
+            DeshabilitarHabilitarBotones(true);
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
             var cliente = (Cliente)listaClientesBindingSource.Current;
-            
-            if(cliente != null)
+
+            if (cliente != null)
             {
                 openFileDialog1.ShowDialog();
                 var archivo = openFileDialog1.FileName;
@@ -134,17 +147,11 @@ namespace WinSupermercado
             {
                 MessageBox.Show("Cree un cliente antes de asignale una imagen.,");
             }
-            
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
             fotoPictureBox.Image = null;
-        }
-
-        private void listaClientesDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

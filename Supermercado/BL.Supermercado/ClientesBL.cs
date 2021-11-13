@@ -26,6 +26,7 @@ namespace BL.Supermercado
             return ListaClientes;
         }
 
+
         public Resultado GuardarCliente(Cliente cliente)
         {//Guardar cliente
             var resultado = Validar(cliente);
@@ -39,6 +40,7 @@ namespace BL.Supermercado
             resultado.Exitoso = true;
             return resultado; 
         }
+
 
         public void AgregarCliente()
         {//AGREGAR CLIENTE
@@ -59,6 +61,16 @@ namespace BL.Supermercado
             }
             return false;
         }
+
+        public void CancelarCambios()
+        {
+            foreach(var item in _contexto.ChangeTracker.Entries())
+            {
+                item.State = EntityState.Unchanged;
+                item.Reload();
+            }
+        }
+
 
         private Resultado Validar(Cliente cliente)
         {

@@ -74,6 +74,7 @@ namespace BL.Supermercado
             tipo2.Descripcion = "Producto Extranjero";
             contexto.Tipos.Add(tipo2);
 
+           
             var cliente1 = new Cliente();
             cliente1.Nombre = "David";
             contexto.Clientes.Add(cliente1);
