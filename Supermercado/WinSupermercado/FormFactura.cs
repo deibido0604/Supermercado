@@ -116,19 +116,8 @@ namespace WinSupermercado
 
             DeshabilitarHabilitarBotones(false);
         }
-
-        private void facturaDetalleDataGridView_DataError_1(object sender, DataGridViewDataErrorEventArgs e)
-        {
-            e.ThrowException = false;
-        }
-
-        private void facturaDetalleDataGridView_CellEndEdit_1(object sender, DataGridViewCellEventArgs e)
-        {
-            var factura = (Factura)listaClientesBindingSource.Current;
-            _facturaBL.CalcularFactura(factura);
-
-            listaFacturasBindingSource.ResetBindings(false);
-        }
+        
+        
 
         private void bindingNavigatorDeleteItem_Click_1(object sender, EventArgs e)
         {
@@ -145,7 +134,7 @@ namespace WinSupermercado
 
         private void listaFacturasBindingSource_CurrentChanged_1(object sender, EventArgs e)
         {
-            var factura = (Factura)listaClientesBindingSource.Current;
+            var factura = (Factura)listaFacturasBindingSource.Current;
             if (factura != null && factura.Id != 0 && factura.Activo == false)
             {
                 label1.Visible = true;
@@ -155,6 +144,19 @@ namespace WinSupermercado
                 label1.Visible = false;
             }
 
+        }
+
+        private void facturaDetalleDataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            e.ThrowException = false;
+        }
+
+        private void facturaDetalleDataGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            var factura = (Factura)listaFacturasBindingSource.Current;
+            _facturaBL.CalcularFactura(factura);
+
+            listaFacturasBindingSource.ResetBindings(false);
         }
     }
 }

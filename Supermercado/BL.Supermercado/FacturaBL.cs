@@ -123,13 +123,13 @@ namespace BL.Supermercado
                 resultado.Mensaje = "La factura esta anulada y no se pueden realizar cambios en ella";
                 resultado.Exitoso = false;
             }
-            /*
+            
             if (factura.ClienteId == 0)
             {
                 resultado.Mensaje = "Seleccione un cliente";
                 resultado.Exitoso = false;
             }
-            */
+            
 
             if (factura.FacturaDetalle.Count == 0)
             {
