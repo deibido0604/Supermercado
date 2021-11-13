@@ -55,6 +55,7 @@
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
+            this.panelChildForm = new System.Windows.Forms.Panel();
             this.panel8.SuspendLayout();
             this.panelVenta.SuspendLayout();
             this.panelCompras.SuspendLayout();
@@ -161,7 +162,7 @@
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(254, 39);
             this.button15.TabIndex = 4;
-            this.button15.Text = "REPORTE DE CLIENTES";
+            this.button15.Text = "CLIENTES";
             this.button15.UseVisualStyleBackColor = true;
             this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
@@ -224,7 +225,7 @@
             this.btnVenta.Name = "btnVenta";
             this.btnVenta.Size = new System.Drawing.Size(254, 52);
             this.btnVenta.TabIndex = 7;
-            this.btnVenta.Text = "VENTA Y FACTURACIÓN";
+            this.btnVenta.Text = "VENTA Y FACTURA";
             this.btnVenta.UseVisualStyleBackColor = true;
             this.btnVenta.Click += new System.EventHandler(this.btnVenta_Click);
             // 
@@ -437,7 +438,7 @@
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.Location = new System.Drawing.Point(13, 28);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(249, 44);
             this.panel2.TabIndex = 0;
@@ -456,16 +457,26 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // panelChildForm
+            // 
+            this.panelChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(84)))), ((int)(((byte)(138)))));
+            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChildForm.Location = new System.Drawing.Point(275, 0);
+            this.panelChildForm.Name = "panelChildForm";
+            this.panelChildForm.Size = new System.Drawing.Size(997, 750);
+            this.panelChildForm.TabIndex = 5;
+            // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1272, 750);
+            this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panel8);
             this.ForeColor = System.Drawing.Color.Lime;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(949, 596);
             this.Name = "FormMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -509,5 +520,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnSeguridad;
+        private System.Windows.Forms.Panel panelChildForm;
     }
 }

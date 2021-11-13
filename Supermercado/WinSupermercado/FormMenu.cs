@@ -151,50 +151,41 @@ namespace WinSupermercado
 
         private void button18_Click(object sender, EventArgs e)
         {//llamamos al formulario de ventas
-           // openChildForm(new FormVender());
-            var formVender = new FormVender();
+            openChildForm(new FormVender());
+            /*var formVender = new FormVender();
             formVender.MdiParent = this;
-            formVender.Show();
+            formVender.Show();*/
             hideSubMenu();
         }
 
         private void button17_Click(object sender, EventArgs e)
         {//llamamos al formulario de producto
-            //openChildForm(new FormProductos());
-            var formProductos = new FormProductos();
+            openChildForm(new FormProductos());
+            /*var formProductos = new FormProductos();
             formProductos.MdiParent = this;
-            formProductos.Show();
+            formProductos.Show();*/
 
             hideSubMenu();
         }
 
         private void button16_Click(object sender, EventArgs e)
         {//llamamos al formulario de Reporte de venta
-           // openChildForm(new FormReporteVenta());
-            var formReporteVenta = new FormReporteVenta();
+           openChildForm(new FormReporteVenta());
+           /* var formReporteVenta = new FormReporteVenta();
             formReporteVenta.MdiParent = this;
-            formReporteVenta.Show();
+            formReporteVenta.Show();*/
 
             hideSubMenu();
         }
 
         private void button15_Click(object sender, EventArgs e)
         {//llamamos al formulario de reporte de Clientes
-           // openChildForm(new FormReporteCliente());
-            var formReporteCliente = new FormReporteCliente();
+            openChildForm(new FormReporteCliente());
+            /*var formReporteCliente = new FormReporteCliente();
             formReporteCliente.MdiParent = this;
-            formReporteCliente.Show();
+            formReporteCliente.Show();*/
             hideSubMenu();
         }
-
-       /* private void button19_Click(object sender, EventArgs e)
-        {//llamamos al formulario de Reporte de Productos
-           
-            var formFactura = new FormFactura();
-            formFactura.ShowDialog();
-            hideSubMenu();
-
-        }*/
 
         private void btnInven_Click(object sender, EventArgs e)
         {//al darle click despliega el panel o la lista del botón.
@@ -230,8 +221,8 @@ namespace WinSupermercado
 
        
 
-   //     private Form activeForm = null;
-       /* private void openChildForm(Form childForm)
+        private Form activeForm = null;
+        private void openChildForm(Form childForm)
         {
             if(activeForm != null)
             {
@@ -244,7 +235,7 @@ namespace WinSupermercado
             panelChildForm.Controls.Add(childForm);
             panelChildForm.Tag = childForm;
             childForm.Show();
-        }*/
+        }
 
         private void button2_Click_1(object sender, EventArgs e)
         {
@@ -286,15 +277,14 @@ namespace WinSupermercado
 
         private void button19_Click(object sender, EventArgs e)
         {
-            /*openChildForm(new FromFactura());
+            openChildForm(new FromFactura());
 
            hideSubMenu();
-           */
+          
 
-            var formFactura = new FromFactura();
+            /*var formFactura = new FromFactura();
             formFactura.MdiParent = this;
-            formFactura.Show();
-            //hideSubMenu();
+            formFactura.Show();*/
         }
     }
 }
