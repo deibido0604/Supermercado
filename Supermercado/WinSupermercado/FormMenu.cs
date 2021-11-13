@@ -286,5 +286,12 @@ namespace WinSupermercado
             formFactura.MdiParent = this;
             formFactura.Show();*/
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            openChildForm(new FormReporteProducto());
+          
+            hideSubMenu();
+        }
     }
 }
