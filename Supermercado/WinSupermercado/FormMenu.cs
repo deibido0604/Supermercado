@@ -249,10 +249,10 @@ namespace WinSupermercado
 
         private void btnSeguridad_Click_1(object sender, EventArgs e)
         {//llamamos al formulario de Seguridad
-            //openChildForm(new FormSeguridad());
-            var formSeguridad = new FormSeguridad();
+            openChildForm(new FormSeguridad());
+            /*var formSeguridad = new FormSeguridad();
             formSeguridad.MdiParent = this;
-            formSeguridad.Show();
+            formSeguridad.Show();*/
         }
 
         private void button9_Click(object sender, EventArgs e)
