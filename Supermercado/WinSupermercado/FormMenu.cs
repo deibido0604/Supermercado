@@ -170,7 +170,7 @@ namespace WinSupermercado
 
         private void button16_Click(object sender, EventArgs e)
         {//llamamos al formulario de Reporte de venta
-           openChildForm(new FormReporteVenta());
+           openChildForm(new FormReporteFacturas());
            /* var formReporteVenta = new FormReporteVenta();
             formReporteVenta.MdiParent = this;
             formReporteVenta.Show();*/
