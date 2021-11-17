@@ -75,6 +75,8 @@
             this.tipoIdComboBox = new System.Windows.Forms.ComboBox();
             this.listaCategoriasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.categoriaIdComboBox = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             descripcionLabel = new System.Windows.Forms.Label();
             existenciaLabel = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
@@ -101,7 +103,7 @@
             descripcionLabel.Location = new System.Drawing.Point(301, 71);
             descripcionLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             descripcionLabel.Name = "descripcionLabel";
-            descripcionLabel.Size = new System.Drawing.Size(104, 20);
+            descripcionLabel.Size = new System.Drawing.Size(83, 16);
             descripcionLabel.TabIndex = 6;
             descripcionLabel.Text = "Descripcion:";
             // 
@@ -112,7 +114,7 @@
             existenciaLabel.Location = new System.Drawing.Point(58, 140);
             existenciaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             existenciaLabel.Name = "existenciaLabel";
-            existenciaLabel.Size = new System.Drawing.Size(91, 20);
+            existenciaLabel.Size = new System.Drawing.Size(72, 16);
             existenciaLabel.TabIndex = 7;
             existenciaLabel.Text = "Existencia:";
             existenciaLabel.Click += new System.EventHandler(this.existenciaLabel_Click);
@@ -124,7 +126,7 @@
             idLabel.Location = new System.Drawing.Point(108, 71);
             idLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(27, 20);
+            idLabel.Size = new System.Drawing.Size(22, 16);
             idLabel.TabIndex = 8;
             idLabel.Text = "id:";
             // 
@@ -135,7 +137,7 @@
             precioUnidadLabel.Location = new System.Drawing.Point(33, 103);
             precioUnidadLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             precioUnidadLabel.Name = "precioUnidadLabel";
-            precioUnidadLabel.Size = new System.Drawing.Size(119, 20);
+            precioUnidadLabel.Size = new System.Drawing.Size(97, 16);
             precioUnidadLabel.TabIndex = 9;
             precioUnidadLabel.Text = "Precio Unidad:";
             // 
@@ -146,7 +148,7 @@
             activoLabel.Location = new System.Drawing.Point(640, 176);
             activoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             activoLabel.Name = "activoLabel";
-            activoLabel.Size = new System.Drawing.Size(60, 20);
+            activoLabel.Size = new System.Drawing.Size(48, 16);
             activoLabel.TabIndex = 10;
             activoLabel.Text = "Activo:";
             activoLabel.Click += new System.EventHandler(this.activoLabel_Click_1);
@@ -156,7 +158,7 @@
             tipoIdLabel.AutoSize = true;
             tipoIdLabel.Location = new System.Drawing.Point(345, 106);
             tipoIdLabel.Name = "tipoIdLabel";
-            tipoIdLabel.Size = new System.Drawing.Size(46, 20);
+            tipoIdLabel.Size = new System.Drawing.Size(39, 16);
             tipoIdLabel.TabIndex = 19;
             tipoIdLabel.Text = "Tipo:";
             // 
@@ -165,7 +167,7 @@
             categoriaIdLabel.AutoSize = true;
             categoriaIdLabel.Location = new System.Drawing.Point(314, 140);
             categoriaIdLabel.Name = "categoriaIdLabel";
-            categoriaIdLabel.Size = new System.Drawing.Size(86, 20);
+            categoriaIdLabel.Size = new System.Drawing.Size(70, 16);
             categoriaIdLabel.TabIndex = 20;
             categoriaIdLabel.Text = "Categoria:";
             // 
@@ -208,8 +210,8 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
-            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 24);
+            this.bindingNavigatorCountItem.Text = "de {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
             // bindingNavigatorMoveFirstItem
@@ -307,7 +309,7 @@
             this.toolStripButtonCancelar.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonCancelar.Image")));
             this.toolStripButtonCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonCancelar.Name = "toolStripButtonCancelar";
-            this.toolStripButtonCancelar.Size = new System.Drawing.Size(70, 24);
+            this.toolStripButtonCancelar.Size = new System.Drawing.Size(57, 24);
             this.toolStripButtonCancelar.Text = "Cancelar";
             this.toolStripButtonCancelar.Visible = false;
             this.toolStripButtonCancelar.Click += new System.EventHandler(this.toolStripButtonCancelar_Click);
@@ -388,7 +390,7 @@
             this.descripcionTextBox.Location = new System.Drawing.Point(399, 65);
             this.descripcionTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.descripcionTextBox.Name = "descripcionTextBox";
-            this.descripcionTextBox.Size = new System.Drawing.Size(316, 26);
+            this.descripcionTextBox.Size = new System.Drawing.Size(316, 22);
             this.descripcionTextBox.TabIndex = 7;
             // 
             // existenciaTextBox
@@ -397,7 +399,7 @@
             this.existenciaTextBox.Location = new System.Drawing.Point(140, 137);
             this.existenciaTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.existenciaTextBox.Name = "existenciaTextBox";
-            this.existenciaTextBox.Size = new System.Drawing.Size(132, 26);
+            this.existenciaTextBox.Size = new System.Drawing.Size(132, 22);
             this.existenciaTextBox.TabIndex = 8;
             // 
             // idTextBox
@@ -407,7 +409,7 @@
             this.idTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.ReadOnly = true;
-            this.idTextBox.Size = new System.Drawing.Size(132, 26);
+            this.idTextBox.Size = new System.Drawing.Size(132, 22);
             this.idTextBox.TabIndex = 9;
             // 
             // precioUnidadTextBox
@@ -416,7 +418,7 @@
             this.precioUnidadTextBox.Location = new System.Drawing.Point(140, 103);
             this.precioUnidadTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.precioUnidadTextBox.Name = "precioUnidadTextBox";
-            this.precioUnidadTextBox.Size = new System.Drawing.Size(132, 26);
+            this.precioUnidadTextBox.Size = new System.Drawing.Size(132, 22);
             this.precioUnidadTextBox.TabIndex = 10;
             // 
             // activoCheckBox
@@ -481,7 +483,7 @@
             this.tipoIdComboBox.FormattingEnabled = true;
             this.tipoIdComboBox.Location = new System.Drawing.Point(399, 100);
             this.tipoIdComboBox.Name = "tipoIdComboBox";
-            this.tipoIdComboBox.Size = new System.Drawing.Size(316, 28);
+            this.tipoIdComboBox.Size = new System.Drawing.Size(316, 24);
             this.tipoIdComboBox.TabIndex = 20;
             this.tipoIdComboBox.ValueMember = "Id";
             // 
@@ -498,17 +500,36 @@
             this.categoriaIdComboBox.FormattingEnabled = true;
             this.categoriaIdComboBox.Location = new System.Drawing.Point(399, 137);
             this.categoriaIdComboBox.Name = "categoriaIdComboBox";
-            this.categoriaIdComboBox.Size = new System.Drawing.Size(316, 28);
+            this.categoriaIdComboBox.Size = new System.Drawing.Size(316, 24);
             this.categoriaIdComboBox.TabIndex = 21;
             this.categoriaIdComboBox.ValueMember = "Id";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(628, 18);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(146, 22);
+            this.textBox1.TabIndex = 22;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(780, 17);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 23;
+            this.button3.Text = "Buscar";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // FormProductos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1192, 749);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(categoriaIdLabel);
             this.Controls.Add(this.categoriaIdComboBox);
             this.Controls.Add(tipoIdLabel);
@@ -593,5 +614,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn CategoriaId;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button3;
     }
 }

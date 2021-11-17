@@ -39,7 +39,13 @@ namespace BL.Supermercado
 
             return ListaProductos;
         }
+        public BindingList<Producto> ObtenerProductos(string buscar)
+        {//LISTA DE PRODUCTO
 
+            var resultado = _contexto.Productos.Where(r => r.Descripcion.Contains(buscar));
+
+            return new BindingList<Producto>(resultado.ToList());
+        }
         public Resultado  GuardarProducto(Producto producto)
         {
             var resultado = Validar(producto);
