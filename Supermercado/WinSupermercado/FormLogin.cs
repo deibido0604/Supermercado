@@ -36,6 +36,12 @@ namespace WinSupermercado
         private void button1_Click(object sender, EventArgs e)
         {//botón de entrar
             //variable para el  usuario y contraseña
+            Login();
+
+        }
+
+        private void Login()
+        {
             string Usuario;
             string Contra;
 
@@ -60,7 +66,6 @@ namespace WinSupermercado
 
             button1.Enabled = true;
             button1.Text = "Aceptar";
-
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -90,6 +95,22 @@ namespace WinSupermercado
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(textBox1.Text != "" && e.KeyChar == (char)Keys.Enter)
+            {
+                textBox2.Focus();
+            }
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (textBox1.Text != "" && textBox2.Text != "" && e.KeyChar == (char)Keys.Enter)
+            {
+                Login();
+            }
         }
     }
 }
