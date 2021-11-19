@@ -37,6 +37,7 @@ namespace BL.Supermercado
             public int Id { get; set; }
             public string Nombre { get; set; }
             public string Contrasena { get; set; }
+            public string TipoUsuario { get; set; }
         }
     }
 }

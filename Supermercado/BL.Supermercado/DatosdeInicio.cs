@@ -16,6 +16,8 @@ namespace BL.Supermercado
             var usuarioAdmin = new Usuario();
             usuarioAdmin.Nombre = "admin";
             usuarioAdmin.Contrasena = "123";
+            usuarioAdmin.TipoUsuario = "Administradores";
+
             contexto.Usuarios.Add(usuarioAdmin);
 
             var categoria1 = new Categoria();
