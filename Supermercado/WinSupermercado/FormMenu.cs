@@ -112,6 +112,9 @@ namespace WinSupermercado
         {//Llamamos al formulario de login
             var formLogin = new FormLogin();
             formLogin.ShowDialog();
+
+            toolStripStatusLabel1.Text = "Usuario: " + Utilidades.NombreUsuario;
+
             hideSubMenu();
         }
 

@@ -54,8 +54,9 @@ namespace WinSupermercado
 
             var resultado = _seguridad.Autorizar(Usuario, Contra);
             //inicio del ciclo if-else
-            if (resultado == true)
+            if (resultado != null)
             {
+                Utilidades.NombreUsuario = resultado.Nombre;
                 this.Close();
                 MessageBox.Show("Bienvenidos a Super Market P.O.S");
             }
