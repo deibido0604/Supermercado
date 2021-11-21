@@ -19,7 +19,7 @@ namespace WinSupermercado
             customizeDesing();
         }
 
-        private void btnUser_Click_1(object sender, EventArgs e)
+       /* private void btnUser_Click_1(object sender, EventArgs e)
         {
             Form[] forms = Application.OpenForms.Cast<Form>().ToArray();
 
@@ -32,7 +32,7 @@ namespace WinSupermercado
             }
 
            // btnUser_Click_1();
-        }
+        }*/
 
         private void customizeDesing()
         {
@@ -327,7 +327,8 @@ namespace WinSupermercado
 
         private void btnUser_Click(object sender, EventArgs e)
         {
-
+            var formLogin = new FormLogin();
+            formLogin.ShowDialog();
         }
     }
 }
