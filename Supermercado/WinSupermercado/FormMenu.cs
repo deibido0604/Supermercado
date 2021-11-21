@@ -19,6 +19,21 @@ namespace WinSupermercado
             customizeDesing();
         }
 
+        private void btnUser_Click_1(object sender, EventArgs e)
+        {
+            Form[] forms = Application.OpenForms.Cast<Form>().ToArray();
+
+            foreach (Form f in forms)
+            {
+                if(f.Name != "FormMenu")
+                {
+                    f.Close();
+                }
+            }
+
+           // btnUser_Click_1();
+        }
+
         private void customizeDesing()
         {
             panelAdmi.Visible = false;
@@ -108,12 +123,25 @@ namespace WinSupermercado
             ShowSubMenu(panelAdmi);
         }
 
-        private void btnUser_Click(object sender, EventArgs e)
+        private void btnUser_Click()
         {//Llamamos al formulario de login
             var formLogin = new FormLogin();
             formLogin.ShowDialog();
 
-            toolStripStatusLabel1.Text = "Usuario: " + Utilidades.NombreUsuario;
+            toolStripStatusLabel1.Text = "Usuario: " + Utilidades.UsuarioActual.Nombre;
+
+            if(Utilidades.UsuarioActual.EsAdmin == true)
+            {
+                btnSeguridad.Visible = true;
+            }else
+            {
+                btnSeguridad.Visible = false;
+                button17.Visible = Utilidades.UsuarioActual.PuedeAccederProductos;
+                button15.Visible = Utilidades.UsuarioActual.PuedeAccederClientes;
+                button19.Visible = Utilidades.UsuarioActual.PuedeAccederFacturas;
+                button16.Visible = Utilidades.UsuarioActual.PuedeAccederReportes;
+                button1.Visible = Utilidades.UsuarioActual.PuedeAccederReportes;
+            }
 
             hideSubMenu();
         }
@@ -252,10 +280,10 @@ namespace WinSupermercado
 
         private void btnSeguridad_Click_1(object sender, EventArgs e)
         {//llamamos al formulario de Seguridad
-            openChildForm(new FormSeguridad());
-            /*var formSeguridad = new FormSeguridad();
-            formSeguridad.MdiParent = this;
-            formSeguridad.Show();*/
+            openChildForm(new FormUsuarios());
+            /*var formUsuarios = new FormUsuarios();
+            formUsuarios.MdiParent = this;
+            formUsuarios.Show();*/
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -295,6 +323,11 @@ namespace WinSupermercado
             openChildForm(new FormReporteProducto());
           
             hideSubMenu();
+        }
+
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

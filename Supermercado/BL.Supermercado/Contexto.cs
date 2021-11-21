@@ -11,7 +11,7 @@ namespace BL.Supermercado
 {
     public class Contexto : DbContext
     {
-       public Contexto() : base("ProductosSupermercado")
+       public Contexto() : base("ProductosSupermercado ")
         {
 
         }

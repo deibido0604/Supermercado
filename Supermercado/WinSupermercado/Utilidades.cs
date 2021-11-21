@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static BL.Supermercado.SeguridadBL;
 
 namespace WinSupermercado
 {
     public static class Utilidades
     {
-        public static string NombreUsuario;
+        public static Usuario UsuarioActual;
     }
 }

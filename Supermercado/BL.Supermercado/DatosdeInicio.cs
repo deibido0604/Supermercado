@@ -16,9 +16,20 @@ namespace BL.Supermercado
             var usuarioAdmin = new Usuario();
             usuarioAdmin.Nombre = "admin";
             usuarioAdmin.Contrasena = "123";
-            usuarioAdmin.TipoUsuario = "Administradores";
-
+            usuarioAdmin.EsAdmin = true;
             contexto.Usuarios.Add(usuarioAdmin);
+
+            var usuarioCaja = new Usuario();
+            usuarioCaja.Nombre = "caja";
+            usuarioCaja.Contrasena = "123";
+            usuarioCaja.PuedeAccederFacturas = true;
+            contexto.Usuarios.Add(usuarioCaja);
+
+            var usuarioGerente = new Usuario();
+            usuarioGerente.Nombre = "gerente";
+            usuarioGerente.Contrasena = "123";
+            usuarioGerente.PuedeAccederReportes = true;
+            contexto.Usuarios.Add(usuarioGerente);
 
             var categoria1 = new Categoria();
             categoria1.Descripcion = "Hogar";

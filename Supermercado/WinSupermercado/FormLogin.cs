@@ -56,7 +56,7 @@ namespace WinSupermercado
             //inicio del ciclo if-else
             if (resultado != null)
             {
-                Utilidades.NombreUsuario = resultado.Nombre;
+                Utilidades.UsuarioActual = resultado;
                 this.Close();
                 MessageBox.Show("Bienvenidos a Super Market P.O.S");
             }
