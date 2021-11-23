@@ -7,6 +7,7 @@ using System.Linq;
 using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BL.Supermercado
 {
@@ -93,7 +94,7 @@ namespace BL.Supermercado
                     {
                         producto.Existencia = producto.Existencia + detalle.Cantidad;
                     }
-                   
+                    
                 }
             }
         }
@@ -102,6 +103,10 @@ namespace BL.Supermercado
         {
             var resultado = new Resultado();
             resultado.Exitoso = true;
+
+
+
+            
 
 
 
@@ -145,7 +150,11 @@ namespace BL.Supermercado
                     resultado.Exitoso = false;
 
                 }
+                
+                
             }
+            
+            
 
             return resultado;
         }

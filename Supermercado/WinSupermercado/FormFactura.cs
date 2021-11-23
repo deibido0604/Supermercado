@@ -58,13 +58,7 @@ namespace WinSupermercado
 
             }
         }
-
-
-
-
-
         
-
 
         private void bindingNavigatorAddNewItem_Click_1(object sender, EventArgs e)
         {
