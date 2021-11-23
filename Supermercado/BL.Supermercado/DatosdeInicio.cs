@@ -76,8 +76,20 @@ namespace BL.Supermercado
             contexto.Categorias.Add(categoria11);
 
             var categoria14 = new Categoria();
-            categoria14.Descripcion = "Pan";
+            categoria14.Descripcion = "Panaderia";
             contexto.Categorias.Add(categoria14);
+
+            var categoria15 = new Categoria();
+            categoria15.Descripcion = "Mariscos";
+            contexto.Categorias.Add(categoria15);
+
+            var categoria16 = new Categoria();
+            categoria16.Descripcion = "Embutidos";
+            contexto.Categorias.Add(categoria16);
+
+            var categoria17 = new Categoria();
+            categoria17.Descripcion = "Snacks";
+            contexto.Categorias.Add(categoria17);
 
             var tipo1 = new Tipo();
             tipo1.Descripcion = "Producto Nacional";

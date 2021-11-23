@@ -144,7 +144,7 @@ namespace WinSupermercado
 
         private void button8_Click(object sender, EventArgs e)
         {
-            openChildForm(new FormReporteFacturas());
+            openChildForm(new FormReporteProducto());
 
             hideSubMenu();
         }
