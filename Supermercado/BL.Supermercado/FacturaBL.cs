@@ -75,7 +75,7 @@ namespace BL.Supermercado
             CalcularExistencia(factura);
             _contexto.SaveChanges();
             resultado.Exitoso = true;
-
+            
             return resultado;
         }
 
@@ -94,6 +94,8 @@ namespace BL.Supermercado
                     {
                         producto.Existencia = producto.Existencia + detalle.Cantidad;
                     }
+
+                    
                     
                 }
             }
@@ -105,7 +107,7 @@ namespace BL.Supermercado
             resultado.Exitoso = true;
 
 
-
+            
             
 
 
@@ -150,8 +152,14 @@ namespace BL.Supermercado
                     resultado.Exitoso = false;
 
                 }
-                
-                
+
+                if (detalle.Producto.Existencia - detalle.Cantidad < 0)
+                {
+                    resultado.Mensaje = "No hay suficiente existencia para " + detalle.Producto.Descripcion;
+                    resultado.Exitoso = false;
+                }
+
+
             }
             
             

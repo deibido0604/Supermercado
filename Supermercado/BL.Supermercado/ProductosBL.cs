@@ -101,6 +101,7 @@ namespace BL.Supermercado
                 resultado.Exitoso = false;
             }
 
+
             if (producto.PrecioUnidad < 0)
             {
                 resultado.Mensaje = "El precio debe ser mayor que cero";
