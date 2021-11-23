@@ -85,12 +85,7 @@ namespace WinSupermercado
 
         }
 
-        private void productoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var formVender = new FormVender();
-            formVender.MdiParent = this;
-            formVender.Show();
-        }
+
 
         private void FormMenu_Load(object sender, EventArgs e)
         {
@@ -132,36 +127,31 @@ namespace WinSupermercado
 
             if(Utilidades.UsuarioActual.EsAdmin == true)
             {
-                btnSeguridad.Visible = true;
+                //btnSeguridad.Visible = true;
             }else
             {
-                btnSeguridad.Visible = false;
-                button17.Visible = Utilidades.UsuarioActual.PuedeAccederProductos;
-                button15.Visible = Utilidades.UsuarioActual.PuedeAccederClientes;
-                button19.Visible = Utilidades.UsuarioActual.PuedeAccederFacturas;
-                button16.Visible = Utilidades.UsuarioActual.PuedeAccederReportes;
-                button1.Visible = Utilidades.UsuarioActual.PuedeAccederReportes;
+                //btnSeguridad.Visible = false;
+                //button17.Visible = Utilidades.UsuarioActual.PuedeAccederProductos;
+                //button15.Visible = Utilidades.UsuarioActual.PuedeAccederClientes;
+                //button19.Visible = Utilidades.UsuarioActual.PuedeAccederFacturas;
+                //button16.Visible = Utilidades.UsuarioActual.PuedeAccederReportes;
+                //button1.Visible = Utilidades.UsuarioActual.PuedeAccederReportes;
             }
 
             hideSubMenu();
         }
-
-        private void button7_Click(object sender, EventArgs e)
-        {//llamamos el formulario de inventario general
-            //openChildForm(new FormInventarios());
-            var formInventarios = new FormInventarios();
-            formInventarios.MdiParent = this;
-            formInventarios.Show();
-            hideSubMenu();
-        }
+        
 
         private void button8_Click(object sender, EventArgs e)
-        {//llamamos al formulario de salida y devoluciones
+        {
+            openChildForm(new FormReporteFacturas());
+
             hideSubMenu();
         }
 
         private void button11_Click(object sender, EventArgs e)
-        {//llamamos al formulario de Control de proveedores
+        {
+            openChildForm(new FormProductos());
             hideSubMenu();
         }
 
@@ -180,14 +170,7 @@ namespace WinSupermercado
             hideSubMenu();
         }
 
-        private void button18_Click(object sender, EventArgs e)
-        {//llamamos al formulario de ventas
-            openChildForm(new FormVender());
-            /*var formVender = new FormVender();
-            formVender.MdiParent = this;
-            formVender.Show();*/
-            hideSubMenu();
-        }
+        
 
         private void button17_Click(object sender, EventArgs e)
         {//llamamos al formulario de producto
@@ -201,17 +184,17 @@ namespace WinSupermercado
 
         private void button16_Click(object sender, EventArgs e)
         {//llamamos al formulario de Reporte de venta
-           openChildForm(new FormReporteFacturas());
-           /* var formReporteVenta = new FormReporteVenta();
-            formReporteVenta.MdiParent = this;
-            formReporteVenta.Show();*/
+            openChildForm(new FormReporteFacturas());
+            /* var formReporteVenta = new FormReporteVenta();
+             formReporteVenta.MdiParent = this;
+             formReporteVenta.Show();*/
 
             hideSubMenu();
         }
 
         private void button15_Click(object sender, EventArgs e)
         {//llamamos al formulario de reporte de Clientes
-            openChildForm(new FormReporteCliente());
+            openChildForm(new FormClientes());
             /*var formReporteCliente = new FormReporteCliente();
             formReporteCliente.MdiParent = this;
             formReporteCliente.Show();*/
@@ -329,6 +312,27 @@ namespace WinSupermercado
         {
             var formLogin = new FormLogin();
             formLogin.ShowDialog();
+        }
+
+        private void button2_Click_2(object sender, EventArgs e)
+        {
+            openChildForm(new FormClientes());
+
+            hideSubMenu();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FormReporteFacturas());
+
+            hideSubMenu();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FormUsuarios());
+
+            hideSubMenu();
         }
     }
 }

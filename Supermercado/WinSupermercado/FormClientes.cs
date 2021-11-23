@@ -12,11 +12,11 @@ using System.Windows.Forms;
 
 namespace WinSupermercado
 {
-    public partial class FormReporteCliente : Form
+    public partial class FormClientes : Form
     {
         ClientesBL _clientes;
 
-        public FormReporteCliente()
+        public FormClientes()
         {
             InitializeComponent();
 
