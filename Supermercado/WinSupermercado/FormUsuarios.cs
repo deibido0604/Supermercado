@@ -152,5 +152,23 @@ namespace WinSupermercado
         {
             fotoPictureBox.Image = null;
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == true)
+            {
+                if (contrasenaTextBox.PasswordChar == '*')
+            {
+                contrasenaTextBox.PasswordChar = '\0';
+            }
+            else
+            {
+                contrasenaTextBox.PasswordChar = '*';
+            }
+            }else
+            {
+                contrasenaTextBox.PasswordChar = '*';
+            }//fin del ciclo if-else
+}
     }
 }

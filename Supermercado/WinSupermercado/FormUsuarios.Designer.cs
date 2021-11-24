@@ -31,12 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label idLabel;
             System.Windows.Forms.Label nombreLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUsuarios));
             System.Windows.Forms.Label puedeAccederClientesLabel;
             System.Windows.Forms.Label puedeAccederFacturasLabel;
             System.Windows.Forms.Label puedeAccederProductosLabel;
             System.Windows.Forms.Label puedeAccederReportesLabel;
             System.Windows.Forms.Label contrasenaLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUsuarios));
             this.listaUsuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.listaUsuariosBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -64,6 +64,7 @@
             this.puedeAccederProductosCheckBox = new System.Windows.Forms.CheckBox();
             this.puedeAccederReportesCheckBox = new System.Windows.Forms.CheckBox();
             this.contrasenaTextBox = new System.Windows.Forms.TextBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             idLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
             puedeAccederClientesLabel = new System.Windows.Forms.Label();
@@ -95,6 +96,51 @@
             nombreLabel.Size = new System.Drawing.Size(62, 17);
             nombreLabel.TabIndex = 7;
             nombreLabel.Text = "Nombre:";
+            // 
+            // puedeAccederClientesLabel
+            // 
+            puedeAccederClientesLabel.AutoSize = true;
+            puedeAccederClientesLabel.Location = new System.Drawing.Point(21, 203);
+            puedeAccederClientesLabel.Name = "puedeAccederClientesLabel";
+            puedeAccederClientesLabel.Size = new System.Drawing.Size(163, 17);
+            puedeAccederClientesLabel.TabIndex = 14;
+            puedeAccederClientesLabel.Text = "Puede Acceder Clientes:";
+            // 
+            // puedeAccederFacturasLabel
+            // 
+            puedeAccederFacturasLabel.AutoSize = true;
+            puedeAccederFacturasLabel.Location = new System.Drawing.Point(16, 240);
+            puedeAccederFacturasLabel.Name = "puedeAccederFacturasLabel";
+            puedeAccederFacturasLabel.Size = new System.Drawing.Size(168, 17);
+            puedeAccederFacturasLabel.TabIndex = 15;
+            puedeAccederFacturasLabel.Text = "Puede Acceder Facturas:";
+            // 
+            // puedeAccederProductosLabel
+            // 
+            puedeAccederProductosLabel.AutoSize = true;
+            puedeAccederProductosLabel.Location = new System.Drawing.Point(7, 270);
+            puedeAccederProductosLabel.Name = "puedeAccederProductosLabel";
+            puedeAccederProductosLabel.Size = new System.Drawing.Size(177, 17);
+            puedeAccederProductosLabel.TabIndex = 16;
+            puedeAccederProductosLabel.Text = "Puede Acceder Productos:";
+            // 
+            // puedeAccederReportesLabel
+            // 
+            puedeAccederReportesLabel.AutoSize = true;
+            puedeAccederReportesLabel.Location = new System.Drawing.Point(13, 303);
+            puedeAccederReportesLabel.Name = "puedeAccederReportesLabel";
+            puedeAccederReportesLabel.Size = new System.Drawing.Size(171, 17);
+            puedeAccederReportesLabel.TabIndex = 17;
+            puedeAccederReportesLabel.Text = "Puede Acceder Reportes:";
+            // 
+            // contrasenaLabel
+            // 
+            contrasenaLabel.AutoSize = true;
+            contrasenaLabel.Location = new System.Drawing.Point(8, 109);
+            contrasenaLabel.Name = "contrasenaLabel";
+            contrasenaLabel.Size = new System.Drawing.Size(85, 17);
+            contrasenaLabel.TabIndex = 18;
+            contrasenaLabel.Text = "Contrasena:";
             // 
             // listaUsuariosBindingNavigator
             // 
@@ -295,86 +341,41 @@
             // 
             this.listaUsuariosBindingSource1.DataSource = typeof(BL.Supermercado.SeguridadBL.Usuario);
             // 
-            // puedeAccederClientesLabel
-            // 
-            puedeAccederClientesLabel.AutoSize = true;
-            puedeAccederClientesLabel.Location = new System.Drawing.Point(21, 160);
-            puedeAccederClientesLabel.Name = "puedeAccederClientesLabel";
-            puedeAccederClientesLabel.Size = new System.Drawing.Size(163, 17);
-            puedeAccederClientesLabel.TabIndex = 14;
-            puedeAccederClientesLabel.Text = "Puede Acceder Clientes:";
-            // 
             // puedeAccederClientesCheckBox
             // 
             this.puedeAccederClientesCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listaUsuariosBindingSource1, "PuedeAccederClientes", true));
-            this.puedeAccederClientesCheckBox.Location = new System.Drawing.Point(190, 155);
+            this.puedeAccederClientesCheckBox.Location = new System.Drawing.Point(190, 198);
             this.puedeAccederClientesCheckBox.Name = "puedeAccederClientesCheckBox";
             this.puedeAccederClientesCheckBox.Size = new System.Drawing.Size(104, 24);
             this.puedeAccederClientesCheckBox.TabIndex = 15;
             this.puedeAccederClientesCheckBox.UseVisualStyleBackColor = true;
             // 
-            // puedeAccederFacturasLabel
-            // 
-            puedeAccederFacturasLabel.AutoSize = true;
-            puedeAccederFacturasLabel.Location = new System.Drawing.Point(16, 197);
-            puedeAccederFacturasLabel.Name = "puedeAccederFacturasLabel";
-            puedeAccederFacturasLabel.Size = new System.Drawing.Size(168, 17);
-            puedeAccederFacturasLabel.TabIndex = 15;
-            puedeAccederFacturasLabel.Text = "Puede Acceder Facturas:";
-            // 
             // puedeAccederFacturasCheckBox
             // 
             this.puedeAccederFacturasCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listaUsuariosBindingSource1, "PuedeAccederFacturas", true));
-            this.puedeAccederFacturasCheckBox.Location = new System.Drawing.Point(190, 192);
+            this.puedeAccederFacturasCheckBox.Location = new System.Drawing.Point(190, 235);
             this.puedeAccederFacturasCheckBox.Name = "puedeAccederFacturasCheckBox";
             this.puedeAccederFacturasCheckBox.Size = new System.Drawing.Size(104, 24);
             this.puedeAccederFacturasCheckBox.TabIndex = 16;
             this.puedeAccederFacturasCheckBox.UseVisualStyleBackColor = true;
             // 
-            // puedeAccederProductosLabel
-            // 
-            puedeAccederProductosLabel.AutoSize = true;
-            puedeAccederProductosLabel.Location = new System.Drawing.Point(7, 227);
-            puedeAccederProductosLabel.Name = "puedeAccederProductosLabel";
-            puedeAccederProductosLabel.Size = new System.Drawing.Size(177, 17);
-            puedeAccederProductosLabel.TabIndex = 16;
-            puedeAccederProductosLabel.Text = "Puede Acceder Productos:";
-            // 
             // puedeAccederProductosCheckBox
             // 
             this.puedeAccederProductosCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listaUsuariosBindingSource1, "PuedeAccederProductos", true));
-            this.puedeAccederProductosCheckBox.Location = new System.Drawing.Point(190, 222);
+            this.puedeAccederProductosCheckBox.Location = new System.Drawing.Point(190, 265);
             this.puedeAccederProductosCheckBox.Name = "puedeAccederProductosCheckBox";
             this.puedeAccederProductosCheckBox.Size = new System.Drawing.Size(104, 24);
             this.puedeAccederProductosCheckBox.TabIndex = 17;
             this.puedeAccederProductosCheckBox.UseVisualStyleBackColor = true;
             // 
-            // puedeAccederReportesLabel
-            // 
-            puedeAccederReportesLabel.AutoSize = true;
-            puedeAccederReportesLabel.Location = new System.Drawing.Point(13, 260);
-            puedeAccederReportesLabel.Name = "puedeAccederReportesLabel";
-            puedeAccederReportesLabel.Size = new System.Drawing.Size(171, 17);
-            puedeAccederReportesLabel.TabIndex = 17;
-            puedeAccederReportesLabel.Text = "Puede Acceder Reportes:";
-            // 
             // puedeAccederReportesCheckBox
             // 
             this.puedeAccederReportesCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listaUsuariosBindingSource1, "PuedeAccederReportes", true));
-            this.puedeAccederReportesCheckBox.Location = new System.Drawing.Point(190, 255);
+            this.puedeAccederReportesCheckBox.Location = new System.Drawing.Point(190, 298);
             this.puedeAccederReportesCheckBox.Name = "puedeAccederReportesCheckBox";
             this.puedeAccederReportesCheckBox.Size = new System.Drawing.Size(104, 24);
             this.puedeAccederReportesCheckBox.TabIndex = 18;
             this.puedeAccederReportesCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // contrasenaLabel
-            // 
-            contrasenaLabel.AutoSize = true;
-            contrasenaLabel.Location = new System.Drawing.Point(8, 109);
-            contrasenaLabel.Name = "contrasenaLabel";
-            contrasenaLabel.Size = new System.Drawing.Size(85, 17);
-            contrasenaLabel.TabIndex = 18;
-            contrasenaLabel.Text = "Contrasena:";
             // 
             // contrasenaTextBox
             // 
@@ -385,11 +386,23 @@
             this.contrasenaTextBox.Size = new System.Drawing.Size(471, 22);
             this.contrasenaTextBox.TabIndex = 19;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(99, 134);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(129, 21);
+            this.checkBox1.TabIndex = 20;
+            this.checkBox1.Text = "Ver Contraseña";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // FormUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1020, 566);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(contrasenaLabel);
             this.Controls.Add(this.contrasenaTextBox);
             this.Controls.Add(puedeAccederReportesLabel);
@@ -454,5 +467,6 @@
         private System.Windows.Forms.CheckBox puedeAccederProductosCheckBox;
         private System.Windows.Forms.CheckBox puedeAccederReportesCheckBox;
         private System.Windows.Forms.TextBox contrasenaTextBox;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

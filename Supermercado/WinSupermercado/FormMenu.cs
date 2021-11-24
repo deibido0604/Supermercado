@@ -89,7 +89,7 @@ namespace WinSupermercado
 
         private void FormMenu_Load(object sender, EventArgs e)
         {
-
+            
             var formLogin = new FormLogin();
             formLogin.ShowDialog();
         }
@@ -118,7 +118,7 @@ namespace WinSupermercado
             ShowSubMenu(panelAdmi);
         }
 
-        private void btnUser_Click()
+       /* private void btnUser_Click()
         {//Llamamos al formulario de login
             var formLogin = new FormLogin();
             formLogin.ShowDialog();
@@ -139,7 +139,7 @@ namespace WinSupermercado
             }
 
             hideSubMenu();
-        }
+        }*/
         
 
         private void button8_Click(object sender, EventArgs e)
@@ -310,8 +310,40 @@ namespace WinSupermercado
 
         private void btnUser_Click(object sender, EventArgs e)
         {
+            Form[] forms = Application.OpenForms.Cast<Form>().ToArray();
+
+            foreach (Form f in forms)
+            {
+                if (f.Name != "FormMenu")
+                {
+                    f.Close();
+                }
+            }
+
+            Login();
+
+            hideSubMenu();
+        }
+
+        private void Login()
+        {
             var formLogin = new FormLogin();
             formLogin.ShowDialog();
+
+            toolStripStatusLabel1.Text = "Usuario: " + Utilidades.UsuarioActual.Nombre;
+
+            if (Utilidades.UsuarioActual.EsAdmin == true)
+            {
+                button3.Visible = true;
+            }
+            else
+            {
+                button3.Visible = false;
+                btnCompra.Visible = Utilidades.UsuarioActual.PuedeAccederProductos;
+                button2.Visible = Utilidades.UsuarioActual.PuedeAccederClientes;
+                btnVenta.Visible = Utilidades.UsuarioActual.PuedeAccederFacturas;
+                btnInven.Visible = Utilidades.UsuarioActual.PuedeAccederReportes;
+            }
         }
 
         private void button2_Click_2(object sender, EventArgs e)
