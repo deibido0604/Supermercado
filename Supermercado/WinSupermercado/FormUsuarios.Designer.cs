@@ -82,63 +82,70 @@
             // idLabel
             // 
             idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(36, 50);
+            idLabel.Location = new System.Drawing.Point(62, 119);
+            idLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(23, 17);
+            idLabel.Size = new System.Drawing.Size(19, 13);
             idLabel.TabIndex = 5;
             idLabel.Text = "Id:";
             // 
             // nombreLabel
             // 
             nombreLabel.AutoSize = true;
-            nombreLabel.Location = new System.Drawing.Point(21, 78);
+            nombreLabel.Location = new System.Drawing.Point(51, 141);
+            nombreLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             nombreLabel.Name = "nombreLabel";
-            nombreLabel.Size = new System.Drawing.Size(62, 17);
+            nombreLabel.Size = new System.Drawing.Size(47, 13);
             nombreLabel.TabIndex = 7;
             nombreLabel.Text = "Nombre:";
             // 
             // puedeAccederClientesLabel
             // 
             puedeAccederClientesLabel.AutoSize = true;
-            puedeAccederClientesLabel.Location = new System.Drawing.Point(21, 203);
+            puedeAccederClientesLabel.Location = new System.Drawing.Point(51, 243);
+            puedeAccederClientesLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             puedeAccederClientesLabel.Name = "puedeAccederClientesLabel";
-            puedeAccederClientesLabel.Size = new System.Drawing.Size(163, 17);
+            puedeAccederClientesLabel.Size = new System.Drawing.Size(124, 13);
             puedeAccederClientesLabel.TabIndex = 14;
             puedeAccederClientesLabel.Text = "Puede Acceder Clientes:";
             // 
             // puedeAccederFacturasLabel
             // 
             puedeAccederFacturasLabel.AutoSize = true;
-            puedeAccederFacturasLabel.Location = new System.Drawing.Point(16, 240);
+            puedeAccederFacturasLabel.Location = new System.Drawing.Point(47, 273);
+            puedeAccederFacturasLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             puedeAccederFacturasLabel.Name = "puedeAccederFacturasLabel";
-            puedeAccederFacturasLabel.Size = new System.Drawing.Size(168, 17);
+            puedeAccederFacturasLabel.Size = new System.Drawing.Size(128, 13);
             puedeAccederFacturasLabel.TabIndex = 15;
             puedeAccederFacturasLabel.Text = "Puede Acceder Facturas:";
             // 
             // puedeAccederProductosLabel
             // 
             puedeAccederProductosLabel.AutoSize = true;
-            puedeAccederProductosLabel.Location = new System.Drawing.Point(7, 270);
+            puedeAccederProductosLabel.Location = new System.Drawing.Point(40, 297);
+            puedeAccederProductosLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             puedeAccederProductosLabel.Name = "puedeAccederProductosLabel";
-            puedeAccederProductosLabel.Size = new System.Drawing.Size(177, 17);
+            puedeAccederProductosLabel.Size = new System.Drawing.Size(135, 13);
             puedeAccederProductosLabel.TabIndex = 16;
             puedeAccederProductosLabel.Text = "Puede Acceder Productos:";
             // 
             // puedeAccederReportesLabel
             // 
             puedeAccederReportesLabel.AutoSize = true;
-            puedeAccederReportesLabel.Location = new System.Drawing.Point(13, 303);
+            puedeAccederReportesLabel.Location = new System.Drawing.Point(45, 324);
+            puedeAccederReportesLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             puedeAccederReportesLabel.Name = "puedeAccederReportesLabel";
-            puedeAccederReportesLabel.Size = new System.Drawing.Size(171, 17);
+            puedeAccederReportesLabel.Size = new System.Drawing.Size(130, 13);
             puedeAccederReportesLabel.TabIndex = 17;
             puedeAccederReportesLabel.Text = "Puede Acceder Reportes:";
             // 
             // contrasenaLabel
             // 
             contrasenaLabel.AutoSize = true;
-            contrasenaLabel.Location = new System.Drawing.Point(8, 109);
+            contrasenaLabel.Location = new System.Drawing.Point(41, 167);
+            contrasenaLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             contrasenaLabel.Name = "contrasenaLabel";
-            contrasenaLabel.Size = new System.Drawing.Size(85, 17);
+            contrasenaLabel.Size = new System.Drawing.Size(64, 13);
             contrasenaLabel.TabIndex = 18;
             contrasenaLabel.Text = "Contrasena:";
             // 
@@ -170,15 +177,15 @@
             this.listaUsuariosBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.listaUsuariosBindingNavigator.Name = "listaUsuariosBindingNavigator";
             this.listaUsuariosBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.listaUsuariosBindingNavigator.Size = new System.Drawing.Size(1020, 27);
+            this.listaUsuariosBindingNavigator.Size = new System.Drawing.Size(765, 27);
             this.listaUsuariosBindingNavigator.TabIndex = 0;
             this.listaUsuariosBindingNavigator.Text = "bindingNavigator1";
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
-            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 24);
+            this.bindingNavigatorCountItem.Text = "de {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
             // bindingNavigatorMoveFirstItem
@@ -209,7 +216,7 @@
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(49, 27);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(38, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
@@ -275,7 +282,7 @@
             this.toolStripButtonCancelar.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonCancelar.Image")));
             this.toolStripButtonCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonCancelar.Name = "toolStripButtonCancelar";
-            this.toolStripButtonCancelar.Size = new System.Drawing.Size(70, 24);
+            this.toolStripButtonCancelar.Size = new System.Drawing.Size(57, 24);
             this.toolStripButtonCancelar.Text = "Cancelar";
             this.toolStripButtonCancelar.Visible = false;
             this.toolStripButtonCancelar.Click += new System.EventHandler(this.toolStripButtonCancelar_Click_1);
@@ -283,40 +290,40 @@
             // idTextBox
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaUsuariosBindingSource, "Id", true));
-            this.idTextBox.Location = new System.Drawing.Point(99, 47);
-            this.idTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.idTextBox.Location = new System.Drawing.Point(109, 116);
+            this.idTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.ReadOnly = true;
-            this.idTextBox.Size = new System.Drawing.Size(471, 22);
+            this.idTextBox.Size = new System.Drawing.Size(354, 20);
             this.idTextBox.TabIndex = 6;
             // 
             // nombreTextBox
             // 
             this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaUsuariosBindingSource, "Nombre", true));
-            this.nombreTextBox.Location = new System.Drawing.Point(99, 74);
-            this.nombreTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nombreTextBox.Location = new System.Drawing.Point(109, 138);
+            this.nombreTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nombreTextBox.Name = "nombreTextBox";
-            this.nombreTextBox.Size = new System.Drawing.Size(471, 22);
+            this.nombreTextBox.Size = new System.Drawing.Size(354, 20);
             this.nombreTextBox.TabIndex = 8;
             // 
             // fotoPictureBox
             // 
             this.fotoPictureBox.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.fotoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.listaUsuariosBindingSource, "Foto", true, System.Windows.Forms.DataSourceUpdateMode.Never));
-            this.fotoPictureBox.Location = new System.Drawing.Point(623, 36);
-            this.fotoPictureBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.fotoPictureBox.Location = new System.Drawing.Point(497, 116);
+            this.fotoPictureBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.fotoPictureBox.Name = "fotoPictureBox";
-            this.fotoPictureBox.Size = new System.Drawing.Size(299, 174);
+            this.fotoPictureBox.Size = new System.Drawing.Size(224, 179);
             this.fotoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.fotoPictureBox.TabIndex = 12;
             this.fotoPictureBox.TabStop = false;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(623, 215);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Location = new System.Drawing.Point(497, 306);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(131, 30);
+            this.button1.Size = new System.Drawing.Size(98, 24);
             this.button1.TabIndex = 13;
             this.button1.Text = "AgregarFoto";
             this.button1.UseVisualStyleBackColor = true;
@@ -324,10 +331,10 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(792, 215);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Location = new System.Drawing.Point(623, 306);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(131, 30);
+            this.button2.Size = new System.Drawing.Size(98, 24);
             this.button2.TabIndex = 14;
             this.button2.Text = "Remover Foto";
             this.button2.UseVisualStyleBackColor = true;
@@ -344,54 +351,60 @@
             // puedeAccederClientesCheckBox
             // 
             this.puedeAccederClientesCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listaUsuariosBindingSource1, "PuedeAccederClientes", true));
-            this.puedeAccederClientesCheckBox.Location = new System.Drawing.Point(190, 198);
+            this.puedeAccederClientesCheckBox.Location = new System.Drawing.Point(177, 239);
+            this.puedeAccederClientesCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.puedeAccederClientesCheckBox.Name = "puedeAccederClientesCheckBox";
-            this.puedeAccederClientesCheckBox.Size = new System.Drawing.Size(104, 24);
+            this.puedeAccederClientesCheckBox.Size = new System.Drawing.Size(78, 20);
             this.puedeAccederClientesCheckBox.TabIndex = 15;
             this.puedeAccederClientesCheckBox.UseVisualStyleBackColor = true;
             // 
             // puedeAccederFacturasCheckBox
             // 
             this.puedeAccederFacturasCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listaUsuariosBindingSource1, "PuedeAccederFacturas", true));
-            this.puedeAccederFacturasCheckBox.Location = new System.Drawing.Point(190, 235);
+            this.puedeAccederFacturasCheckBox.Location = new System.Drawing.Point(177, 269);
+            this.puedeAccederFacturasCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.puedeAccederFacturasCheckBox.Name = "puedeAccederFacturasCheckBox";
-            this.puedeAccederFacturasCheckBox.Size = new System.Drawing.Size(104, 24);
+            this.puedeAccederFacturasCheckBox.Size = new System.Drawing.Size(78, 20);
             this.puedeAccederFacturasCheckBox.TabIndex = 16;
             this.puedeAccederFacturasCheckBox.UseVisualStyleBackColor = true;
             // 
             // puedeAccederProductosCheckBox
             // 
             this.puedeAccederProductosCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listaUsuariosBindingSource1, "PuedeAccederProductos", true));
-            this.puedeAccederProductosCheckBox.Location = new System.Drawing.Point(190, 265);
+            this.puedeAccederProductosCheckBox.Location = new System.Drawing.Point(177, 293);
+            this.puedeAccederProductosCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.puedeAccederProductosCheckBox.Name = "puedeAccederProductosCheckBox";
-            this.puedeAccederProductosCheckBox.Size = new System.Drawing.Size(104, 24);
+            this.puedeAccederProductosCheckBox.Size = new System.Drawing.Size(78, 20);
             this.puedeAccederProductosCheckBox.TabIndex = 17;
             this.puedeAccederProductosCheckBox.UseVisualStyleBackColor = true;
             // 
             // puedeAccederReportesCheckBox
             // 
             this.puedeAccederReportesCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listaUsuariosBindingSource1, "PuedeAccederReportes", true));
-            this.puedeAccederReportesCheckBox.Location = new System.Drawing.Point(190, 298);
+            this.puedeAccederReportesCheckBox.Location = new System.Drawing.Point(177, 320);
+            this.puedeAccederReportesCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.puedeAccederReportesCheckBox.Name = "puedeAccederReportesCheckBox";
-            this.puedeAccederReportesCheckBox.Size = new System.Drawing.Size(104, 24);
+            this.puedeAccederReportesCheckBox.Size = new System.Drawing.Size(78, 20);
             this.puedeAccederReportesCheckBox.TabIndex = 18;
             this.puedeAccederReportesCheckBox.UseVisualStyleBackColor = true;
             // 
             // contrasenaTextBox
             // 
             this.contrasenaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaUsuariosBindingSource1, "Contrasena", true));
-            this.contrasenaTextBox.Location = new System.Drawing.Point(99, 106);
+            this.contrasenaTextBox.Location = new System.Drawing.Point(109, 164);
+            this.contrasenaTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.contrasenaTextBox.Name = "contrasenaTextBox";
             this.contrasenaTextBox.PasswordChar = '*';
-            this.contrasenaTextBox.Size = new System.Drawing.Size(471, 22);
+            this.contrasenaTextBox.Size = new System.Drawing.Size(354, 20);
             this.contrasenaTextBox.TabIndex = 19;
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(99, 134);
+            this.checkBox1.Location = new System.Drawing.Point(109, 187);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(129, 21);
+            this.checkBox1.Size = new System.Drawing.Size(99, 17);
             this.checkBox1.TabIndex = 20;
             this.checkBox1.Text = "Ver Contraseña";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -399,9 +412,9 @@
             // 
             // FormUsuarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1020, 566);
+            this.ClientSize = new System.Drawing.Size(765, 460);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(contrasenaLabel);
             this.Controls.Add(this.contrasenaTextBox);
@@ -423,7 +436,7 @@
             this.Controls.Add(this.listaUsuariosBindingNavigator);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormUsuarios";
             this.Text = "FormReporteUsuario";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

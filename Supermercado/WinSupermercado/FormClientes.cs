@@ -153,5 +153,15 @@ namespace WinSupermercado
         {
             fotoPictureBox.Image = null;
         }
+
+        private void emailLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void emailTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

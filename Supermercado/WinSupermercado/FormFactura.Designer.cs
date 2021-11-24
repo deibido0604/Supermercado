@@ -129,30 +129,33 @@
             // impuestoLabel
             // 
             impuestoLabel.AutoSize = true;
-            impuestoLabel.Location = new System.Drawing.Point(935, 624);
+            impuestoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            impuestoLabel.Location = new System.Drawing.Point(460, 579);
             impuestoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             impuestoLabel.Name = "impuestoLabel";
-            impuestoLabel.Size = new System.Drawing.Size(53, 13);
+            impuestoLabel.Size = new System.Drawing.Size(70, 15);
             impuestoLabel.TabIndex = 9;
             impuestoLabel.Text = "Impuesto:";
             // 
             // subtotalLabel
             // 
             subtotalLabel.AutoSize = true;
-            subtotalLabel.Location = new System.Drawing.Point(935, 647);
+            subtotalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            subtotalLabel.Location = new System.Drawing.Point(699, 581);
             subtotalLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             subtotalLabel.Name = "subtotalLabel";
-            subtotalLabel.Size = new System.Drawing.Size(49, 13);
+            subtotalLabel.Size = new System.Drawing.Size(64, 15);
             subtotalLabel.TabIndex = 11;
             subtotalLabel.Text = "Subtotal:";
             // 
             // totalLabel
             // 
             totalLabel.AutoSize = true;
-            totalLabel.Location = new System.Drawing.Point(935, 670);
+            totalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            totalLabel.Location = new System.Drawing.Point(935, 581);
             totalLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             totalLabel.Name = "totalLabel";
-            totalLabel.Size = new System.Drawing.Size(34, 13);
+            totalLabel.Size = new System.Drawing.Size(43, 15);
             totalLabel.TabIndex = 13;
             totalLabel.Text = "Total:";
             // 
@@ -305,7 +308,7 @@
             this.activoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listaFacturasBindingSource, "Activo", true));
             this.activoCheckBox.Enabled = false;
             this.activoCheckBox.Location = new System.Drawing.Point(319, 140);
-            this.activoCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.activoCheckBox.Margin = new System.Windows.Forms.Padding(2);
             this.activoCheckBox.Name = "activoCheckBox";
             this.activoCheckBox.Size = new System.Drawing.Size(150, 20);
             this.activoCheckBox.TabIndex = 2;
@@ -315,7 +318,7 @@
             // 
             this.fechaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.listaFacturasBindingSource, "Fecha", true));
             this.fechaDateTimePicker.Location = new System.Drawing.Point(79, 137);
-            this.fechaDateTimePicker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fechaDateTimePicker.Margin = new System.Windows.Forms.Padding(2);
             this.fechaDateTimePicker.Name = "fechaDateTimePicker";
             this.fechaDateTimePicker.Size = new System.Drawing.Size(151, 20);
             this.fechaDateTimePicker.TabIndex = 6;
@@ -324,7 +327,7 @@
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaFacturasBindingSource, "Id", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "00000"));
             this.idTextBox.Location = new System.Drawing.Point(79, 63);
-            this.idTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.idTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.ReadOnly = true;
             this.idTextBox.Size = new System.Drawing.Size(151, 20);
@@ -332,34 +335,43 @@
             // 
             // impuestoTextBox
             // 
+            this.impuestoTextBox.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.impuestoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaFacturasBindingSource, "Impuesto", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "N2"));
-            this.impuestoTextBox.Location = new System.Drawing.Point(992, 622);
-            this.impuestoTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.impuestoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.impuestoTextBox.ForeColor = System.Drawing.Color.Lime;
+            this.impuestoTextBox.Location = new System.Drawing.Point(532, 568);
+            this.impuestoTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.impuestoTextBox.Name = "impuestoTextBox";
             this.impuestoTextBox.ReadOnly = true;
-            this.impuestoTextBox.Size = new System.Drawing.Size(151, 20);
+            this.impuestoTextBox.Size = new System.Drawing.Size(151, 29);
             this.impuestoTextBox.TabIndex = 10;
             this.impuestoTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // subtotalTextBox
             // 
+            this.subtotalTextBox.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.subtotalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaFacturasBindingSource, "Subtotal", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "N2"));
-            this.subtotalTextBox.Location = new System.Drawing.Point(992, 645);
-            this.subtotalTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.subtotalTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subtotalTextBox.ForeColor = System.Drawing.Color.Lime;
+            this.subtotalTextBox.Location = new System.Drawing.Point(765, 570);
+            this.subtotalTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.subtotalTextBox.Name = "subtotalTextBox";
             this.subtotalTextBox.ReadOnly = true;
-            this.subtotalTextBox.Size = new System.Drawing.Size(151, 20);
+            this.subtotalTextBox.Size = new System.Drawing.Size(151, 29);
             this.subtotalTextBox.TabIndex = 12;
             this.subtotalTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // totalTextBox
             // 
+            this.totalTextBox.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.totalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaFacturasBindingSource, "Total", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "N2"));
-            this.totalTextBox.Location = new System.Drawing.Point(992, 667);
-            this.totalTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.totalTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalTextBox.ForeColor = System.Drawing.Color.Lime;
+            this.totalTextBox.Location = new System.Drawing.Point(981, 570);
+            this.totalTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.totalTextBox.Name = "totalTextBox";
             this.totalTextBox.ReadOnly = true;
-            this.totalTextBox.Size = new System.Drawing.Size(151, 20);
+            this.totalTextBox.Size = new System.Drawing.Size(151, 29);
             this.totalTextBox.TabIndex = 14;
             this.totalTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -379,7 +391,7 @@
             this.clienteIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.clienteIdComboBox.FormattingEnabled = true;
             this.clienteIdComboBox.Location = new System.Drawing.Point(79, 101);
-            this.clienteIdComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.clienteIdComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.clienteIdComboBox.Name = "clienteIdComboBox";
             this.clienteIdComboBox.Size = new System.Drawing.Size(151, 21);
             this.clienteIdComboBox.TabIndex = 15;
@@ -393,26 +405,30 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(992, 128);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(1016, 128);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(56, 41);
             this.button1.TabIndex = 16;
             this.button1.Text = "+";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button2.Location = new System.Drawing.Point(1076, 128);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(56, 41);
             this.button2.TabIndex = 17;
             this.button2.Text = "-";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // label1
@@ -420,7 +436,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(568, 76);
+            this.label1.Location = new System.Drawing.Point(1031, 55);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 24);
@@ -439,7 +455,7 @@
             this.dataGridViewTextBoxColumn6});
             this.facturaDetalleDataGridView.DataSource = this.facturaDetalleBindingSource;
             this.facturaDetalleDataGridView.Location = new System.Drawing.Point(25, 178);
-            this.facturaDetalleDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.facturaDetalleDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.facturaDetalleDataGridView.Name = "facturaDetalleDataGridView";
             this.facturaDetalleDataGridView.RowTemplate.Height = 24;
             this.facturaDetalleDataGridView.Size = new System.Drawing.Size(1107, 354);
