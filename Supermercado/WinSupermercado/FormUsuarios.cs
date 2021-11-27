@@ -170,5 +170,10 @@ namespace WinSupermercado
                 contrasenaTextBox.PasswordChar = '*';
             }//fin del ciclo if-else
 }
+
+        private void FormUsuarios_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

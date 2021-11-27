@@ -37,6 +37,9 @@
             System.Windows.Forms.Label tipoIdLabel;
             System.Windows.Forms.Label categoriaIdLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProductos));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.productoBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -336,7 +339,18 @@
             this.listaProductosDataGridView.AllowUserToAddRows = false;
             this.listaProductosDataGridView.AutoGenerateColumns = false;
             this.listaProductosDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.listaProductosDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            this.listaProductosDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(106)))), ((int)(((byte)(127)))));
+            this.listaProductosDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listaProductosDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.listaProductosDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.listaProductosDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.listaProductosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
@@ -345,12 +359,30 @@
             this.dataGridViewCheckBoxColumn1,
             this.CategoriaId});
             this.listaProductosDataGridView.DataSource = this.listaProductosBindingSource;
-            this.listaProductosDataGridView.Location = new System.Drawing.Point(0, 271);
+            this.listaProductosDataGridView.EnableHeadersVisualStyles = false;
+            this.listaProductosDataGridView.GridColor = System.Drawing.Color.SteelBlue;
+            this.listaProductosDataGridView.Location = new System.Drawing.Point(24, 271);
             this.listaProductosDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listaProductosDataGridView.Name = "listaProductosDataGridView";
             this.listaProductosDataGridView.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(106)))), ((int)(((byte)(127)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.listaProductosDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.listaProductosDataGridView.RowHeadersVisible = false;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(106)))), ((int)(((byte)(127)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.listaProductosDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.listaProductosDataGridView.RowTemplate.Height = 24;
-            this.listaProductosDataGridView.Size = new System.Drawing.Size(1160, 430);
+            this.listaProductosDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.listaProductosDataGridView.Size = new System.Drawing.Size(1113, 430);
             this.listaProductosDataGridView.TabIndex = 6;
             this.listaProductosDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.listaProductosDataGridView_CellContentClick);
             // 
